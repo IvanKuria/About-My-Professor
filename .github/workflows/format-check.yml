@@ -2,24 +2,22 @@ name: Code Format Check
 
 on:
   pull_request:
-    branches:
-      - main # our default branch
+    branches: [main]
+  push:
+    branches: [main]
 
 jobs:
-  format-check:
+  format:
+    name: Prettier Check
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: "20"
-
-      - name: Install Prettier
-        run: npm install prettier
-
-      - name: Run Prettier check
-        run: npx prettier . --check
+          node-version: 20
+          cache: npm
+      - name: Install deps
+        run: npm ci || npm i
+      - name: Run Prettier (verify only)
+        run: npx prettier --check .
