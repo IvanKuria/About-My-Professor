@@ -9,7 +9,7 @@ import data from "../data/prof_uids.json";
  * @param {Element} panel - The DOM element for a single course panel.
  * @returns {string | null} The professor's name (e.g., "TANTALO,C") or null if not found.
  */
-function getProfName(panel) {
+function getProfNameInSearch(panel) {
   const profDivs = panel.querySelectorAll("div.col-xs-6.col-sm-3");
 
   for (const div of profDivs) {
@@ -20,7 +20,96 @@ function getProfName(panel) {
       return name;
     }
   }
+  // Moved this here so I could modularize the render function to also work for the shopping cart page - B.C.
+
+  // console.log(panel.innerText) - use this instead
+  // finds "Instructor", optional "s", and whitespaces - E.H
+  const re = /Instructor[s]?:\s*([\w,.'-]+)/i;
+
+  // if the regex doesn't find a match - E.H
+  // if (name == null) {
+  let text = panel.innerText;
+  let res = text.match(re);
+
+  if (res && res[1]) {
+    const name = res[1];
+    return name;
+  } else {
+    console.log("Couldn't parse prof name for panel", panel);
+    //return;
+  }
+  //console.log("name from regex ",name);
+  //}
   return null; // if name isn't found for whatever reason
+}
+
+//Find Professor Name from row div in shopping cart - B.C.
+function getProfNameInCart(panel) {
+  const nameBox = panel.querySelector(
+    '[id^="win0divDERIVED_REGFRM1_SSR_INSTR_LONG$"]',
+  );
+  let name = nameBox.outerText;
+  //console.log(name);
+  if (name == "" || name == undefined || name == null) {
+    return null;
+  }
+  //need to reformat the name (J. Doe) so it matches the format from the search page ("Doe,J.") - B.C.
+  let firstIntial = name.slice(0, 2); // instead need to use regex to match up to the first space
+  const reFI = /^([^\s]+)/i;
+  let res = name.match(reFI);
+  if(res && res[1]){
+    firstIntial = res[1];
+  } else {
+    console.log("Couldn't parse prof first intial for div from cart", panel);
+    return null;
+  }
+  let sliceTarget = firstIntial.length + 1;
+  let lastName = name.slice(sliceTarget); 
+  let formattedName = lastName + "," + firstIntial;
+  return formattedName;
+}
+
+//Modularized this and other parts to reduce repetition for shopping cart B.C.
+function getUIDFromJson(name) {
+  //get uID from json
+  // let uID = "jdoe";
+  // //console.log(data);
+  // //get uID by indexing the json data as a dictionary
+  // if (data[name]) {
+  //   uID = data[name];
+  // } else {
+  //   console.log(
+  //     "couldn't match name to uID in the json, gave output",
+  //     data[name],
+  //     "for name: ",
+  //     name,
+  //   );
+  // }
+  //console.log(uID);
+
+  //why was the code above replaced and if the code below is better why is the code above still there? B.C.
+
+  let uID = "jdoe";
+  if (data[name]) {
+    const value = String(data[name]); // Get the value, e.g., "https://...uid=chern133"
+
+    // Use regex to find 'uid=' and capture what's after it
+    const uidMatch = value.match(/uid=([\w-]+)/);
+
+    if (uidMatch && uidMatch[1]) {
+      // Found a match! e.g., uidMatch[1] is "chern133"
+      uID = uidMatch[1];
+    } else if (!value.includes("http")) {
+      // Fallback: The value might already be a clean UID
+      uID = value;
+    } else {
+      // The value was a bad URL or something we couldn't parse
+      console.log(`Found invalid UID value for ${name}: ${value}`);
+    }
+  } else {
+    console.log(`Couldn't match name to uID in the json for name: ${name}`);
+  }
+  return uID;
 }
 
 async function getProfessorData(uID, name) {
@@ -38,69 +127,60 @@ async function getProfessorData(uID, name) {
  * response from the background script for each panel.
  */
 async function renderIntoPanels() {
-  const panels = document.querySelectorAll(".panel.panel-default.row");
-  if (!panels || panels.length === 0) return;
+  let anyPanels = false;
+  let searchPage = false;
+  //check if panels from the Search/Cart page exist - B.C.
+  const panelsSearch = document.querySelectorAll(".panel.panel-default.row");
+  if (!panelsSearch || panelsSearch.length === 0) {
+    //console.log("not in searchPage");
+  } else {
+    anyPanels = true;
+    searchPage = true;
+    //console.log("found panel div in the Class Search Page");
+  }
+  const panelsCartShopping = document.querySelectorAll(
+    '[id^="trSSR_REGFORM_VW$0_row"]',
+  );
+  if (!panelsCartShopping || panelsCartShopping.length === 0) {
+    //console.log("nothing in the shopping Cart");
+  } else {
+    anyPanels = true;
+    //console.log("found row div in the Cart for Shopping");
+  }
+  const panelsCartEnrolled = document.querySelectorAll(
+    '[id^="trSTDNT_ENRL_SSVW$0_row"]',
+  );
+  if (!panelsCartEnrolled || panelsCartEnrolled.length === 0) {
+    //console.log("empty enrolled section in Shopping Cart page");
+  } else {
+    anyPanels = true;
+    //console.log("found row div in the Cart for Enrolled");
+  }
+
+  //if none of the above found we aren't on either page - B.C.
+  if (anyPanels == false) return;
+  const panels = [
+    ...panelsSearch,
+    ...panelsCartShopping,
+    ...panelsCartEnrolled,
+  ];
 
   for (const panel of panels) {
     if (panel.querySelector(".about-my-professor-root")) return; // avoid duplicate mounts(will come in handy when we cache the results)
 
     //get name from panel
-    let name = getProfName(panel);
-    // console.log(panel.innerText) - use this instead
-    // finds "Instructor", optional "s", and whitespaces - E.H
-    const re = /Instructor[s]?:\s*([\w,.'-]+)/i;
-
-    // if the regex doesn't find a match - E.H
-    if (name == null) {
-      let text = panel.innerText;
-      let res = text.match(re);
-
-      if (res && res[1]) {
-        name = res[1];
-      } else {
-        console.log("Couldn't parse prof name for panel", panel);
-        return;
-      }
-      //console.log("name from regex ",name);
-    }
-
-    // //get uID from json
-    // let uID = "jdoe";
-    // //console.log(data);
-    // //get uID by indexing the json data as a dictionary
-    // if (data[name]) {
-    //   uID = data[name];
-    // } else {
-    //   console.log(
-    //     "couldn't match name to uID in the json, gave output",
-    //     data[name],
-    //     "for name: ",
-    //     name,
-    //   );
-    // }
-    //console.log(uID);
-
-    //get uID from json
-    let uID = "jdoe";
-    if (data[name]) {
-      const value = String(data[name]); // Get the value, e.g., "https://...uid=chern133"
-
-      // Use regex to find 'uid=' and capture what's after it
-      const uidMatch = value.match(/uid=([\w-]+)/);
-
-      if (uidMatch && uidMatch[1]) {
-        // Found a match! e.g., uidMatch[1] is "chern133"
-        uID = uidMatch[1];
-      } else if (!value.includes("http")) {
-        // Fallback: The value might already be a clean UID
-        uID = value;
-      } else {
-        // The value was a bad URL or something we couldn't parse
-        console.log(`Found invalid UID value for ${name}: ${value}`);
-      }
+    let name = null;
+    if (searchPage == true) {
+      name = getProfNameInSearch(panel);
     } else {
-      console.log(`Couldn't match name to uID in the json for name: ${name}`);
+      name = getProfNameInCart(panel);
     }
+    if (name == null) {
+      return;
+    }
+
+    //Modularized this - B.C.
+    let uID = getUIDFromJson(name);
 
     //get fullName from API
     let profileDict = null;
