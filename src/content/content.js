@@ -205,35 +205,42 @@ async function renderIntoPanels() {
     }
 
     // Find the main course title header (the <h2>)
-    const targetPanel = panel;
-
+    //two cases of search page or cart page - B.C>
     const mount = document.createElement("span");
     mount.className = "about-my-professor-root";
+    const targetPanel = panel;
+    if(searchPage == true){
+      
 
-    // 2. Add a class to the panel itself so we can use 'position: relative'
-    targetPanel.classList.add("prof-panel-relative");
-    targetPanel.appendChild(mount);
+      // 2. Add a class to the panel itself so we can use 'position: relative'
+      targetPanel.classList.add("prof-panel-relative");
+      targetPanel.appendChild(mount);
 
-    // 3. Find the <h2> and *remove* the flex class if it's there
-    const targetHeader = panel.querySelector("h2");
-    if (targetHeader) {
-      targetHeader.classList.remove("prof-info-header-flex");
+      // 3. Find the <h2> and *remove* the flex class if it's there
+      const targetHeader = panel.querySelector("h2");
+      if (targetHeader) {
+        targetHeader.classList.remove("prof-info-header-flex");
+      }
     }
-
-    /** Keeping old placement just in case we want it back  - E.H */
-    // const mount = document.createElement("div");
-    // mount.className = "about-my-professor-root";
-    // // panel.appendChild(mount);
-    // const columns = panel.querySelectorAll("div.col-xs-6.col-sm-3");
-    // if (columns.length > 0) {
-    //   // Get the last column (which contains "In Person")
-    //   const lastColumn = columns[columns.length - 1];
-    //   // Append the button container inside it
-    //   lastColumn.appendChild(mount);
-    // } else {
-    //   // Fallback in case the structure is different
-    //   panel.appendChild(mount);
-    // }
+    else{
+      //change this to be custom css for cart page and mby just mount directly onto the targetPanel
+      targetPanel.classList.add("prof-cart-panel");
+      const box = targetPanel.querySelector('[id^="win0divDERIVED_REGFRM1_SSR_STATUS_LONG"]');
+      box.appendChild(mount);
+      /** Keeping old placement just in case we want it back  - E.H */
+      //panel.appendChild(mount);
+      // const columns = panel.querySelectorAll("div.col-xs-6.col-sm-3");
+      // if (columns.length > 0) {
+      //   // Get the last column (which contains "In Person")
+      //   const lastColumn = columns[columns.length - 1];
+      //   // Append the button container inside it
+      //   lastColumn.appendChild(mount);
+      // } else {
+      //   // Fallback in case the structure is different
+      //   panel.appendChild(mount);
+      // }
+      
+    } 
     const root = createRoot(mount);
 
     // in a typical react application, you'll render the main entry point within 'root'
