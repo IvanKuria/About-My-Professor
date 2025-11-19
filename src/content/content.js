@@ -57,14 +57,14 @@ function getProfNameInCart(panel) {
   let firstIntial = name.slice(0, 2); // instead need to use regex to match up to the first space
   const reFI = /^([^\s]+)/i;
   let res = name.match(reFI);
-  if(res && res[1]){
+  if (res && res[1]) {
     firstIntial = res[1];
   } else {
     console.log("Couldn't parse prof first intial for div from cart", panel);
     return null;
   }
   let sliceTarget = firstIntial.length + 1;
-  let lastName = name.slice(sliceTarget); 
+  let lastName = name.slice(sliceTarget);
   let formattedName = lastName + "," + firstIntial;
   return formattedName;
 }
@@ -120,21 +120,16 @@ async function getProfessorData(uID, name) {
   });
 }
 
-/**
- * Main function to find all course panels on the page and inject
- * the React info-button component into each one.
- * This function is 'async' because it must 'await' the API
- * response from the background script for each panel.
- */
-async function renderIntoPanels() {
-  let anyPanels = false;
+//This function find out which page we are at (Search or Shopping Cart) by checking html elements
+// and calls the corresponding render function if at either one - B.C.
+function whichPage() {
   let searchPage = false;
+  let cartPage = false;
   //check if panels from the Search/Cart page exist - B.C.
   const panelsSearch = document.querySelectorAll(".panel.panel-default.row");
   if (!panelsSearch || panelsSearch.length === 0) {
     //console.log("not in searchPage");
   } else {
-    anyPanels = true;
     searchPage = true;
     //console.log("found panel div in the Class Search Page");
   }
@@ -144,7 +139,7 @@ async function renderIntoPanels() {
   if (!panelsCartShopping || panelsCartShopping.length === 0) {
     //console.log("nothing in the shopping Cart");
   } else {
-    anyPanels = true;
+    cartPage = true;
     //console.log("found row div in the Cart for Shopping");
   }
   const panelsCartEnrolled = document.querySelectorAll(
@@ -153,28 +148,30 @@ async function renderIntoPanels() {
   if (!panelsCartEnrolled || panelsCartEnrolled.length === 0) {
     //console.log("empty enrolled section in Shopping Cart page");
   } else {
-    anyPanels = true;
+    cartPage = true;
     //console.log("found row div in the Cart for Enrolled");
   }
 
-  //if none of the above found we aren't on either page - B.C.
-  if (anyPanels == false) return;
-  const panels = [
-    ...panelsSearch,
-    ...panelsCartShopping,
-    ...panelsCartEnrolled,
-  ];
+  //handle cases of each page or if none don't do anything - B.C.
+  if (searchPage == true) {
+    renderIntoSearchPanels(panelsSearch);
+  } else if (cartPage == true) {
+    const panels = [...panelsCartShopping, ...panelsCartEnrolled];
+    renderIntoCartPanels(panels);
+  } else return;
+}
 
+/**
+ * functions to inject the React info-button component into each course pannel.
+ * This function is 'async' because it must 'await' the API
+ * response from the background script for each panel.
+ */
+async function renderIntoSearchPanels(panels) {
   for (const panel of panels) {
     if (panel.querySelector(".about-my-professor-root")) return; // avoid duplicate mounts(will come in handy when we cache the results)
 
     //get name from panel
-    let name = null;
-    if (searchPage == true) {
-      name = getProfNameInSearch(panel);
-    } else {
-      name = getProfNameInCart(panel);
-    }
+    let name = getProfNameInSearch(panel);
     if (name == null) {
       return;
     }
@@ -182,7 +179,7 @@ async function renderIntoPanels() {
     //Modularized this - B.C.
     let uID = getUIDFromJson(name);
 
-    //get fullName from API
+    //get Prof Info from API - B.C.
     let profileDict = null;
     if (uID != "jdoe") {
       try {
@@ -196,7 +193,6 @@ async function renderIntoPanels() {
       }
     }
     //console.log("dict: ", profileDict?.data);
-
     let profData = null;
     let rateMyProfessorData = null;
     if (profileDict != null) {
@@ -204,43 +200,34 @@ async function renderIntoPanels() {
       rateMyProfessorData = profileDict.rateMyProfessor;
     }
 
-    // Find the main course title header (the <h2>)
-    //two cases of search page or cart page - B.C>
+    //1. Find the main course title header (the <h2>)
     const mount = document.createElement("span");
     mount.className = "about-my-professor-root";
     const targetPanel = panel;
-    if(searchPage == true){
-      
 
-      // 2. Add a class to the panel itself so we can use 'position: relative'
-      targetPanel.classList.add("prof-panel-relative");
-      targetPanel.appendChild(mount);
+    // 2. Add a class to the panel itself so we can use 'position: relative'
+    targetPanel.classList.add("prof-panel-relative");
+    targetPanel.appendChild(mount);
 
-      // 3. Find the <h2> and *remove* the flex class if it's there
-      const targetHeader = panel.querySelector("h2");
-      if (targetHeader) {
-        targetHeader.classList.remove("prof-info-header-flex");
-      }
+    // 3. Find the <h2> and *remove* the flex class if it's there
+    const targetHeader = panel.querySelector("h2");
+    if (targetHeader) {
+      targetHeader.classList.remove("prof-info-header-flex");
     }
-    else{
-      //change this to be custom css for cart page and mby just mount directly onto the targetPanel
-      targetPanel.classList.add("prof-cart-panel");
-      const box = targetPanel.querySelector('[id^="win0divDERIVED_REGFRM1_SSR_STATUS_LONG"]');
-      box.appendChild(mount);
-      /** Keeping old placement just in case we want it back  - E.H */
-      //panel.appendChild(mount);
-      // const columns = panel.querySelectorAll("div.col-xs-6.col-sm-3");
-      // if (columns.length > 0) {
-      //   // Get the last column (which contains "In Person")
-      //   const lastColumn = columns[columns.length - 1];
-      //   // Append the button container inside it
-      //   lastColumn.appendChild(mount);
-      // } else {
-      //   // Fallback in case the structure is different
-      //   panel.appendChild(mount);
-      // }
-      
-    } 
+
+    /** Keeping old placement just in case we want it back  - E.H */
+    //panel.appendChild(mount);
+    // const columns = panel.querySelectorAll("div.col-xs-6.col-sm-3");
+    // if (columns.length > 0) {
+    //   // Get the last column (which contains "In Person")
+    //   const lastColumn = columns[columns.length - 1];
+    //   // Append the button container inside it
+    //   lastColumn.appendChild(mount);
+    // } else {
+    //   // Fallback in case the structure is different
+    //   panel.appendChild(mount);
+    // }
+
     const root = createRoot(mount);
 
     // in a typical react application, you'll render the main entry point within 'root'
@@ -259,5 +246,99 @@ async function renderIntoPanels() {
   }
 }
 
+async function renderIntoCartPanels(panels) {
+  for (const panel of panels) {
+    if (panel.querySelector(".about-my-professor-root")) return; // avoid duplicate mounts(will come in handy when we cache the results)
+
+    let name = getProfNameInCart(panel);
+    if (name == null) {
+      return;
+    }
+
+    //Modularized this - B.C.
+    let uID = getUIDFromJson(name);
+
+    //get Prof Info from API - B.C.
+    let profileDict = null;
+    if (uID != "jdoe") {
+      try {
+        profileDict = await getProfessorData(uID, name);
+      } catch (error) {
+        console.error("Error fetching professor data", error);
+        profileDict = null;
+      }
+      if (profileDict?.data?.success === false) {
+        profileDict.data = null;
+      }
+    }
+    //console.log("dict: ", profileDict?.data);
+    let profData = null;
+    let rateMyProfessorData = null;
+    if (profileDict != null) {
+      profData = profileDict.data;
+      rateMyProfessorData = profileDict.rateMyProfessor;
+    }
+
+    //create a mount and add it to the page's html
+    const mount = document.createElement("span");
+    mount.className = "about-my-professor-root";
+    const targetPanel = panel;
+    //change this to be custom css for cart page and mby just mount directly onto the targetPanel
+    targetPanel.classList.add("prof-cart-panel");
+    const box = targetPanel.querySelector(
+      '[id^="win0divDERIVED_REGFRM1_SSR_STATUS_LONG"]',
+    );
+    box.appendChild(mount);
+
+    const root = createRoot(mount);
+
+    // in a typical react application, you'll render the main entry point within 'root'
+    // however, in our case we will render it elsewhere(our own custom 'root')
+    // also pass profile dictionary (from the API) as a property (variable) to the component
+    if (uID != "jdoe") {
+      root.render(
+        <React.StrictMode>
+          <ProfInfoButton
+            apiData={profData}
+            rateMyProfessor={rateMyProfessorData}
+          />
+        </React.StrictMode>,
+      );
+    }
+  }
+}
+
+//Mutation obserer isn't working yet
+// //function to keep checking if I Frame element exists so we can start observing it - B.C.
+// function addObserverIfIFrameAvailable(observer, config){
+//   //select html Component to be observed by MutationObserver- B.C.
+//   //('[id^="main_target_win"]') or document.getElementById("main_target_win0") or .querySelector(".ps_target-iframe") or "PT_MID_SECTION" or  'ps_mid_section'
+//   const targetComponent = document.getElementById("ps_mid_section");
+//   if(!targetComponent){
+//     setTimeout(addObserverIfIFrameAvailable(observer, config), 2000);
+//     return;
+//   }
+//   console.log("observing");
+//   console.log(targetComponent);
+//   observer.observe(targetComponent, config);
+// }
+
+// //configure option for the mutationObserver - B.C.
+// const config = {attributes: true, childList: true, subtree: true};
+// //callback function when mutations are observed figure out which Page we are on and call corresponding render function -B.C.
+// const whichPage = (mutationList, observer) => {
+//   for (const mutation of mutationList) {
+//     if (mutation.type === "childList") {
+//       console.log("Switched Page");
+//     }
+//   }
+// }
+// //Create MutationObserver to observe iframe and call whichPage when it changes - B.C.
+// const observer = new MutationObserver(whichPage);
+
+// addObserverIfIFrameAvailable(observer, config);
+
 // Initial attempt after a short delay for the iframe
-setTimeout(renderIntoPanels, 1500);
+setTimeout(whichPage, 3000);
+
+//observer.disconnect();
