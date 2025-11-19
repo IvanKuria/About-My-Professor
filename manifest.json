@@ -21,7 +21,7 @@
   ],
   "web_accessible_resources": [
     {
-      "resources": ["images/*"],
+      "resources": ["images/*", "prof_research_topics.json"],
       "matches": ["https://pisa.ucsc.edu/*", "https://my.ucsc.edu/*"]
     }
   ]

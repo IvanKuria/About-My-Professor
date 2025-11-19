@@ -2,6 +2,7 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import ProfInfoButton from "../react/components/ProfInfoButton.jsx";
 import data from "../data/prof_uids.json";
+import { getFirst } from "../utils/utils.js";
 
 /**
  * Scrapes the professor's name from a specific, known HTML structure
@@ -23,12 +24,38 @@ function getProfName(panel) {
   return null; // if name isn't found for whatever reason
 }
 
+/**
+ * Sends a message to the background script to fetch all professor data
+ * (both from the Campus Directory and RateMyProfessors).
+ * @param {string} uID - The professor's User ID (e.g., "pdey").
+ * @param {string} name - The professor's name from the panel (e.g., "DEY,P.").
+ * @returns {Promise<object>} A promise that resolves with the complete profile object.
+ */
 async function getProfessorData(uID, name) {
   return chrome.runtime.sendMessage({
     action: "fetchProfessorData",
     ID: uID,
     name,
   });
+}
+
+/**
+ * Fetches research topics from the local JSON file.
+ * @returns {Promise<object>} A dictionary mapping Full Name to Research Topic.
+ */
+async function fetchLocalResearchData() {
+  const url = chrome.runtime.getURL("prof_research_topics.json");
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      console.error(`Failed to load research JSON: ${response.status}`);
+      return {};
+    }
+    return await response.json();
+  } catch (e) {
+    console.error("Error parsing research JSON:", e);
+    return {};
+  }
 }
 
 /**
@@ -40,6 +67,9 @@ async function getProfessorData(uID, name) {
 async function renderIntoPanels() {
   const panels = document.querySelectorAll(".panel.panel-default.row");
   if (!panels || panels.length === 0) return;
+
+  // maps full name -> research topic
+  const researchTopics = await fetchLocalResearchData();
 
   for (const panel of panels) {
     if (panel.querySelector(".about-my-professor-root")) return; // avoid duplicate mounts(will come in handy when we cache the results)
@@ -117,11 +147,16 @@ async function renderIntoPanels() {
     }
     //console.log("dict: ", profileDict?.data);
 
-    let profData = null;
-    let rateMyProfessorData = null;
+    let profData,
+      rateMyProfessorData,
+      researchTopicText,
+      fullName = null;
+    // get full data from API
     if (profileDict != null) {
       profData = profileDict.data;
       rateMyProfessorData = profileDict.rateMyProfessor;
+      fullName = getFirst(profData?.cn);
+      researchTopicText = researchTopics[[fullName]];
     }
 
     // Find the main course title header (the <h2>)
@@ -165,6 +200,7 @@ async function renderIntoPanels() {
           <ProfInfoButton
             apiData={profData}
             rateMyProfessor={rateMyProfessorData}
+            localResearchTopic={researchTopicText} // Pass the specific research topic as a string
           />
         </React.StrictMode>,
       );
