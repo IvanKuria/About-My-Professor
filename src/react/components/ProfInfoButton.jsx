@@ -1,21 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import "../styles/index.css";
-
-/**
- * Helper function to safely get the first trimmed item from a property
- * that could be a string or an array.
- * @param {*} value - The value to parse (e.g., [" John "] or " John ")
- * @returns {string|null} The trimmed string or null.
- */
-const getFirst = (value) => {
-  if (Array.isArray(value) && value.length > 0) {
-    return value[0].trim() || null;
-  }
-  if (typeof value === "string") {
-    return value.trim() || null;
-  }
-  return null;
-};
+import { getFirst } from "../../utils/utils";
 
 /**
  * A new component to render a 5-star rating.
@@ -50,6 +35,7 @@ export default function ProfInfoButton(props) {
   const [isOpen, setIsOpen] = useState(false);
   const [isPhoto, setIsPhoto] = useState("");
   const [showMoreInfo, setShowMoreInfo] = useState(false);
+  const localResearchTopic = props.localResearchTopic;
 
   // rate my professor data - I.K
   const rateMyProfessor = props.rateMyProfessor;
@@ -92,13 +78,14 @@ export default function ProfInfoButton(props) {
   // --- Process Campus Directory Data ---
   const name = getFirst(props.apiData?.cn) || "Not Listed";
   const email = getFirst(props.apiData?.mail);
-  const phone = getFirst(props.apiData?.telephonenumber) || "Not Listed";
+  const phone = getFirst(props.apiData?.telephonenumber);
   const department = getFirst(props.apiData?.ucscpersonpubdepartmentnumber);
   const divisionValue = getFirst(props.apiData?.ucscpersonpubdivision);
   const officeHours = getFirst(props.apiData?.ucscpersonpubofficehours);
+  const researchTopicText = localResearchTopic;
   const researchInterest = getFirst(
     props.apiData?.ucscpersonpubresearchinterest,
-  ); // assumes this is not an array/string to be trimmed
+  );
   const courses = props.apiData?.ucscpersonpubfacultycourses; // assumes this is already an array
 
   const normalize = (value) =>
@@ -179,7 +166,10 @@ export default function ProfInfoButton(props) {
   const hasMoreInfo =
     Boolean(officeHours) ||
     (Array.isArray(courses) && courses.length > 0) ||
-    Boolean(researchInterest);
+    Boolean(researchTopicText) || // Use the main topic text
+    Boolean(researchInterest) || // Check for the keyword field
+    Boolean(website) ||
+    publicationLinks.length > 0;
 
   /**
    * handles photos that are valid and invalid - I.K
@@ -428,27 +418,29 @@ export default function ProfInfoButton(props) {
                       );
                     }
                   })()}
+
+                  {/* Research Topic (Local Scraped Field: Topic Paragraph) */}
+                  {researchTopicText && (
+                    <div className="campus-card-section">
+                      <p>
+                        <strong>Research Topic:</strong>
+                      </p>
+                      {/* Displays the full, descriptive paragraph */}
+                      <p>{researchTopicText}</p>
+                    </div>
+                  )}
+
+                  {/* This handles the case where the API had no short description */}
+                  {!researchTopicText && !researchInterest && (
+                    <div className="campus-card-section">
+                      <p>
+                        <strong>Research Info:</strong> Not listed in public
+                        directory.
+                      </p>
+                    </div>
+                  )}
                 </div>
               )}
-              {(() => {
-                const researchInterest =
-                  props.apiData?.ucscpersonpubresearchinterest;
-                if (
-                  typeof researchInterest === "string" &&
-                  researchInterest.trim()
-                ) {
-                  const rInterestHTML =
-                    "<p><strong>Research Interests:</strong>" +
-                    researchInterest +
-                    "</p>";
-                  return (
-                    <div
-                      className="campus-card-section"
-                      dangerouslySetInnerHTML={{ __html: rInterestHTML }}
-                    />
-                  );
-                }
-              })()}
             </div>
 
             {/* RMP section */}
