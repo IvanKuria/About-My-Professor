@@ -113,7 +113,6 @@ function getUIDFromJson(name) {
   return uID;
 }
 
-
 /**
  * Sends a message to the background script to fetch all professor data
  * (both from the Campus Directory and RateMyProfessors).
@@ -142,7 +141,6 @@ function whichPage() {
   } else {
     searchPage = true;
     //console.log("found panel div in the Class Search Page");
-
   }
   const panelsCartShopping = document.querySelectorAll(
     '[id^="trSSR_REGFORM_VW$0_row"]',
@@ -189,7 +187,6 @@ async function fetchLocalResearchData() {
     console.error("Error parsing research JSON:", e);
     return {};
   }
-  
 }
 
 /**
@@ -200,7 +197,6 @@ async function fetchLocalResearchData() {
  * response from the background script for each panel.
  */
 async function renderIntoSearchPanels(panels) {
-
   // maps full name -> research topic
   const researchTopics = await fetchLocalResearchData();
 
@@ -230,11 +226,6 @@ async function renderIntoSearchPanels(panels) {
       }
     }
     //console.log("dict: ", profileDict?.data);
-	let profData,
-      rateMyProfessorData,
-      researchTopicText,
-      fullName = null;
-    // get full data from API
 
     let profData,
       rateMyProfessorData,
@@ -246,10 +237,9 @@ async function renderIntoSearchPanels(panels) {
       rateMyProfessorData = profileDict.rateMyProfessor;
       fullName = getFirst(profData?.cn);
       researchTopicText = researchTopics[[fullName]];
-	}
+    }
     //1. Find the main course title header (the <h2>)
 
-    const targetPanel = panel;
     const mount = document.createElement("span");
     mount.className = "about-my-professor-root";
     const targetPanel = panel;
