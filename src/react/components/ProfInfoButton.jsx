@@ -252,8 +252,8 @@ export default function ProfInfoButton(props) {
 
   return (
     <div className={containerClass}>
-      {/* Button to toggle popup */}
-      <button className="prof-info-btn" onClick={handleOpen}>
+      {/* Button to toggle popup, added type so that it works in the shopping cart - B.C> */}
+      <button className="prof-info-btn" onClick={handleOpen} type="button">
         {/* SVG Icon */}
         <svg
           xmlns="http://www.w3.org/2000/svg"

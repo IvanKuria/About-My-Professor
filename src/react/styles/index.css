@@ -143,7 +143,6 @@
 
 /*This is used in shopping cart by content.js - B.C.*/
 .prof-cart-panel {
-  offset-block-start: 25 px;
   position: relative;
 }
 

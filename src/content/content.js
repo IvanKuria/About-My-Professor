@@ -280,13 +280,14 @@ async function renderIntoCartPanels(panels) {
     }
 
     //create a mount and add it to the page's html
-    const mount = document.createElement("span");
+    const mount = document.createElement("div");
     mount.className = "about-my-professor-root";
     const targetPanel = panel;
     //change this to be custom css for cart page and mby just mount directly onto the targetPanel
     targetPanel.classList.add("prof-cart-panel");
+    // win0divE/P_CLASS_NAME$ or win0divDERIVED_REGFRM1_SSR_STATUS_LONG or win0divDERIVED_REGFRM1_SSR_INSTR_LONG$ - mounting column doesn't seem to change this
     const box = targetPanel.querySelector(
-      '[id^="win0divDERIVED_REGFRM1_SSR_STATUS_LONG"]',
+      '[id*="win0divDERIVED_REGFRM1_SSR_INSTR_LONG$"]',
     );
     box.appendChild(mount);
 
@@ -308,37 +309,5 @@ async function renderIntoCartPanels(panels) {
   }
 }
 
-//Mutation obserer isn't working yet
-// //function to keep checking if I Frame element exists so we can start observing it - B.C.
-// function addObserverIfIFrameAvailable(observer, config){
-//   //select html Component to be observed by MutationObserver- B.C.
-//   //('[id^="main_target_win"]') or document.getElementById("main_target_win0") or .querySelector(".ps_target-iframe") or "PT_MID_SECTION" or  'ps_mid_section'
-//   const targetComponent = document.getElementById("ps_mid_section");
-//   if(!targetComponent){
-//     setTimeout(addObserverIfIFrameAvailable(observer, config), 2000);
-//     return;
-//   }
-//   console.log("observing");
-//   console.log(targetComponent);
-//   observer.observe(targetComponent, config);
-// }
-
-// //configure option for the mutationObserver - B.C.
-// const config = {attributes: true, childList: true, subtree: true};
-// //callback function when mutations are observed figure out which Page we are on and call corresponding render function -B.C.
-// const whichPage = (mutationList, observer) => {
-//   for (const mutation of mutationList) {
-//     if (mutation.type === "childList") {
-//       console.log("Switched Page");
-//     }
-//   }
-// }
-// //Create MutationObserver to observe iframe and call whichPage when it changes - B.C.
-// const observer = new MutationObserver(whichPage);
-
-// addObserverIfIFrameAvailable(observer, config);
-
-// Initial attempt after a short delay for the iframe
+// Initial attempt after a short delay
 setTimeout(whichPage, 3000);
-
-//observer.disconnect();
