@@ -112,6 +112,14 @@ function getUIDFromJson(name) {
   return uID;
 }
 
+/**
+ * Sends a message to the background script to fetch all professor data
+ * (both from the Campus Directory and RateMyProfessors).
+ * @param {string} uID - The professor's User ID (e.g., "pdey").
+ * @param {string} name - The professor's name from the panel (e.g., "DEY,P.").
+ * @returns {Promise<object>} A promise that resolves with the complete profile object.
+ */
+
 async function getProfessorData(uID, name) {
   return chrome.runtime.sendMessage({
     action: "fetchProfessorData",
@@ -132,6 +140,52 @@ function whichPage() {
   } else {
     searchPage = true;
     //console.log("found panel div in the Class Search Page");
+
+  }
+  const panelsCartShopping = document.querySelectorAll(
+    '[id^="trSSR_REGFORM_VW$0_row"]',
+  );
+  if (!panelsCartShopping || panelsCartShopping.length === 0) {
+    //console.log("nothing in the shopping Cart");
+  } else {
+    cartPage = true;
+    //console.log("found row div in the Cart for Shopping");
+  }
+  const panelsCartEnrolled = document.querySelectorAll(
+    '[id^="trSTDNT_ENRL_SSVW$0_row"]',
+  );
+  if (!panelsCartEnrolled || panelsCartEnrolled.length === 0) {
+    //console.log("empty enrolled section in Shopping Cart page");
+  } else {
+    cartPage = true;
+    //console.log("found row div in the Cart for Enrolled");
+  }
+
+  //handle cases of each page or if none don't do anything - B.C.
+  if (searchPage == true) {
+    renderIntoSearchPanels(panelsSearch);
+  } else if (cartPage == true) {
+    const panels = [...panelsCartShopping, ...panelsCartEnrolled];
+    renderIntoCartPanels(panels);
+  } else return;
+}
+
+/**
+ * Fetches research topics from the local JSON file.
+ * @returns {Promise<object>} A dictionary mapping Full Name to Research Topic.
+ */
+async function fetchLocalResearchData() {
+  const url = chrome.runtime.getURL("prof_research_topics.json");
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      console.error(`Failed to load research JSON: ${response.status}`);
+      return {};
+    }
+    return await response.json();
+  } catch (e) {
+    console.error("Error parsing research JSON:", e);
+    return {};
   }
   const panelsCartShopping = document.querySelectorAll(
     '[id^="trSSR_REGFORM_VW$0_row"]',
@@ -167,6 +221,9 @@ function whichPage() {
  * response from the background script for each panel.
  */
 async function renderIntoSearchPanels(panels) {
+
+  // maps full name -> research topic
+  const researchTopics = await fetchLocalResearchData();
   for (const panel of panels) {
     if (panel.querySelector(".about-my-professor-root")) return; // avoid duplicate mounts(will come in handy when we cache the results)
 
@@ -193,13 +250,18 @@ async function renderIntoSearchPanels(panels) {
       }
     }
     //console.log("dict: ", profileDict?.data);
-    let profData = null;
-    let rateMyProfessorData = null;
+	let profData,
+      rateMyProfessorData,
+      researchTopicText,
+      fullName = null;
+    // get full data from API
+
     if (profileDict != null) {
       profData = profileDict.data;
       rateMyProfessorData = profileDict.rateMyProfessor;
-    }
-
+      fullName = getFirst(profData?.cn);
+      researchTopicText = researchTopics[[fullName]];
+	}
     //1. Find the main course title header (the <h2>)
     const mount = document.createElement("span");
     mount.className = "about-my-professor-root";
@@ -250,6 +312,7 @@ async function renderIntoCartPanels(panels) {
   for (const panel of panels) {
     if (panel.querySelector(".about-my-professor-root")) return; // avoid duplicate mounts(will come in handy when we cache the results)
 
+    const researchTopics = await fetchLocalResearchData();
     let name = getProfNameInCart(panel);
     if (name == null) {
       return;
@@ -272,11 +335,18 @@ async function renderIntoCartPanels(panels) {
       }
     }
     //console.log("dict: ", profileDict?.data);
-    let profData = null;
-    let rateMyProfessorData = null;
+
+    let profData,
+      rateMyProfessorData,
+      researchTopicText,
+      fullName = null;
+    // get full data from API
+
     if (profileDict != null) {
       profData = profileDict.data;
       rateMyProfessorData = profileDict.rateMyProfessor;
+      fullName = getFirst(profData?.cn);
+      researchTopicText = researchTopics[[fullName]];
     }
 
     //create a mount and add it to the page's html

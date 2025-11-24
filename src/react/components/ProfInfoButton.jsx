@@ -276,7 +276,11 @@ export default function ProfInfoButton(props) {
           <div className="prof-info-modal" role="dialog" aria-modal="true">
             <div className="prof-info-header">
               <h3 className="prof-info-title">Professor Info</h3>
-              <button className="prof-info-close" onClick={handleOpen}>
+              <button
+                className="prof-info-close"
+                onClick={handleOpen}
+                type="button"
+              >
                 X
               </button>
             </div>
@@ -379,6 +383,7 @@ export default function ProfInfoButton(props) {
                 <button
                   className="prof-info-more-btn"
                   onClick={handleToggleMoreInfo}
+                  type="button"
                 >
                   {showMoreInfo ? "Show Less" : "More Info"}
                 </button>
