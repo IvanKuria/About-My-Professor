@@ -49,6 +49,11 @@ function getProfNameInCart(panel) {
   const nameBox = panel.querySelector(
     '[id^="win0divDERIVED_REGFRM1_SSR_INSTR_LONG$"]',
   );
+  console.log(nameBox);
+  if (nameBox==null){
+    return null;
+  }
+ 
   let name = nameBox.outerText;
   //console.log(name);
   if (name == "" || name == undefined || name == null) {
@@ -72,23 +77,6 @@ function getProfNameInCart(panel) {
 
 //Modularized this and other parts to reduce repetition for shopping cart B.C.
 function getUIDFromJson(name) {
-  //get uID from json
-  // let uID = "jdoe";
-  // //console.log(data);
-  // //get uID by indexing the json data as a dictionary
-  // if (data[name]) {
-  //   uID = data[name];
-  // } else {
-  //   console.log(
-  //     "couldn't match name to uID in the json, gave output",
-  //     data[name],
-  //     "for name: ",
-  //     name,
-  //   );
-  // }
-  //console.log(uID);
-
-  //why was the code above replaced and if the code below is better why is the code above still there? B.C.
 
   let uID = "jdoe";
   if (data[name]) {
@@ -206,7 +194,7 @@ async function renderIntoSearchPanels(panels) {
     //get name from panel
     let name = getProfNameInSearch(panel);
     if (name == null) {
-      return;
+      continue;
     }
 
     //Modularized this - B.C.
@@ -293,7 +281,7 @@ async function renderIntoCartPanels(panels) {
     const researchTopics = await fetchLocalResearchData();
     let name = getProfNameInCart(panel);
     if (name == null) {
-      return;
+      continue;
     }
 
     //Modularized this - B.C.
