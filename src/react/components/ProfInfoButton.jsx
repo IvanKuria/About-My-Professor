@@ -242,8 +242,8 @@ export default function ProfInfoButton(props) {
 
   return (
     <div className={containerClass}>
-      {/* Button to toggle popup */}
-      <button className="prof-info-btn" onClick={handleOpen}>
+      {/* Button to toggle popup, added type so that it works in the shopping cart - B.C> */}
+      <button className="prof-info-btn" onClick={handleOpen} type="button">
         {/* SVG Icon */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -266,7 +266,11 @@ export default function ProfInfoButton(props) {
           <div className="prof-info-modal" role="dialog" aria-modal="true">
             <div className="prof-info-header">
               <h3 className="prof-info-title">Professor Info</h3>
-              <button className="prof-info-close" onClick={handleOpen}>
+              <button
+                className="prof-info-close"
+                onClick={handleOpen}
+                type="button"
+              >
                 X
               </button>
             </div>
@@ -369,6 +373,7 @@ export default function ProfInfoButton(props) {
                 <button
                   className="prof-info-more-btn"
                   onClick={handleToggleMoreInfo}
+                  type="button"
                 >
                   {showMoreInfo ? "Show Less" : "More Info"}
                 </button>
