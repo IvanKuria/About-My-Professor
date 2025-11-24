@@ -50,10 +50,10 @@ function getProfNameInCart(panel) {
     '[id^="win0divDERIVED_REGFRM1_SSR_INSTR_LONG$"]',
   );
   console.log(nameBox);
-  if (nameBox==null){
+  if (nameBox == null) {
     return null;
   }
- 
+
   let name = nameBox.outerText;
   //console.log(name);
   if (name == "" || name == undefined || name == null) {
@@ -77,7 +77,6 @@ function getProfNameInCart(panel) {
 
 //Modularized this and other parts to reduce repetition for shopping cart B.C.
 function getUIDFromJson(name) {
-
   let uID = "jdoe";
   if (data[name]) {
     const value = String(data[name]); // Get the value, e.g., "https://...uid=chern133"
