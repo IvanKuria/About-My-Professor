@@ -1,34 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import "../styles/index.css";
-import { getFirst } from "../../utils/utils";
-
-/**
- * A new component to render a 5-star rating.
- * @param {object} props - Component props.
- * @param {number} props.rating - The rating number (0-5).
- * @param {number} props.numRatings - The total number of ratings.
- */
-function StarRating({ rating, numRatings }) {
-  // If rating is null or there are no ratings, display "N/A"
-  if (rating == null || numRatings === 0) {
-    return <span className="metric-value">N/A</span>;
-  }
-
-  return (
-    <div className="star-rating">
-      {[...Array(5)].map((_, index) => (
-        <svg
-          key={index}
-          className={index < rating ? "star-filled" : "star-empty"}
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M12 17.27L18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21 12 17.27z" />
-        </svg>
-      ))}
-    </div>
-  );
-}
+import { getFirst, StarRating } from "../../utils/utils";
 
 export default function ProfInfoButton(props) {
   // Track whether popup is open or closed
@@ -66,6 +38,11 @@ export default function ProfInfoButton(props) {
   const roundToOneDecimal = (value) => {
     const num = toNumber(value);
     return num != null ? Math.round(num * 10) / 10 : null;
+  };
+
+  // Helper function to ensure precision (place this outside component or in utils)
+  const formatNumber = (num) => {
+    return num ? Number(num).toFixed(1) : "N/A";
   };
 
   const roundedRating = roundToWhole(rating);
@@ -327,44 +304,6 @@ export default function ProfInfoButton(props) {
                       )}
                     </div>
                   ))}
-
-                  {/* Website, styled like Email/Phone */}
-                  {website && (
-                    <div className="campus-detail">
-                      <span className="detail-label">Website</span>
-                      <a
-                        className="detail-value"
-                        href={website}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        {formatLinkLabel(website)}
-                      </a>
-                    </div>
-                  )}
-
-                  {/* Selected publications, also in the same grid cell */}
-                  {publicationLinks.length > 0 && (
-                    <div className="campus-detail">
-                      <span className="detail-label">
-                        Selected Publications
-                      </span>
-                      <ul className="detail-value-list">
-                        {publicationLinks.slice(0, 5).map((link, i) => (
-                          <li key={i}>
-                            <a
-                              className="detail-value"
-                              href={link}
-                              target="_blank"
-                              rel="noreferrer"
-                            >
-                              {formatLinkLabel(link)}
-                            </a>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
                 </div>
               )}
 
@@ -391,6 +330,21 @@ export default function ProfInfoButton(props) {
                     </div>
                   )}
 
+                  {/* Website, styled like Email/Phone */}
+                  {website && (
+                    <div className="campus-detail">
+                      <span className="detail-label">Website</span>
+                      <a
+                        className="detail-value"
+                        href={website}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {formatLinkLabel(website)}
+                      </a>
+                    </div>
+                  )}
+
                   {/* Courses Taught */}
                   {Array.isArray(courses) && courses.length > 0 && (
                     <div className="campus-card-section">
@@ -400,6 +354,29 @@ export default function ProfInfoButton(props) {
                       <ul>
                         {courses.map((course, i) => (
                           <li key={i}>{course}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  {/* Selected publications, also in the same grid cell */}
+                  {publicationLinks.length > 0 && (
+                    <div className="campus-detail">
+                      <span className="detail-label">
+                        Selected Publications
+                      </span>
+                      <ul className="detail-value-list">
+                        {publicationLinks.slice(0, 5).map((link, i) => (
+                          <li key={i}>
+                            <a
+                              className="detail-value"
+                              href={link}
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              {formatLinkLabel(link)}
+                            </a>
+                          </li>
                         ))}
                       </ul>
                     </div>
@@ -448,93 +425,115 @@ export default function ProfInfoButton(props) {
               )}
             </div>
 
-            {/* RMP section */}
-            <div className="rmp-section">
-              {rateMyProfessor ? (
-                <div className="rmp-card">
-                  <div className="rmp-card-header">
-                    <h4>Rate My Professors</h4>
-                    {profileUrl && (
-                      <a href={profileUrl} target="_blank" rel="noreferrer">
-                        View Profile
-                      </a>
-                    )}
-                  </div>
-
-                  <div className="rmp-card-grid">
-                    {/* stars rating */}
-                    <div className="rmp-metric rating">
-                      <span className="metric-label">Rating</span>
-                      {/* Use the new StarRating component */}
-                      <StarRating
-                        rating={roundedRating}
-                        numRatings={numRatings}
-                      />
-                      <span className="metric-sub">Average score</span>
+            {/* RMP section*/}
+            {/* will only show if the prof does have a existing rmp profile */}
+            {rateMyProfessor && (
+              <div className="rmp-section">
+                {rateMyProfessor ? (
+                  <div className="rmp-card">
+                    <div className="rmp-card-header">
+                      <h4>Rate My Professors</h4>
+                      {profileUrl && (
+                        <a href={profileUrl} target="_blank" rel="noreferrer">
+                          View Profile
+                        </a>
+                      )}
                     </div>
 
-                    {/* difficulty */}
-                    <div className="rmp-metric difficulty">
-                      <span className="metric-label">Difficulty</span>
-                      <span className="metric-value">
-                        {roundedDifficulty != null
-                          ? `${roundedDifficulty}/5`
-                          : "N/A"}
-                      </span>
-                      <span className="metric-sub">Avg difficulty</span>
-                    </div>
+                    <div className="rmp-card-grid">
+                      {/* stars rating */}
+                      <div className="rmp-metric rating">
+                        {/* EDGE CASE: Handle 0 ratings separately so it doesn't show empty stars or 0.0 */}
+                        {numRatings > 0 ? (
+                          <StarRating
+                            rating={roundedRating}
+                            numRatings={numRatings}
+                          />
+                        ) : (
+                          <span className="metric-value-na">N/A</span>
+                        )}
+                        <span className="metric-sub">
+                          {/* EDGE CASE: Clarity on what the score is */}
+                          {numRatings > 0 ? "Average score" : "No ratings yet"}
+                        </span>
+                      </div>
 
-                    {/* would take */}
-                    <div className="rmp-metric would-take">
-                      <span className="metric-label">Would Take Again</span>
-                      <span className="metric-value">
-                        {roundedWouldTakeAgain != null && numRatings > 0
-                          ? `${roundedWouldTakeAgain}%`
-                          : "N/A"}
-                      </span>
-                      <span className="metric-sub">Student approval</span>
-                    </div>
+                      {/* difficulty */}
+                      <div className="rmp-metric difficulty">
+                        <span className="metric-label">Difficulty</span>
+                        <span className="metric-value">
+                          {/* EDGE CASE: Check for 0, null, or 0 ratings */}
+                          {roundedDifficulty &&
+                          roundedDifficulty > 0 &&
+                          numRatings > 0
+                            ? `${formatNumber(roundedDifficulty)}/5`
+                            : "N/A"}
+                        </span>
+                        <span className="metric-sub">Avg difficulty</span>
+                      </div>
 
-                    {/* total ratings */}
-                    <div className="rmp-metric total-ratings">
-                      <span className="metric-label">Reviews</span>
-                      <span className="metric-value">
-                        {roundedWouldTakeAgain != null ? numRatings : "N/A"}
-                      </span>
-                      <span className="metric-sub">Total reviews</span>
-                    </div>
-                  </div>
+                      {/* would take */}
+                      <div className="rmp-metric would-take">
+                        <span className="metric-label">Would Take Again</span>
+                        <span className="metric-value">
+                          {/* EDGE CASE: RMP sometimes returns -1 for N/A data */}
+                          {roundedWouldTakeAgain != null &&
+                          roundedWouldTakeAgain >= 0 &&
+                          numRatings > 0
+                            ? `${roundedWouldTakeAgain}%`
+                            : "N/A"}
+                        </span>
+                        <span className="metric-sub">Student approval</span>
+                      </div>
 
-                  {/* top tags */}
-                  {topTags.length > 0 && (
-                    <div className="rmp-tags">
-                      <span className="tags-label">Top Tags</span>
-                      <div className="tags-grid">
-                        {topTags.map((tag) => (
-                          <span
-                            className="tag-chip"
-                            key={tag.id || tag.legacyId}
-                          >
-                            <span className="tag-name">{tag.tagName}</span>
-                            <span className="tag-count">{tag.tagCount}</span>
-                          </span>
-                        ))}
+                      {/* total ratings */}
+                      <div className="rmp-metric total-ratings">
+                        <span className="metric-label">Reviews</span>
+                        <span className="metric-value">
+                          {roundedWouldTakeAgain != null ? numRatings : "N/A"}
+                        </span>
+                        <span className="metric-sub">Total reviews</span>
                       </div>
                     </div>
-                  )}
-                </div>
-              ) : (
-                // empty state
-                <div className="rmp-card empty">
-                  <div className="rmp-card-header">
-                    <h4>Rate My Professors</h4>
+
+                    {/* top tags */}
+                    {topTags.length > 0 && (
+                      <div className="rmp-tags">
+                        <span className="tags-label">Top Tags</span>
+                        <div className="tags-grid">
+                          {/* EDGE CASE: Slice to prevent UI overflow if prof has many tags */}
+                          {topTags.slice(0, 5).map((tag) => (
+                            <span
+                              className="tag-chip"
+                              // EDGE CASE: Fallback if ID is missing
+                              key={tag.id || tag.legacyId || Math.random()}
+                            >
+                              {/* EDGE CASE: Truncate very long tag names via CSS or here */}
+                              <span className="tag-name">
+                                {tag.tagName.length > 20
+                                  ? tag.tagName.substring(0, 20) + "..."
+                                  : tag.tagName}
+                              </span>
+                              <span className="tag-count">{tag.tagCount}</span>
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                   </div>
-                  <p className="rmp-empty">
-                    Rate My Professors data not available.
-                  </p>
-                </div>
-              )}
-            </div>
+                ) : (
+                  // empty state
+                  <div className="rmp-card empty">
+                    <div className="rmp-card-header">
+                      <h4>Rate My Professors</h4>
+                    </div>
+                    <p className="rmp-empty">
+                      Rate My Professors data not available.
+                    </p>
+                  </div>
+                )}
+              </div>
+            )}
           </div>
         </div>
       )}
