@@ -2,6 +2,7 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import ProfInfoButton from "../react/components/ProfInfoButton.jsx";
 import data from "../data/prof_uids.json";
+import { getFirst } from "../utils/utils.js";
 
 /**
  * Scrapes the professor's name from a specific, known HTML structure
@@ -112,6 +113,7 @@ function getUIDFromJson(name) {
   return uID;
 }
 
+
 /**
  * Sends a message to the background script to fetch all professor data
  * (both from the Campus Directory and RateMyProfessors).
@@ -187,36 +189,13 @@ async function fetchLocalResearchData() {
     console.error("Error parsing research JSON:", e);
     return {};
   }
-  const panelsCartShopping = document.querySelectorAll(
-    '[id^="trSSR_REGFORM_VW$0_row"]',
-  );
-  if (!panelsCartShopping || panelsCartShopping.length === 0) {
-    //console.log("nothing in the shopping Cart");
-  } else {
-    cartPage = true;
-    //console.log("found row div in the Cart for Shopping");
-  }
-  const panelsCartEnrolled = document.querySelectorAll(
-    '[id^="trSTDNT_ENRL_SSVW$0_row"]',
-  );
-  if (!panelsCartEnrolled || panelsCartEnrolled.length === 0) {
-    //console.log("empty enrolled section in Shopping Cart page");
-  } else {
-    cartPage = true;
-    //console.log("found row div in the Cart for Enrolled");
-  }
-
-  //handle cases of each page or if none don't do anything - B.C.
-  if (searchPage == true) {
-    renderIntoSearchPanels(panelsSearch);
-  } else if (cartPage == true) {
-    const panels = [...panelsCartShopping, ...panelsCartEnrolled];
-    renderIntoCartPanels(panels);
-  } else return;
+  
 }
 
 /**
  * functions to inject the React info-button component into each course pannel.
+ * Main function to find all course panels on the page and inject
+ * the React info-button component into each one.
  * This function is 'async' because it must 'await' the API
  * response from the background script for each panel.
  */
@@ -224,6 +203,7 @@ async function renderIntoSearchPanels(panels) {
 
   // maps full name -> research topic
   const researchTopics = await fetchLocalResearchData();
+
   for (const panel of panels) {
     if (panel.querySelector(".about-my-professor-root")) return; // avoid duplicate mounts(will come in handy when we cache the results)
 
@@ -256,6 +236,11 @@ async function renderIntoSearchPanels(panels) {
       fullName = null;
     // get full data from API
 
+    let profData,
+      rateMyProfessorData,
+      researchTopicText,
+      fullName = null;
+    // get full data from API
     if (profileDict != null) {
       profData = profileDict.data;
       rateMyProfessorData = profileDict.rateMyProfessor;
@@ -263,6 +248,8 @@ async function renderIntoSearchPanels(panels) {
       researchTopicText = researchTopics[[fullName]];
 	}
     //1. Find the main course title header (the <h2>)
+
+    const targetPanel = panel;
     const mount = document.createElement("span");
     mount.className = "about-my-professor-root";
     const targetPanel = panel;
@@ -301,6 +288,7 @@ async function renderIntoSearchPanels(panels) {
           <ProfInfoButton
             apiData={profData}
             rateMyProfessor={rateMyProfessorData}
+            localResearchTopic={researchTopicText} // Pass the specific research topic as a string
           />
         </React.StrictMode>,
       );
