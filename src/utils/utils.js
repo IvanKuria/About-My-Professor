@@ -10,19 +10,68 @@
  * @returns {string|null} The trimmed string or null if the value is invalid or empty.
  */
 export const getFirst = (value) => {
-  if (
-    Array.isArray(value) &&
-    value.length > 0 &&
-    typeof value[0] === "string"
-  ) {
-    // If it's an array, return the trimmed first element
-    return value[0].trim() || null;
-  }
-  if (typeof value === "string") {
-    // If it's a string, return the trimmed value
-    return value.trim() || null;
-  }
-  return null;
+  // Handle null or undefined immediately
+  if (value == null) return null;
+
+  // Extract the target value
+  // If it's an array, take the first element. If it's empty [], target becomes undefined.
+  // If it's a value (string/number), use it directly.
+  const target = Array.isArray(value) ? value[0] : value;
+
+  // Safety check for the target (e.g., if array was empty)
+  if (target == null) return null;
+
+  // Coerce to String and Trim
+  // This ensures that Numbers (e.g. 101) or Boolean values don't crash the app
+  // and are treated as displayable text.
+  const cleaned = String(target).trim();
+
+  // Return null if the result is an empty string (""), otherwise return the string
+  return cleaned.length > 0 ? cleaned : null;
+};
+
+/**
+ * Safely converts an input value (string or number) into a finite Number.
+ * Useful for handling API data that might return "N/A", null, or numeric strings.
+ * @param {string|number} value - The value to parse.
+ * @returns {number|null} The valid number, or null if the input is invalid/infinite.
+ */
+export const toNumber = (value) => {
+  const num = typeof value === "number" ? value : parseFloat(value);
+  return Number.isFinite(num) ? num : null;
+};
+
+/**
+ * Rounds a value to the nearest whole integer.
+ * Handles string inputs by parsing them first.
+ * @param {string|number} value - The value to round.
+ * @returns {number|null} The rounded integer, or null if input was invalid.
+ */
+export const roundToWhole = (value) => {
+  const num = toNumber(value);
+  return num != null ? Math.round(num) : null;
+};
+
+/**
+ * Rounds a value to exactly one decimal place.
+ * Example: 3.45 -> 3.5, 3.44 -> 3.4
+ * @param {string|number} value - The value to round.
+ * @returns {number|null} The rounded number, or null if input was invalid.
+ */
+export const roundToOneDecimal = (value) => {
+  const num = toNumber(value);
+  return num != null ? Math.round(num * 10) / 10 : null;
+};
+
+/**
+ * Formats a number as a string with exactly one decimal place for UI display.
+ * Returns "N/A" if the value is falsy (0, null, undefined).
+ * Example: 3.5 -> "3.5", 3 -> "3.0"
+ * @param {string|number} num - The value to format.
+ * @returns {string} The formatted string or "N/A".
+ */
+export const formatNumber = (num) => {
+  return num ? Number(num).toFixed(1) : "N/A";
 };
 
 /**
@@ -38,7 +87,7 @@ export function StarRating({ rating, numRatings }) {
   }
 
   return (
-    <div className="star-rating">
+    <div className="star-rating" aria-label={`Rating: ${rating} out of 5`}>
       {[...Array(5)].map((_, index) => (
         <svg
           key={index}
