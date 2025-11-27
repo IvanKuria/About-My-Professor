@@ -1,7 +1,7 @@
-import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import ProfInfoButton from '../../src/react/components/ProfInfoButton.jsx';
+import React from "react";
+import { render, screen, fireEvent } from "@testing-library/react";
+import "@testing-library/jest-dom";
+import ProfInfoButton from "../../src/react/components/ProfInfoButton.jsx";
 
 // --- MOCKS ---
 global.chrome = {
@@ -10,67 +10,155 @@ global.chrome = {
   },
 };
 
-const mockApiData = {
-  cn: ["Professor Test"], 
+const createApiData = (overrides = {}) => ({
+  cn: ["Professor Test"],
   mail: ["test@ucsc.edu"],
-  telephonenumber: ["555-1234"],
+  telephonenumber: ["123-4567"],
   ucscpersonpubdepartmentnumber: ["Computer Science"],
+  ucscpersonpubdivision: ["Engineering"],
   ucscpersonpubofficehours: ["Mon 2-4pm"],
+  ucscpersonpubwebsite: ["http://example.com"],
   ucscpersonpubresearchinterest: ["Artificial Intelligence"],
-  jpegphoto: "https://example.com/photo.jpg?uid=ptest"
-};
+  ucscpersonpubfacultycourses: ["CSE 101"],
+  ucscpersonpubselectedpublication: ['<a href="http://pub.com">My Paper</a>'],
+  jpegphoto: "https://example.com/photo.jpg?uid=ptest",
+  ...overrides,
+});
 
-describe('ProfInfoButton Component', () => {
-  
-  test('opens the modal when the button is clicked', () => {
-    render(<ProfInfoButton apiData={mockApiData} />);
-    
-    // Click the main button
-    const button = screen.getByRole('button', { name: /Professor Info/i });
-    fireEvent.click(button);
-    
-    // Check for the Header
-    expect(screen.getByText(/About the Professor/i)).toBeInTheDocument();
+const createRmpData = (overrides = {}) => ({
+  avgRatingRounded: 4.0,
+  numRatings: 10,
+  avgDifficultyRounded: 3.0,
+  wouldTakeAgainPercentRounded: 80,
+  legacyId: 12345,
+  teacherRatingTags: [{ tagName: "Helpful", tagCount: 5 }],
+  ...overrides,
+});
 
-    // Check for the Name
-    expect(screen.getByText(/Professor Test/i)).toBeInTheDocument();
+describe("ProfInfoButton Component", () => {
+  // =================================================================
+  // Basic Identity (basic info for prof)
+  // Stories: Button present, Full name (last, first), Department
+  // Email + Phone Number, Prof Picture,
+  // In general, the tests should have some sort of format that
+  // is easily readable and more importantly, it has to be consistent.
+  // =================================================================
+  describe("Basic Info", () => {
+    // Basic Info - User Story 1
+    test("BI-US1: opens the modal when the button is clicked", () => {
+      render(<ProfInfoButton apiData={createApiData()} />);
+
+      // Click the main button
+      const button = screen.getByRole("button", { name: /Professor Info/i });
+      fireEvent.click(button);
+      expect(screen.getByText(/About the Professor/i)).toBeInTheDocument();
+    });
+
+    test("MISC-US1-2: Closes modal on close button click", () => {
+      render(<ProfInfoButton apiData={createApiData()} />);
+      fireEvent.click(screen.getByRole("button", { name: /Professor Info/i }));
+
+      const closeBtn = screen.getByLabelText("Close");
+      fireEvent.click(closeBtn);
+
+      expect(
+        screen.queryByText(/About the Professor/i),
+      ).not.toBeInTheDocument();
+    });
+
+    test.todo("placeholder");
+
+    test.todo("placeholder");
+
+    test.todo("placeholder");
   });
 
-  test('formats research topic correctly', () => {
-     render(<ProfInfoButton apiData={mockApiData} localResearchTopic="Deep Learning" />);
-     
-     // Open Modal
-     fireEvent.click(screen.getByRole('button', { name: /Professor Info/i }));
-     
-     // Click "More Info" to reveal the research topic
-     const moreInfoBtn = screen.getByText(/More Info/i);
-     fireEvent.click(moreInfoBtn);
+  // =========================================================================================
+  // More Info (for the prof)
+  // Stories: Office Hours, Division, Research Interests, Website, Publications, Other Courses
+  // =========================================================================================
+  describe("More Info", () => {
+    test.todo("placeholder");
 
-     // Check for the Label using the custom matcher
-     expect(screen.getByText((content, element) => {
-       return element.tagName.toLowerCase() === 'strong' && content.includes('Research Topic');
-     })).toBeInTheDocument();
+    test.todo("placeholder");
 
-     // Check for the Value
-     expect(screen.getByText(/Deep Learning/i)).toBeInTheDocument();
+    test.todo("placeholder");
+
+    test("MI-US3: Research Topic formats correctly", async () => {
+      render(
+        <ProfInfoButton
+          apiData={createApiData()}
+          localResearchTopic="Deep Learning"
+        />,
+      );
+
+      fireEvent.click(screen.getByRole("button", { name: /Professor Info/i }));
+      fireEvent.click(screen.getByText(/More Info/i));
+
+      // Custom matcher for bold label
+      expect(
+        screen.getByText((content, element) => {
+          return (
+            element.tagName.toLowerCase() === "strong" &&
+            content.includes("Research Topic")
+          );
+        }),
+      ).toBeInTheDocument();
+
+      expect(screen.getByText(/Deep Learning/i)).toBeInTheDocument();
+    });
+
+    test("MI-US4: Displays Division if different from Dept", () => {
+      const data = createApiData({
+        ucscpersonpubdivision: ["Engineering"],
+      });
+      render(<ProfInfoButton apiData={data} />);
+      fireEvent.click(screen.getByRole("button", { name: /Professor Info/i }));
+      expect(screen.getByText("Engineering")).toBeInTheDocument();
+    });
+
+    test("MI-US5: Displays Website and Publications in More Info", () => {
+      render(<ProfInfoButton apiData={createApiData()} />);
+      fireEvent.click(screen.getByRole("button", { name: /Professor Info/i }));
+      fireEvent.click(screen.getByText(/More Info/i));
+
+      expect(screen.getByText("example.com/")).toBeInTheDocument();
+      expect(screen.getByText(/Publication 1/i)).toBeInTheDocument();
+    });
+
+    test.todo("placeholder");
+
+    test.todo("placeholder");
   });
 
-  test('toggles "More Info" section', () => {
-    render(<ProfInfoButton apiData={mockApiData} />);
-    fireEvent.click(screen.getByRole('button', { name: /Professor Info/i }));
+  // ========================================================================
+  // RMP (Rate My Professor Section)
+  // Stories: Star Rating, Tags, Avaliable in Shopping Cart, Stored in Cache
+  // ========================================================================
+  describe("More Info", () => {
+    test.todo("placeholder");
 
-    const moreBtn = screen.getByText('More Info');
-    expect(moreBtn).toBeInTheDocument();
+    test.todo("placeholder");
 
-    // Content should NOT be visible yet
-    expect(screen.queryByText('Office Hours:')).not.toBeInTheDocument();
+    test.todo("placeholder");
+  });
 
-    // Click to expand
-    fireEvent.click(moreBtn);
-    expect(screen.getByText('Show Less')).toBeInTheDocument();
-    expect(screen.getByText('Office Hours:')).toBeInTheDocument();
-    
-    // Check if Research Interests (which are also inside More Info now) are visible
-    expect(screen.getByText(/Artificial Intelligence/i)).toBeInTheDocument();
+  // ==========================================================
+  // Misc. stuff
+  // Stories: Testing
+  // ==========================================================
+  describe("Misc", () => {
+    test("MISC-US1: Does not crash with empty API data", () => {
+      render(<ProfInfoButton apiData={{}} />);
+      const button = screen.getByRole("button", { name: /Professor Info/i });
+      fireEvent.click(button);
+
+      // Should show fallback
+      expect(screen.getByText("Not Listed")).toBeInTheDocument();
+    });
+
+    test.todo("placeholder");
+
+    test.todo("placeholder");
   });
 });

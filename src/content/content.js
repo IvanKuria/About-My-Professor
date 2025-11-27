@@ -224,7 +224,7 @@ async function renderIntoSearchPanels(panels) {
     //console.log("dict: ", profileDict?.data);
 
     // if (uID == "jdoe") {
-    //   console.log("Skipping render because UID is jdoe"); 
+    //   console.log("Skipping render because UID is jdoe");
     // }
 
     let profData,

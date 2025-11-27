@@ -61,7 +61,7 @@ It fetches professor data from UCSC’s public directory API using each professo
 
 ## Testing
 
-We're using [Jest]() for unit testing logic and components, and [Playwright]() for End-to-End testing to simulate how our extension behaves in a real (chrome) browser environment.
+We're using [Jest](https://jestjs.io/) for unit testing logic and components, and [Playwright](https://playwright.dev/) for End-to-End testing to simulate how our extension behaves in a real (chrome) browser environment.
 
 ### Prerequisites
 
