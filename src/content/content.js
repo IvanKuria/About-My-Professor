@@ -76,34 +76,76 @@ function getProfNameInCart(panel) {
 }
 
 //Modularized this and other parts to reduce repetition for shopping cart B.C.
+/**
+ * Resolves a professor's UID from a dataset using Exact and Fuzzy matching.
+ * Strategy:
+ * 1. Checks for exact key match.
+ * 2. If not found, attempts to match 'Last, F.' pattern against keys like 'Last, F.M.'
+ * @param {string} name - The name from the webpage (e.g., "Jullig,R.").
+ * @param {object} dataset - The dictionary of names to UIDs/URLs (from prof_uids.json).
+ * @returns {string} The resolved UID string (e.g. "rjullig"), or "jdoe" if not found.
+ */
 function getUIDFromJson(name) {
   let uID = "jdoe";
+  // try exact match first
+  let value = data[name];
 
-  // 1. Clean the name (remove extra spaces)
-  const cleanName = name.trim();
+  // if exact match fails, try fuzzy match
+  if (!value) {
+    try {
+      // Split input "Jullig, R." -> "jullig", "r"
+      const nameParts = name.split(",");
+      if (nameParts.length >= 2) {
+        const targetLast = nameParts[0].trim().toLowerCase(); // "jullig"
+        const targetFirstInitial = nameParts[1].trim().charAt(0).toLowerCase(); // "r"
 
-  // 2. Try Exact Match
-  let match = data[cleanName];
+        // search keys: find "jullig r"
+        const matchKey = Object.keys(data).find((key) => {
+          const keyParts = key.split(",");
+          if (keyParts.length < 2) return false;
 
-  // 3. If not found, try UpperCase (Common in legacy databases)
-  if (!match) {
-    match = data[cleanName.toUpperCase()];
+          const keyLast = keyParts[0].trim().toLowerCase();
+          const keyFirstInitial = keyParts[1].trim().charAt(0).toLowerCase();
+
+          // returns only if "juillig" and "r" matches with the key in the JSON file exactly
+          return (
+            targetLast === keyLast && targetFirstInitial === keyFirstInitial
+          );
+        });
+
+        if (matchKey) {
+          console.log(
+            `Fuzzy matched input '${name}' to JSON key '${matchKey}'`,
+          );
+          value = data[matchKey];
+        }
+      }
+    } catch (err) {
+      console.error("Error during fuzzy matching:", err);
+    }
   }
 
-  if (match) {
-    const value = String(match);
-    const uidMatch = value.match(/uid=([\w-]+)/);
+  // process the found value (if any)
+  if (value) {
+    const stringValue = String(value); // e.g. "https://...uid=rjullig"
+
+    // use regex to find 'uid=' and capture what's after it
+    const uidMatch = stringValue.match(/uid=([\w-]+)/);
 
     if (uidMatch && uidMatch[1]) {
+      // found a match, e.g., uidMatch[1] is "rjullig"
       uID = uidMatch[1];
-    } else if (!value.includes("http")) {
-      uID = value;
+    } else if (!stringValue.includes("http")) {
+      // fallback: The value might already be a clean UID
+      uID = stringValue;
+    } else {
+      // the value was a bad URL or something we couldn't parse
+      console.log(`Found invalid UID value for ${name}: ${stringValue}`);
     }
   } else {
-    console.log(
-      `Couldn't match name to uID in the json for name: "${cleanName}"`,
-    );
+    console.log(`Couldn't match name to uID in the json for name: ${name}`);
   }
+
   return uID;
 }
 
