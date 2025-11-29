@@ -14,7 +14,6 @@
   position: absolute;
   top: 15px;
   right: 18px; /* Distance from the right of the panel */
-
   z-index: 999;
   font-family:
     -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
@@ -32,7 +31,6 @@
   font-weight: 600;
   padding: 0;
   margin: 0;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -40,17 +38,14 @@
   height: 28px;
   border-radius: 50%;
   border: none;
-
   background-color: #00508f;
   color: #ffffff;
   cursor: pointer;
-
   /* MUI-style shadow */
   box-shadow:
     0 2px 2px 0 rgba(0, 0, 0, 0.14),
     0 3px 1px -2px rgba(0, 0, 0, 0.12),
     0 1px 5px 0 rgba(0, 0, 0, 0.2);
-
   transition: all 0.2s ease-in-out;
 }
 
@@ -66,6 +61,124 @@
     0 4px 5px -2px rgba(0, 0, 0, 0.2),
     0 7px 10px 1px rgba(0, 0, 0, 0.14),
     0 2px 16px 1px rgba(0, 0, 0, 0.12);
+}
+
+/* sticky card container (draggable) */
+.prof-sticky-card {
+  position: fixed;
+  width: 360px;
+  max-height: 600px;
+  background: #f8fafc;
+  border-radius: 20px;
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.2),
+    0 0 0 1px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+  z-index: 10000;
+  overflow: hidden;
+  animation: fadeIn 0.2s ease-out;
+
+  /* default cursor (pinned state) */
+  cursor: default;
+}
+
+/* when dragging is unlocked */
+.prof-sticky-card.draggable-active {
+  cursor: grab;
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.2),
+    0 0 0 2px #00508f; /* Blue border when moving */
+}
+
+.prof-sticky-card.draggable-active:active {
+  cursor: grabbing;
+}
+
+/* header */
+.prof-sticky-header {
+  background-color: white;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f1f5f9;
+  user-select: none;
+}
+
+.prof-info-title {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* lock button */
+.prof-lock-btn {
+  background: #f1f5f9;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #64748b;
+  transition: all 0.2s;
+}
+.prof-lock-btn:hover {
+  background: #e2e8f0;
+  color: #334155;
+}
+.prof-lock-btn.unlocked {
+  color: #00508f;
+  background: #e0f2fe;
+}
+
+/* close button */
+.prof-info-close {
+  background: #f1f5f9;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+.prof-info-close:hover {
+  background: #fee2e2;
+  color: #ef4444;
+}
+
+/* scrollable content area */
+.prof-sticky-content {
+  padding: 20px;
+  overflow-y: auto;
+  flex-grow: 1;
+  background-color: #f8fafc;
+}
+
+/* custom scrollbar for popup */
+.prof-sticky-content::-webkit-scrollbar {
+  width: 6px;
+}
+.prof-sticky-content::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
 }
 
 /* Modal properties */
@@ -98,14 +211,6 @@
     0 4px 16px rgba(15, 23, 42, 0.12);
   border: 1px solid rgba(226, 232, 240, 0.8);
   position: relative;
-}
-
-.prof-info-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 16px;
 }
 
 .prof-info-title {
@@ -644,6 +749,15 @@
   .rmp-section {
     border-left: none;
     border-top: 8px solid #e1e4e8;
+  }
+}
+
+@media (max-width: 480px) {
+  .prof-sticky-card {
+    /* On mobile, shrink width to fit 90% of screen */
+    width: 90vw !important;
+    max-height: 80vh;
+    font-size: 14px;
   }
 }
 
