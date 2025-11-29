@@ -8,10 +8,10 @@ import { getFirst } from "../utils/utils.js";
  * Scrapes the professor's name from a specific, known HTML structure
  * in a class panel.
  * @param {Element} panel - The DOM element for a single course panel.
- * @returns {string | null} The professor's name (e.g., "TANTALO,C") or null if not found.
+ * @returns {string | null} The professor's name (e.g., "DEY, P") or null if not found.
  */
 function getProfNameInSearch(panel) {
-  const profDivs = panel.querySelectorAll("div.col-xs-6.col-sm-3");
+  const profDivs = panel.querySelectorAll("div.col-xs-6.col-sm-3 div");
 
   for (const div of profDivs) {
     const text = div.textContent.trim();
@@ -78,24 +78,31 @@ function getProfNameInCart(panel) {
 //Modularized this and other parts to reduce repetition for shopping cart B.C.
 function getUIDFromJson(name) {
   let uID = "jdoe";
-  if (data[name]) {
-    const value = String(data[name]); // Get the value, e.g., "https://...uid=chern133"
 
-    // Use regex to find 'uid=' and capture what's after it
+  // 1. Clean the name (remove extra spaces)
+  const cleanName = name.trim();
+
+  // 2. Try Exact Match
+  let match = data[cleanName];
+
+  // 3. If not found, try UpperCase (Common in legacy databases)
+  if (!match) {
+    match = data[cleanName.toUpperCase()];
+  }
+
+  if (match) {
+    const value = String(match);
     const uidMatch = value.match(/uid=([\w-]+)/);
 
     if (uidMatch && uidMatch[1]) {
-      // Found a match! e.g., uidMatch[1] is "chern133"
       uID = uidMatch[1];
     } else if (!value.includes("http")) {
-      // Fallback: The value might already be a clean UID
       uID = value;
-    } else {
-      // The value was a bad URL or something we couldn't parse
-      console.log(`Found invalid UID value for ${name}: ${value}`);
     }
   } else {
-    console.log(`Couldn't match name to uID in the json for name: ${name}`);
+    console.log(
+      `Couldn't match name to uID in the json for name: "${cleanName}"`,
+    );
   }
   return uID;
 }
@@ -122,7 +129,7 @@ function whichPage() {
   let searchPage = false;
   let cartPage = false;
   //check if panels from the Search/Cart page exist - B.C.
-  const panelsSearch = document.querySelectorAll(".panel.panel-default.row");
+  const panelsSearch = document.querySelectorAll(".panel.panel-default");
   if (!panelsSearch || panelsSearch.length === 0) {
     //console.log("not in searchPage");
   } else {
@@ -188,16 +195,18 @@ async function renderIntoSearchPanels(panels) {
   const researchTopics = await fetchLocalResearchData();
 
   for (const panel of panels) {
-    if (panel.querySelector(".about-my-professor-root")) return; // avoid duplicate mounts(will come in handy when we cache the results)
+    if (panel.querySelector(".about-my-professor-root")) continue; // avoid duplicate mounts(will come in handy when we cache the results)
 
     //get name from panel
     let name = getProfNameInSearch(panel);
+    // console.log("Parsed Name:", name);
     if (name == null) {
       continue;
     }
 
     //Modularized this - B.C.
     let uID = getUIDFromJson(name);
+    // console.log("Resolved UID:", uID);
 
     //get Prof Info from API - B.C.
     let profileDict = null;
@@ -213,6 +222,10 @@ async function renderIntoSearchPanels(panels) {
       }
     }
     //console.log("dict: ", profileDict?.data);
+
+    // if (uID == "jdoe") {
+    //   console.log("Skipping render because UID is jdoe");
+    // }
 
     let profData,
       rateMyProfessorData,
@@ -345,4 +358,4 @@ async function renderIntoCartPanels(panels) {
 }
 
 // Initial attempt after a short delay
-setTimeout(whichPage, 3000);
+setTimeout(whichPage, 1500);

@@ -21,6 +21,8 @@ It fetches professor data from UCSC’s public directory API using each professo
 - **React + Webpack** – UI framework and bundler
 - **Content Scripts** – scan and inject React roots
 - **Background Service Worker** – API fetch + caching
+- **Jest** – Unit and Component testing
+- **Playwright** – End-to-End (E2E) browser testing
 - **CSS** – styling
 - **chrome.storage.local** – cache layer
 - **prof-map.json** – local mapping of abbreviated names → UID
@@ -56,6 +58,24 @@ It fetches professor data from UCSC’s public directory API using each professo
 6. When prompted, navigate to the direcory where you cloned the repo and select the `Dist` folder.
 7. Navigate to `https://my.ucsc.edu/psc/csprd/EMPLOYEE/SA/c/NUI_FRAMEWORK.PT_AGSTARTPAGE_NUI.GBL?CONTEXTIDPARAMS=TEMPLATE_ID%3aPTPPNAVCOL&scname=ADMN_ENROLLMENT&PTPPB_GROUPLET_ID=SCX_ENROLLMENT&CRefName=ADMN_NAVCOLL_4&PanelCollapsible=Y&AJAXTransfer=Y`
 8. Perform any search you want and you should see 'Hello World' in red appear under each prof panel :)
+
+## Testing
+
+We're using [Jest](https://jestjs.io/) for unit testing logic and components, and [Playwright](https://playwright.dev/) for End-to-End testing to simulate how our extension behaves in a real (chrome) browser environment.
+
+### Prerequisites
+
+Before running E2E tests, you must build the extension first (the commands below in `package.json` already handles this):
+`npm run build`
+
+### Running Tests
+
+| Command             | Description                                                                                                                              |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| npm run test:unit   | Runs Jest tests. Verifies utility functions and React component logic in isolation.                                                      |
+| npm run test:e2e    | Runs Playwright tests in Headless mode. Launches a browser with the extension loaded and tests against a local mock of the UCSC website. |
+| npm run test:e2e:ui | Runs Playwright in UI Mode. Opens a dashboard where you can watch the browser execute tests step-by-step.                                |
+| npm test            | Runs both Unit and E2E tests sequentially.                                                                                               |
 
 ## Chrome Extension Resources
 

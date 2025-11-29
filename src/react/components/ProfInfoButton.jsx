@@ -1,6 +1,13 @@
 import React, { useState, useEffect, useCallback } from "react";
 import "../styles/index.css";
-import { getFirst, StarRating } from "../../utils/utils";
+import {
+  getFirst,
+  toNumber,
+  roundToWhole,
+  roundToOneDecimal,
+  formatNumber,
+  StarRating,
+} from "../../utils/utils";
 
 export default function ProfInfoButton(props) {
   // Track whether popup is open or closed
@@ -24,32 +31,8 @@ export default function ProfInfoButton(props) {
     : [];
   const topTags = ratingTags.slice(0, 4);
 
-  // --- RMP Helper Functions ---
-  const toNumber = (value) => {
-    const num = typeof value === "number" ? value : parseFloat(value);
-    return Number.isFinite(num) ? num : null;
-  };
-
-  const roundToWhole = (value) => {
-    const num = toNumber(value);
-    return num != null ? Math.round(num) : null;
-  };
-
-  const roundToOneDecimal = (value) => {
-    const num = toNumber(value);
-    return num != null ? Math.round(num * 10) / 10 : null;
-  };
-
-  // Helper function to ensure precision (place this outside component or in utils)
-  const formatNumber = (num) => {
-    return num ? Number(num).toFixed(1) : "N/A";
-  };
-
   const roundedRating = roundToWhole(rating);
-
-  // covers case where additional decimals aren't truncated appropriately (e.g. 3.8000...)
   const roundedDifficulty = roundToOneDecimal(avgDifficulty);
-
   const roundedWouldTakeAgain = roundToWhole(wouldTakeAgain);
 
   // --- Process Campus Directory Data ---
@@ -76,39 +59,30 @@ export default function ProfInfoButton(props) {
     department &&
     normalize(divisionValue) !== normalize(department);
 
-  // A clean list of contact details for the grid
-  const detailItems = [
-    email && { label: "Email", value: email, href: `mailto:${email}` },
-    phone && { label: "Phone", value: phone, href: `tel:${phone}` },
-  ].filter(Boolean);
-
-  //Shorten long URLs for display
+  // Shorten long URLs for display
   const formatLinkLabel = (url) => {
     try {
       const u = new URL(url);
-      const host = u.hostname.replace("www.", ""); // remove "www."
+      const host = u.hostname.replace("www.", ""); // remove www.
       let path = u.pathname;
-
       // shorten long paths
       if (path.length > 20) {
         path = path.slice(0, 20) + "...";
       }
-
       return `${host}${path}`;
     } catch {
-      return url; // fallback
+      return "Link"; // fallback
     }
   };
 
   // Extract website URL (ucscpersonpubwebsite)
   let website = null;
   const websiteField = props.apiData?.ucscpersonpubwebsite;
-
   if (Array.isArray(websiteField) && websiteField.length > 0) {
     const raw = websiteField[0];
     if (typeof raw === "string" && raw.trim()) {
       // value looks like: "https://leaper.sites.ucsc.edu/ Campbell Leaper Web Page"
-      website = raw.split(" ")[0].trim(); // just the URL
+      website = raw.split(" ")[0].trim();
     }
   } else if (typeof websiteField === "string" && websiteField.trim()) {
     website = websiteField.split(" ")[0].trim();
@@ -117,7 +91,6 @@ export default function ProfInfoButton(props) {
   // Extract publication links (from ucscpersonpubselectedpublication HTML)
   let publicationLinks = [];
   const publicationsField = props.apiData?.ucscpersonpubselectedpublication;
-
   const extractLinksFromHtml = (html) => {
     if (typeof html !== "string" || !html.trim()) return [];
     const links = [];
@@ -134,12 +107,29 @@ export default function ProfInfoButton(props) {
   } else if (typeof publicationsField === "string") {
     publicationLinks = extractLinksFromHtml(publicationsField);
   }
-
   // Remove duplicates, just in case
   publicationLinks = Array.from(new Set(publicationLinks));
 
   // Logic to determine if the "More Info" button should even exist - E.H
   // the field either has to have a valid type or null
+  const contactItems = [
+    email && { label: "Email", value: email, href: `mailto:${email}` },
+    phone && { label: "Phone", value: phone, href: `tel:${phone}` },
+  ].filter(Boolean);
+
+  const detailItems = [
+    website && {
+      label: "Website",
+      value: formatLinkLabel(website),
+      href: website,
+    },
+    ...publicationLinks.map((link, i) => ({
+      label: `Publication ${i + 1}`,
+      value: formatLinkLabel(link),
+      href: link,
+    })),
+  ].filter(Boolean);
+
   const hasMoreInfo =
     Boolean(officeHours) ||
     (Array.isArray(courses) && courses.length > 0) ||
@@ -151,7 +141,6 @@ export default function ProfInfoButton(props) {
   /**
    * handles photos that are valid and invalid - I.K
    * Wrapped in useCallback to stabilize it for the useEffect hook.
-   * Using useCallBack for more efficient rendering (it memoizes handlePhotoURL)
    * https://stackoverflow.com/questions/71265042/what-is-usecallback-in-react-and-when-to-use-it  - E.H
    */
   const handlePhotoURL = useCallback(() => {
@@ -173,7 +162,6 @@ export default function ProfInfoButton(props) {
    */
   function handleOpen() {
     setIsOpen((prev) => !prev);
-
     if (isOpen) {
       setShowMoreInfo(false);
     }
@@ -219,8 +207,13 @@ export default function ProfInfoButton(props) {
 
   return (
     <div className={containerClass}>
-      {/* Button to toggle popup, added type so that it works in the shopping cart - B.C> */}
-      <button className="prof-info-btn" onClick={handleOpen} type="button">
+      {/* Button to toggle popup */}
+      <button
+        className="prof-info-btn"
+        aria-label="Professor Info"
+        onClick={handleOpen}
+        type="button"
+      >
         {/* SVG Icon */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -247,6 +240,7 @@ export default function ProfInfoButton(props) {
                 className="prof-info-close"
                 onClick={handleOpen}
                 type="button"
+                aria-label="Close"
               >
                 X
               </button>
@@ -271,6 +265,7 @@ export default function ProfInfoButton(props) {
                     alt="Default profile picture"
                   />
                 )}
+
                 <div className="campus-card-hero-text">
                   <h5>{name}</h5>
                   <div className="campus-chip-row">
@@ -287,12 +282,10 @@ export default function ProfInfoButton(props) {
               </div>
 
               {/* campus card section*/}
-              {/* gets and displays professor's website and publication link - L.L */}
-              {(detailItems.length > 0 ||
-                website ||
-                publicationLinks.length > 0) && (
+              {/* email/phone */}
+              {contactItems.length > 0 && (
                 <div className="campus-card-grid">
-                  {detailItems.map((item) => (
+                  {contactItems.map((item) => (
                     <div className="campus-detail" key={item.label}>
                       <span className="detail-label">{item.label}</span>
                       {item.href ? (
@@ -307,7 +300,7 @@ export default function ProfInfoButton(props) {
                 </div>
               )}
 
-              {/* More Info button */}
+              {/* More Info Section */}
               {hasMoreInfo && (
                 <button
                   className="prof-info-more-btn"
@@ -318,30 +311,15 @@ export default function ProfInfoButton(props) {
                 </button>
               )}
 
-              {/* --- Collapsible More Info Section --- */}
+              {/* More Info Section */}
               {showMoreInfo && (
                 <div className="prof-info-more-section">
-                  {/* Office Hours */}
+                  {/* office hours */}
                   {officeHours && (
                     <div className="campus-card-section">
                       <p>
                         <strong>Office Hours:</strong> {officeHours}
                       </p>
-                    </div>
-                  )}
-
-                  {/* Website, styled like Email/Phone */}
-                  {website && (
-                    <div className="campus-detail">
-                      <span className="detail-label">Website</span>
-                      <a
-                        className="detail-value"
-                        href={website}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        {formatLinkLabel(website)}
-                      </a>
                     </div>
                   )}
 
@@ -359,61 +337,62 @@ export default function ProfInfoButton(props) {
                     </div>
                   )}
 
-                  {/* Selected publications, also in the same grid cell */}
-                  {publicationLinks.length > 0 && (
-                    <div className="campus-detail">
-                      <span className="detail-label">
-                        Selected Publications
-                      </span>
-                      <ul className="detail-value-list">
-                        {publicationLinks.slice(0, 5).map((link, i) => (
-                          <li key={i}>
+                  {/* Selected publications and website */}
+                  {detailItems.length > 0 && (
+                    <div className="campus-card-grid">
+                      {detailItems.map((item, index) => (
+                        <div
+                          className="campus-detail"
+                          key={`${item.label}-${index}`}
+                        >
+                          <span className="detail-label">{item.label}</span>
+                          {item.href ? (
                             <a
                               className="detail-value"
-                              href={link}
+                              href={item.href}
                               target="_blank"
-                              rel="noreferrer"
+                              rel="noopener noreferrer"
                             >
-                              {formatLinkLabel(link)}
+                              {item.value}
                             </a>
-                          </li>
-                        ))}
-                      </ul>
+                          ) : (
+                            <span className="detail-value">{item.value}</span>
+                          )}
+                        </div>
+                      ))}
                     </div>
                   )}
 
-                  {/* Research Interest */}
-                  {(() => {
-                    if (
-                      typeof researchInterest === "string" &&
-                      researchInterest.trim()
-                    ) {
-                      const rInterestHTML =
-                        "<p><strong>Research Interests: </strong>" +
-                        researchInterest +
-                        "</p>";
-                      return (
-                        <div
-                          className="campus-card-section"
-                          dangerouslySetInnerHTML={{ __html: rInterestHTML }}
-                        />
-                      );
-                    }
-                  })()}
-
-                  {/* Research Topic (Local Scraped Field: Topic Paragraph) */}
-                  {researchTopicText && (
+                  {/* research interests/topics */}
+                  {researchTopicText || researchInterest ? (
                     <div className="campus-card-section">
-                      <p>
-                        <strong>Research Topic:</strong>
-                      </p>
-                      {/* Displays the full, descriptive paragraph */}
-                      <p>{researchTopicText}</p>
-                    </div>
-                  )}
+                      {/* Research Interest */}
+                      {researchInterest &&
+                        typeof researchInterest === "string" && (
+                          <div
+                            dangerouslySetInnerHTML={{
+                              __html:
+                                "<p><strong>Research Interests: </strong>" +
+                                researchInterest +
+                                "</p>",
+                            }}
+                          />
+                        )}
 
-                  {/* This handles the case where the API had no short description */}
-                  {!researchTopicText && !researchInterest && (
+                      {/* Research Topic */}
+                      {researchTopicText && (
+                        <div
+                          style={{
+                            marginTop: researchInterest ? "10px" : "0",
+                          }}
+                        >
+                          <p>
+                            <strong>Research Topic:</strong> {researchTopicText}
+                          </p>
+                        </div>
+                      )}
+                    </div>
+                  ) : (
                     <div className="campus-card-section">
                       <p>
                         <strong>Research Info:</strong> Not listed in public
@@ -443,7 +422,6 @@ export default function ProfInfoButton(props) {
                     <div className="rmp-card-grid">
                       {/* stars rating */}
                       <div className="rmp-metric rating">
-                        {/* EDGE CASE: Handle 0 ratings separately so it doesn't show empty stars or 0.0 */}
                         {numRatings > 0 ? (
                           <StarRating
                             rating={roundedRating}
@@ -453,7 +431,6 @@ export default function ProfInfoButton(props) {
                           <span className="metric-value-na">N/A</span>
                         )}
                         <span className="metric-sub">
-                          {/* EDGE CASE: Clarity on what the score is */}
                           {numRatings > 0 ? "Average score" : "No ratings yet"}
                         </span>
                       </div>
@@ -462,7 +439,6 @@ export default function ProfInfoButton(props) {
                       <div className="rmp-metric difficulty">
                         <span className="metric-label">Difficulty</span>
                         <span className="metric-value">
-                          {/* EDGE CASE: Check for 0, null, or 0 ratings */}
                           {roundedDifficulty &&
                           roundedDifficulty > 0 &&
                           numRatings > 0
@@ -476,7 +452,6 @@ export default function ProfInfoButton(props) {
                       <div className="rmp-metric would-take">
                         <span className="metric-label">Would Take Again</span>
                         <span className="metric-value">
-                          {/* EDGE CASE: RMP sometimes returns -1 for N/A data */}
                           {roundedWouldTakeAgain != null &&
                           roundedWouldTakeAgain >= 0 &&
                           numRatings > 0
@@ -486,7 +461,6 @@ export default function ProfInfoButton(props) {
                         <span className="metric-sub">Student approval</span>
                       </div>
 
-                      {/* total ratings */}
                       <div className="rmp-metric total-ratings">
                         <span className="metric-label">Reviews</span>
                         <span className="metric-value">
@@ -501,14 +475,11 @@ export default function ProfInfoButton(props) {
                       <div className="rmp-tags">
                         <span className="tags-label">Top Tags</span>
                         <div className="tags-grid">
-                          {/* EDGE CASE: Slice to prevent UI overflow if prof has many tags */}
                           {topTags.slice(0, 5).map((tag) => (
                             <span
                               className="tag-chip"
-                              // EDGE CASE: Fallback if ID is missing
                               key={tag.id || tag.legacyId || Math.random()}
                             >
-                              {/* EDGE CASE: Truncate very long tag names via CSS or here */}
                               <span className="tag-name">
                                 {tag.tagName.length > 20
                                   ? tag.tagName.substring(0, 20) + "..."
