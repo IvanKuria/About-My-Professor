@@ -461,41 +461,111 @@
   color: #1e293b;
 }
 
+/* to stop overriding of wta text colors*/
+.rmp-metric.would-take .metric-value.wta-low {
+  color: #dc2626 !important;
+}
+
+.rmp-metric.would-take .metric-value.wta-mid {
+  color: #eab308 !important;
+}
+
+.rmp-metric.would-take .metric-value.wta-high {
+  color: #16a34a !important;
+}
+
 .rmp-metric .metric-sub {
   font-size: 12px;
   color: #64748b;
 }
 
 /* text colors for difficulty, and would-take */
-.rmp-metric.difficulty .metric-value {
-  color: #d0021b;
-}
-.rmp-metric.would-take .metric-value {
-  color: #2ecc36;
+
+/* Would Take Again color buckets */
+.wta-low {
+  /* 0–40% */
+  color: #dc2626; /* red */
 }
 
-/* star ratings */
+.wta-mid {
+  /* 41–70% */
+  color: #eab308; /* yellow */
+}
+
+.wta-high {
+  /* 71–100% */
+  color: #16a34a; /* green */
+}
+
+/* Difficulty color buckets */
+.diff-low {
+  /* easy */
+  color: #16a34a; /* green */
+}
+
+.diff-mid {
+  /* moderate */
+  color: #eab308; /* yellow */
+}
+
+.diff-high {
+  /* hard */
+  color: #dc2626; /* red */
+}
+
+/* Stronger selectors to override .rmp-metric .metric-value */
+.rmp-metric.difficulty .metric-value.diff-low {
+  color: #16a34a !important;
+}
+
+.rmp-metric.difficulty .metric-value.diff-mid {
+  color: #eab308 !important;
+}
+
+.rmp-metric.difficulty .metric-value.diff-high {
+  color: #dc2626 !important;
+}
+
 .star-rating {
   display: flex;
   align-items: center;
-  /* Use the same font size as metric-value for N/A text */
   font-size: 24px;
   font-weight: 700;
-  color: #111;
 }
+
+/* Size of stars */
 .star-rating svg {
   width: 20px;
   height: 20px;
   margin-right: 2px;
 }
+
+/* Filled stars take the current text color */
 .star-filled {
-  fill: #ecf545;
-  stroke: #000000;
+  fill: currentColor;
+  stroke: currentColor;
 }
+
+/* Empty star stays gray */
 .star-empty {
   fill: none;
-  stroke: #ccc; /* Empty star color */
+  stroke: #ccc;
   stroke-width: 1.5;
+}
+
+/* 1–2 stars → red */
+.star-rating-low {
+  color: #dc2626;
+}
+
+/* 3 stars → yellow */
+.star-rating-mid {
+  color: #eab308;
+}
+
+/* 4–5 stars → green */
+.star-rating-high {
+  color: #16a34a;
 }
 
 /* top tags */

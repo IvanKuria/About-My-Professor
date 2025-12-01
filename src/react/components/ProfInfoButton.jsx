@@ -406,9 +406,8 @@ export default function ProfInfoButton(props) {
                 </div>
               )}
             </div>
-
             {/* RMP section*/}
-            {/* will only show if the prof does have a existing rmp profile */}
+            {/* will only show if the prof does have an existing RMP profile */}
             {rateMyProfessor && (
               <div className="rmp-section">
                 {rateMyProfessor ? (
@@ -441,7 +440,19 @@ export default function ProfInfoButton(props) {
                       {/* difficulty */}
                       <div className="rmp-metric difficulty">
                         <span className="metric-label">Difficulty</span>
-                        <span className="metric-value">
+                        <span
+                          className={`metric-value ${
+                            roundedDifficulty &&
+                            roundedDifficulty > 0 &&
+                            numRatings > 0
+                              ? roundedDifficulty >= 4
+                                ? "diff-high"
+                                : roundedDifficulty >= 2.6
+                                  ? "diff-mid"
+                                  : "diff-low"
+                              : ""
+                          }`}
+                        >
                           {roundedDifficulty &&
                           roundedDifficulty > 0 &&
                           numRatings > 0
@@ -451,10 +462,22 @@ export default function ProfInfoButton(props) {
                         <span className="metric-sub">Avg difficulty</span>
                       </div>
 
-                      {/* would take */}
+                      {/* would take again */}
                       <div className="rmp-metric would-take">
                         <span className="metric-label">Would Take Again</span>
-                        <span className="metric-value">
+                        <span
+                          className={`metric-value ${
+                            roundedWouldTakeAgain != null &&
+                            roundedWouldTakeAgain >= 0 &&
+                            numRatings > 0
+                              ? roundedWouldTakeAgain <= 40
+                                ? "wta-low"
+                                : roundedWouldTakeAgain <= 70
+                                  ? "wta-mid"
+                                  : "wta-high"
+                              : ""
+                          }`}
+                        >
                           {roundedWouldTakeAgain != null &&
                           roundedWouldTakeAgain >= 0 &&
                           numRatings > 0
@@ -485,7 +508,7 @@ export default function ProfInfoButton(props) {
                             >
                               <span className="tag-name">
                                 {tag.tagName.length > 20
-                                  ? tag.tagName.substring(0, 20) + "..."
+                                  ? `${tag.tagName.substring(0, 20)}...`
                                   : tag.tagName}
                               </span>
                               <span className="tag-count">{tag.tagCount}</span>
