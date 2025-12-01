@@ -85,6 +85,11 @@ export default function ProfInfoButton(props) {
 
   // --- HELPERS ---
 
+  // global id for global registry
+  const profId = name;
+
+  // --- HELPERS ---
+
   // Shorten long URLs for display
   const formatLinkLabel = (url) => {
     try {
@@ -146,6 +151,7 @@ export default function ProfInfoButton(props) {
   ].filter(Boolean);
 
   // Items hidden in "More Info"
+  // Items hidden in "More Info"
   const detailItems = [
     website && {
       label: "Website",
@@ -196,6 +202,17 @@ export default function ProfInfoButton(props) {
     e.stopPropagation();
     setIsOpen(false);
   };
+  // function to bring this specific card to the front
+  const bringToFront = useCallback(() => {
+    window.AMP_Z_INDEX += 1;
+    setZIndex(window.AMP_Z_INDEX);
+  }, []);
+
+  // logic specifically for closing
+  const handleClose = (e) => {
+    e.stopPropagation();
+    setIsOpen(false);
+  };
 
   /**
    * Toggles the "More Info" collapsible section.
@@ -211,13 +228,100 @@ export default function ProfInfoButton(props) {
     setIsDraggable((prev) => !prev);
   };
 
+  // toggle lock/unlock for dragging
+  const toggleDraggable = (e) => {
+    e.stopPropagation();
+    setIsDraggable((prev) => !prev);
+  };
+
   /**
    * Effect hook to load the professor's photo only when the modal is opened and we have data.  - E.H
+   * Also handles which popup appears depending on what the user clicks on
    * Also handles which popup appears depending on what the user clicks on
    */
   useEffect(() => {
     if (isOpen) {
       handlePhotoURL();
+      window.AMP_ACTIVE_CARDS[profId] = bringToFront;
+    }
+
+    // clean up
+    return () => {
+      if (isOpen && window.AMP_ACTIVE_CARDS[profId] === bringToFront) {
+        delete window.AMP_ACTIVE_CARDS[profId];
+      }
+    };
+  }, [isOpen, handlePhotoURL, bringToFront, profId]); // runs when any of these change
+
+  // opening logic for the info button
+  const handleInfoClick = (e) => {
+    // get viewport dimensions
+    const vw = Math.max(
+      document.documentElement.clientWidth || 0,
+      window.innerWidth || 0,
+    );
+    const vh = Math.max(
+      document.documentElement.clientHeight || 0,
+      window.innerHeight || 0,
+    );
+
+    // get button position
+    const btn = e.currentTarget.getBoundingClientRect();
+
+    // define card dimensions
+    const CARD_W = 360;
+    const CARD_H = 550;
+    const GAP = 12;
+
+    // calculate X (Horizontal)
+    let finalX = btn.right + GAP; // Try placing to the right first
+
+    // Check if it goes off the right edge
+    if (finalX + CARD_W > vw) {
+      // try placing to the left
+      finalX = btn.left - CARD_W - GAP;
+    }
+
+    // check if it goes off the left edge (e.g., mobile screen)
+    if (finalX < 0) {
+      // if screen is too narrow for offsets, roughly center it
+      finalX = (vw - CARD_W) / 2;
+      // make sure it doesn't go negative even after centering attempts
+      if (finalX < 10) finalX = 10;
+    }
+
+    // calculate Y (Vertical)
+    let finalY = btn.top;
+
+    // check if it goes off the bottom edge
+    if (finalY + CARD_H > vh) {
+      // shift it up so the bottom rests near the window bottom
+      finalY = vh - CARD_H - GAP;
+    }
+
+    // check if it goes off the top edge
+    if (finalY < 10) finalY = 10;
+
+    setSpawnPos({ x: finalX, y: finalY });
+
+    // check if any card for this prof is already open
+    if (window.AMP_ACTIVE_CARDS[profId]) {
+      // if so, bring that card to front
+      window.AMP_ACTIVE_CARDS[profId]();
+      return;
+    }
+
+    // otherwise, open this specific instance
+    if (!isOpen) {
+      setIsOpen(true);
+      setShowMoreInfo(false);
+      setIsDraggable(false);
+    }
+
+    // register immediately so the very next click knows about it
+    window.AMP_ACTIVE_CARDS[profId] = bringToFront;
+    bringToFront();
+  };
       window.AMP_ACTIVE_CARDS[profId] = bringToFront;
     }
 
@@ -306,10 +410,12 @@ export default function ProfInfoButton(props) {
 
   return (
     <div className="prof-info-container">
+    <div className="prof-info-container">
       {/* Button to toggle popup */}
       <button
         className="prof-info-btn"
         aria-label="Professor Info"
+        onClick={handleInfoClick}
         onClick={handleInfoClick}
         type="button"
       >
@@ -330,6 +436,98 @@ export default function ProfInfoButton(props) {
       </button>
 
       {/* Popup content — only visible if `open` is true */}
+      {isOpen &&
+        createPortal(
+          <Draggable
+            nodeRef={nodeRef}
+            defaultPosition={spawnPos}
+            disabled={!isDraggable} // locked by default
+            cancel="button, a .prof-info-more-btn" // prevent dragging when interacting with these elements
+            onMouseDown={bringToFront} // clicking anywhere on card brings it to the front
+          >
+            {/* Draggable requires a direct child ref with fixed positioning */}
+            <div
+              ref={nodeRef}
+              style={{ position: "fixed", zIndex: 10000, top: 0, left: 0 }}
+            >
+              <div
+                className={`prof-sticky-card ${isDraggable ? "draggable-active" : ""}`}
+              >
+                {/* --- HEADER --- */}
+                <div className="prof-sticky-header">
+                  <h3 className="prof-info-title">Professor Info</h3>
+
+                  <div className="header-controls">
+                    {/* Lock/Unlock Toggle */}
+                    <button
+                      className={`prof-pin-btn ${isDraggable ? "unlocked" : "locked"}`}
+                      onClick={toggleDraggable}
+                      type="button"
+                      title={
+                        isDraggable
+                          ? "Unlocked: Drag to move"
+                          : "Locked: Click to move"
+                      }
+                      onMouseDown={(e) => e.stopPropagation()}
+                    >
+                      {isDraggable ? (
+                        /* UNLOCKED ICON (Open Padlock) */
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
+                          <rect
+                            x="3"
+                            y="11"
+                            width="18"
+                            height="11"
+                            rx="2"
+                            ry="2"
+                          ></rect>
+                          <path d="M7 11V7a5 5 0 0 1 9.9-1"></path>
+                        </svg>
+                      ) : (
+                        /* LOCKED ICON (Closed Padlock) */
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          stroke="none"
+                        >
+                          <rect
+                            x="3"
+                            y="11"
+                            width="18"
+                            height="11"
+                            rx="2"
+                            ry="2"
+                          ></rect>
+                          <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                      )}
+                    </button>
+
+                    {/* Close Button */}
+                    <button
+                      className="prof-info-close"
+                      onClick={handleClose}
+                      type="button"
+                      aria-label="Close"
+                      onMouseDown={(e) => e.stopPropagation()}
+                    >
+                      X
+                    </button>
+                  </div>
+                </div>
       {isOpen &&
         createPortal(
           <Draggable
@@ -480,6 +678,24 @@ export default function ProfInfoButton(props) {
                         ))}
                       </div>
                     )}
+                    {/* campus card section (always visible)*/}
+                    {/* email/phone */}
+                    {contactItems.length > 0 && (
+                      <div className="campus-card-grid">
+                        {contactItems.map((item) => (
+                          <div className="campus-detail" key={item.label}>
+                            <span className="detail-label">{item.label}</span>
+                            {item.href ? (
+                              <a className="detail-value" href={item.href}>
+                                {item.value}
+                              </a>
+                            ) : (
+                              <span className="detail-value">{item.value}</span>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    )}
 
                     {/* More Info Section */}
                     {hasMoreInfo && (
@@ -492,6 +708,16 @@ export default function ProfInfoButton(props) {
                       </button>
                     )}
 
+                    {showMoreInfo && (
+                      <div className="prof-info-more-section">
+                        {/* office hours */}
+                        {officeHours && (
+                          <div className="campus-card-section">
+                            <p>
+                              <strong>Office Hours:</strong> {officeHours}
+                            </p>
+                          </div>
+                        )}
                     {showMoreInfo && (
                       <div className="prof-info-more-section">
                         {/* office hours */}
@@ -627,6 +853,26 @@ export default function ProfInfoButton(props) {
                                   : "No ratings yet"}
                               </span>
                             </div>
+                          <div className="rmp-card-grid">
+                            {/* stars rating */}
+                            <div className="rmp-metric">
+                              <span className="metric-label">Rating</span>
+                              {numRatings > 0 ? (
+                                <div className="star-rating">
+                                  <StarRating
+                                    rating={roundedRating}
+                                    numRatings={numRatings}
+                                  />
+                                </div>
+                              ) : (
+                                <span className="metric-value-na">N/A</span>
+                              )}
+                              <span className="metric-sub">
+                                {numRatings > 0
+                                  ? "Average score"
+                                  : "No ratings yet"}
+                              </span>
+                            </div>
 
                             {/* difficulty */}
                             <div className="rmp-metric difficulty">
@@ -682,6 +928,15 @@ export default function ProfInfoButton(props) {
                               </span>
                             </div>
 
+                            {/* total reviews */}
+                            <div className="rmp-metric total-ratings">
+                              <span className="metric-label">Reviews</span>
+                              <span className="metric-value">
+                                {numRatings || "0"}
+                              </span>
+                              <span className="metric-sub">Total Reviews</span>
+                            </div>
+                          </div>
                             {/* total reviews */}
                             <div className="rmp-metric total-ratings">
                               <span className="metric-label">Reviews</span>
