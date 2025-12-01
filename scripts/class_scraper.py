@@ -30,8 +30,10 @@ def scrape_classes_taught():
     Could also scrape all links in the catalog & older catalogs if had more time - B.C.
     """
     baseURL = "https://catalog.ucsc.edu/en/current/general-catalog/courses/"
+    baseEngineeringURL = "https://courses.engineering.ucsc.edu/courses/"
+    baseEngineeringURLEndings = ["/2025","/2024","/2023","/2022"]
+    EngineeringURLExtensions = ["am","bme", "cmpm", "cse", "ece", "game", "hci", "nlp", "stat", "tim"]
     #only include some becuase many don't have any instructor info or only have "The Staff" listed - B.C.
-    URLtestExtension = ["aplx-applied-linguistics"]
     URLExtensions = ["anth-anthropology", "aplx-applied-linguistics", "arbc-arabic", "art-art",
                       "artg-art-and-design-games-and-playable-media", "bioc-biochemistry-and-molecular-biology", 
                       "bioe-biology-ecology-and-evolutionary", "biol-biology-molecular-cell-and-developmental", 
@@ -51,6 +53,8 @@ def scrape_classes_taught():
     cached_data = load_classes_taught_cache()
 
     print(f"\n--- Starting Class Scrape (HTML Parse Method) ---")
+
+    
     #scrape from current catalog links
     for urlExtension in URLExtensions:
         URL = baseURL+urlExtension
@@ -96,7 +100,7 @@ def scrape_classes_taught():
                     rePattern =  r"[A-Za-z]+(?:[-\s][A-Za-z]+)*"
                     iListStr = re.findall(rePattern, innerText)
                     for potentialInstructor in iListStr:
-                        if potentialInstructor != "The Staff" and potentialInstructor != "Instructor":
+                        if potentialInstructor != "The Staff" and potentialInstructor != "Instructor" and potentialInstructor != "Staff":
                             instructorList.append(potentialInstructor)
                     
                     #added for unit test
@@ -133,20 +137,101 @@ def scrape_classes_taught():
         except Exception as e:
             print(f"An error occurred: {e}")
 
-    # Compare the newly scraped data to the old cached data
+    #also scrape Engineering website links
+    for ending in baseEngineeringURLEndings:
+        for extension in EngineeringURLExtensions:
+            URL = baseEngineeringURL + extension + ending
+            print(f"Fetching data from {URL}...")
+
+            try:
+                # Fetch the page content (no browser needed, but requires a user agent)
+                headers = {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+                }
+                response = requests.get(URL, timeout=10, headers=headers)
+                response.raise_for_status() # Check for errors
+                
+                # Parse the HTML with BeautifulSoup
+                print("Parsing HTML response...")
+                soup = BeautifulSoup(response.text, 'html.parser')
+
+                #All of the courses are under one big div
+                # so will jump straight to the class div
+                # and then will nagivate using siblings to get the associated course staff names - B.C.
+                courseElementList = soup.find_all('td', class_='soe-classes-schedule-course-name')
+
+                if not courseElementList:
+                    print("Error: Could not find any soe-classes-schedule-course-name divs.")
+                    print("This may be due to a change in the page structure.")
+                    return
+
+                for courseElement in courseElementList:
+                    try:
+                        courseElementContainer = courseElement.find_parent()
+                        instructorsByQuarterContainer = courseElementContainer.find_next_sibling()
+                        count = 0
+                        courseName = courseElement.text.strip()
+                        for instructorsByQuarter in instructorsByQuarterContainer.findChildren(recursive=False):
+                            #only check first four children
+                            count += 1
+                            #parse instructors and remove uid
+                            innerText = instructorsByQuarter.text.strip()
+                            #print(f"text: {innerText}")
+                            textWOutUIDs = re.sub(r'\(.*?\)', '', innerText)
+                            instructorList = []
+                            rePattern =  r"[A-Za-z]+(?:[-\s][A-Za-z]+)*"
+                            iListStr = re.findall(rePattern, textWOutUIDs)
+                            badStrings = ['Section','Session', 'In Person', 'Staff', "In-person", "In person", "Week", "Online", "online", "G", "n", "A", "Weeks", "S", "L"]
+                            for potentialInstructor in iListStr:
+                                if(potentialInstructor not in badStrings ):
+                                    instructorList.append(potentialInstructor)
+                            #print(f"instructors: {instructorList}")
+                            if count >= 4:
+                                break    
+                        
+                            
+                            if(instructorList.__len__ != 0):
+                                for instructor in instructorList:
+                                    freshly_scraped_data[instructor].append(courseName)
+
+                    except Exception as e:
+                        print(f"WARNING - Skipping an entry, error parsing: {e}")
+
+
+            except requests.exceptions.RequestException as e:
+                print(f"Error during request: {e}")
+            except Exception as e:
+                print(f"An error occurred: {e}")            
+        
+
+
+    #combine new data with cached data and remove duplicates
+    merged_dict = {}
     freshly_scraped_data = dict(freshly_scraped_data)
-    if freshly_scraped_data == cached_data:
+    # Combine keys and values from both dictionaries, using sets to remove duplicates
+    all_keys = set(freshly_scraped_data.keys()) | set(cached_data.keys()) # Use set union to get all unique keys
+
+    for key in all_keys:
+        # Get values for the current key, defaulting to an empty list if the key is missing
+        list1_values = freshly_scraped_data.get(key, [])
+        list2_values = cached_data.get(key, [])
+
+        # Combine the lists and convert to a set to remove duplicates, then back to a list
+        unique_values = list(set(list1_values + list2_values))
+        
+        merged_dict[key] = unique_values
+
+    # Compare the newly scraped data to the old cached data
+    if merged_dict == cached_data:
         print(f"Scrape complete. No changes detected.")
-        print(f"Found {len(freshly_scraped_data)} entries (same as cache).")
+        print(f"Found {len(merged_dict)} entries (same as cache).")
     else:
         print(f"Scrape complete. New data found!")
-        #combine data
-
         # Save the new data to the JSON file
         with open(JSON_FILE, "w", encoding="utf-8") as f:
-            json.dump(freshly_scraped_data, f, ensure_ascii=False, indent=2)
+            json.dump(merged_dict, f, ensure_ascii=False, indent=2)
             
-        print(f"Successfully saved {len(freshly_scraped_data)} research topics to {JSON_FILE}")
+        print(f"Successfully saved {len(merged_dict)} teachers with classes taught to {JSON_FILE}")
 
     
     
