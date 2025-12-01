@@ -1,7 +1,5 @@
 {
-  "Jaime Morse": [
-    "POLI 122 Politics, Labor, and Markets"
-  ],
+  "Jaime Morse": ["POLI 122 Politics, Labor, and Markets"],
   "Cardenas": [
     "CSE132: Computer Security",
     "CSE233: Advanced Computer Security",
@@ -12,15 +10,9 @@
     "EDUC 190 Senior Seminar Capstone",
     "EDUC 263 Educational Reform"
   ],
-  "Jennifer": [
-    "HAVC 141B Death, Desire, and Modernity"
-  ],
-  "Leslie Leslie": [
-    "KRSG 65W Kresge Lab: Creative Writing"
-  ],
-  "Natalia Ocampo-Pe": [
-    "ENVS 120 Conservation Biology"
-  ],
+  "Jennifer": ["HAVC 141B Death, Desire, and Modernity"],
+  "Leslie Leslie": ["KRSG 65W Kresge Lab: Creative Writing"],
+  "Natalia Ocampo-Pe": ["ENVS 120 Conservation Biology"],
   "Zeka Glucs": [
     "ENVS 106A Natural History of Birds",
     "ENVS 106M Natural History of Birds Laboratory"
@@ -29,9 +21,7 @@
     "CSE121: Embedded System Design",
     "CSE16: Applied Discrete Mathematics"
   ],
-  "Kim Wang": [
-    "FILM 194S Special Topics Seminar"
-  ],
+  "Kim Wang": ["FILM 194S Special Topics Seminar"],
   "Katie Monsen": [
     "ENVS 100 Ecology and Society",
     "ENVS 130A Agroecology and Sustainable Agriculture",
@@ -42,20 +32,14 @@
     "ENVS 170 Agriculture and Climate Change",
     "ENVS 190 Capstone Course: Environmental Problem Solving"
   ],
-  "Donald Lane": [
-    "SOCY 160 Solving Homelessness"
-  ],
+  "Donald Lane": ["SOCY 160 Solving Homelessness"],
   "Douglas Kellogg": [
     "BIOL 200C Advanced Cell Biology",
     "BIOL 208 Cellular Signaling Mechanisms",
     "BIOL 280K Topics in Cell Cycle Research"
   ],
-  "Erin O": [
-    "OAKS 1A Introduction to University Life and Learning"
-  ],
-  "Todd Haddow": [
-    "KRSG 3 Campus Natural History Practicum"
-  ],
+  "Erin O": ["OAKS 1A Introduction to University Life and Learning"],
+  "Todd Haddow": ["KRSG 3 Campus Natural History Practicum"],
   "Kai Zhu": [
     "ENVS 121 Landscape Ecology",
     "ENVS 196 Senior Seminar",
@@ -68,15 +52,9 @@
     "SOCY 170 Ethnicity and Race",
     "SOCY 178 Sociology of Social Problems"
   ],
-  "Enrique": [
-    "ART 159 Special Topics in Photography"
-  ],
-  "nsal Gen": [
-    "FILM 202 Pedagogy in Film and Digital Media"
-  ],
-  "Gustavo Vaszquez": [
-    "FILM 196A Senior Project in Narrative Production"
-  ],
+  "Enrique": ["ART 159 Special Topics in Photography"],
+  "nsal Gen": ["FILM 202 Pedagogy in Film and Digital Media"],
+  "Gustavo Vaszquez": ["FILM 196A Senior Project in Narrative Production"],
   "Judith Habicht Mauche": [
     "ANTH 172 Archaeological Research Design",
     "ANTH 176D Colonial Encounters in the Americas",
@@ -134,12 +112,8 @@
     "BME237: Applied RNA Bioinformatics",
     "BME281L: Seminar in Computational Genetics"
   ],
-  "Nathan Cohen": [
-    "ANTH 142 Anthropology of Law"
-  ],
-  "Tyler R Sorensen": [
-    "CSE280O: Languages, Systems, and Data Seminar"
-  ],
+  "Nathan Cohen": ["ANTH 142 Anthropology of Law"],
+  "Tyler R Sorensen": ["CSE280O: Languages, Systems, and Data Seminar"],
   "Alexandra Kolla": [
     "CSE101M: Mathematical Thinking for Computer Science",
     "CSE102: Introduction to Analysis of Algorithms",
@@ -149,12 +123,8 @@
     "CSE16: Applied Discrete Mathematics",
     "CSE258: Spectral Graph Theory"
   ],
-  "Jeff LeFevre": [
-    "CSE280S: Seminar on Computer Systems"
-  ],
-  "Roberto DeRoock": [
-    "SOCY 30A Introduction to Digital Justice Studies"
-  ],
+  "Jeff LeFevre": ["CSE280S: Seminar on Computer Systems"],
+  "Roberto DeRoock": ["SOCY 30A Introduction to Digital Justice Studies"],
   "M Ty": [
     "CRES 185 Race, Gender, and Science",
     "CRES 206 Studying with Ancestors"
@@ -165,9 +135,7 @@
     "ENVS 158 Political Ecology and Social Change",
     "ENVS 80F Introduction to Agroecology and Sustainable Food Systems"
   ],
-  "Joel Dreskin": [
-    "CMPM122: Business of Games"
-  ],
+  "Joel Dreskin": ["CMPM122: Business of Games"],
   "Renee Fox": [
     "LIT 146B Victorian Literature",
     "LIT 149D Topics in Modern Literature",
@@ -221,23 +189,15 @@
     "BME 5 Introduction to Biotechnology",
     "BME 80H The Human Genome"
   ],
-  "Abe Borker": [
-    "BIOE 20F Field Biology in Practice"
-  ],
+  "Abe Borker": ["BIOE 20F Field Biology in Practice"],
   "Teodorescu": [
     "ECE216: Bio-inspired Locomotion",
     "ECE280C: Seminar on Control",
     "ECE9: Statics and Mechanics of Materials"
   ],
-  "Evelyn Strauss": [
-    "SCIC 201C Profile and Essay Writing"
-  ],
-  "Rick Vargas": [
-    "CRWN 91 Marketing for Good"
-  ],
-  "Shakari Patel": [
-    "LALS 1 Introduction to Latin American and Latino Studies"
-  ],
+  "Evelyn Strauss": ["SCIC 201C Profile and Essay Writing"],
+  "Rick Vargas": ["CRWN 91 Marketing for Good"],
+  "Shakari Patel": ["LALS 1 Introduction to Latin American and Latino Studies"],
   "Anatole Leikin": [
     "MUSC 101B History of Western Art Music",
     "MUSC 105R History of Russian Music",
@@ -282,12 +242,8 @@
     "ANTH 259 Race in Theory and Ethnography",
     "ANTH 299W Anthropology Dissertation Workshop"
   ],
-  "Scott Newsome": [
-    "POLI 17 U.S. and the World Economy"
-  ],
-  "Kirsten The Staff": [
-    "LIT 146F The Dissenting Tradition in America"
-  ],
+  "Scott Newsome": ["POLI 17 U.S. and the World Economy"],
+  "Kirsten The Staff": ["LIT 146F The Dissenting Tradition in America"],
   "Nathaniel Deutsch": [
     "HIS 163B Genesis: A History",
     "HIS 178A European Intellectual History: The Enlightenment",
@@ -308,9 +264,7 @@
     "SOCD 201C Project Planning for the Social Documentary",
     "SOCD 294B Production/Analysis/Editing"
   ],
-  "Jared N Pettitt": [
-    "CMPM176: Game Systems"
-  ],
+  "Jared N Pettitt": ["CMPM176: Game Systems"],
   "Harikrishna Santhosh Kuttivelil": [
     "CSE200: Research and Teaching in Computer Science and Engineering"
   ],
@@ -318,12 +272,8 @@
     "STAT205B: Intermediate Classical Inference",
     "STAT280B: Seminars in Statistics"
   ],
-  "Dena Robertson": [
-    "COWL 110 Introduction to Mock Trial"
-  ],
-  "Ed Shanken": [
-    "FILM 80M Understanding Media"
-  ],
+  "Dena Robertson": ["COWL 110 Introduction to Mock Trial"],
+  "Ed Shanken": ["FILM 80M Understanding Media"],
   "Keith Corzine": [
     "ECE136: Engineering Electromagnetics",
     "ECE170: Advanced Power Electronics",
@@ -340,9 +290,7 @@
     "ENVS 290L Graduate Research Seminar",
     "ENVS 291D Advanced Readings in Tropical Ecology, Agriculture, and Development"
   ],
-  "Emma Wood": [
-    "PRTR 193J The Literary Journal: Process to Product"
-  ],
+  "Emma Wood": ["PRTR 193J The Literary Journal: Process to Product"],
   "Ryan Carle": [
     "ENVS 106A Natural History of Birds",
     "ENVS 106M Natural History of Birds Laboratory",
@@ -350,9 +298,7 @@
     "ENVS 107B Natural History Field Quarter",
     "ENVS 107C Natural History Field Quarter"
   ],
-  "Michael Oye": [
-    "ECE30: Engineering Principles of Electronics"
-  ],
+  "Michael Oye": ["ECE30: Engineering Principles of Electronics"],
   "Dimitris Papadopoulos": [
     "HISC 144 World-Making and Power",
     "HISC 155 Science, Technology and Social Transformation",
@@ -361,9 +307,7 @@
     "HISC 283 Autonomy and Autonomist Politics",
     "HUMN 25 Humans and Machines: A History"
   ],
-  "Leya Bre Darla C": [
-    "CMPM131: User Experience for Interactive Media"
-  ],
+  "Leya Bre Darla C": ["CMPM131: User Experience for Interactive Media"],
   "Russell Rodriguez": [
     "MUSC 105C Folk and Traditional Music in California",
     "MUSC 105V Mexican Music and Conviviality",
@@ -375,9 +319,7 @@
     "MUSC 80F Music in Latin American Culture: Regional Traditions",
     "MUSC 81M Chicano/Latino Music in the United States"
   ],
-  "Cooppan": [
-    "LIT 108B Literature Internships 2"
-  ],
+  "Cooppan": ["LIT 108B Literature Internships 2"],
   "Graeme J Devine": [
     "CMPM123: Advanced Programming",
     "CMPM170: Rapid Prototyping",
@@ -385,9 +327,7 @@
     "CMPM172: Game Production Studio",
     "CMPM176: Game Systems"
   ],
-  "Stefania Cotei": [
-    "HISC 82 Another Brick in the Wall"
-  ],
+  "Stefania Cotei": ["HISC 82 Another Brick in the Wall"],
   "Daryl Jones": [
     "FILM 145 Social Media Documentary Theory and Production",
     "KRSG 2 The Power of Filmmaking",
@@ -406,9 +346,7 @@
     "HISC 106 The U.S. Horror Film: Race, Capitalism, and Monsters",
     "HISC 117 Making the Refugee Century: Non-Citizens and Modernity"
   ],
-  "Kyle B Gonzalez": [
-    "CMPM290A: Topics in Computational Media"
-  ],
+  "Kyle B Gonzalez": ["CMPM290A: Topics in Computational Media"],
   "Raquel Prado": [
     "STAT131: Introduction to Probability Theory",
     "STAT200: Research and Teaching in Statistics",
@@ -416,9 +354,7 @@
     "STAT204: Introduction to Statistical Data Analysis",
     "STAT223: Time Series Analysis"
   ],
-  "Linsey Dillion": [
-    "SOCY 105B Contemporary Social Theory"
-  ],
+  "Linsey Dillion": ["SOCY 105B Contemporary Social Theory"],
   "Maria Evangelatou": [
     "HAVC 151 Greek Myths Antiquity to the Present",
     "HAVC 153 Neither Venus Nor Virgin: Women's Lives Beyond Men's Constructs in Late Antiquity and Byzantium",
@@ -446,12 +382,8 @@
     "LIT 126T Time Travel Narratives",
     "LIT 250 Theory and Methods"
   ],
-  "Ashwak Hauter": [
-    "ANTH 134 Medical Anthropology: An Introduction"
-  ],
-  "Rebecca Ora": [
-    "FILM 194H Ethics and Documentary Filmmaking"
-  ],
+  "Ashwak Hauter": ["ANTH 134 Medical Anthropology: An Introduction"],
+  "Rebecca Ora": ["FILM 194H Ethics and Documentary Filmmaking"],
   "Depends on the faculty sponsor Depends on the faculty sponsor": [
     "BIOE 297F Independent Study"
   ],
@@ -476,12 +408,8 @@
     "FILM 237 Graduate Critique",
     "SOCD 202 Multiple-Platform Social Documentary Production"
   ],
-  "Emiily Murai": [
-    "ENVS 100L Ecology and Society Writing Laboratory"
-  ],
-  "Naindeep Chann": [
-    "CRES 70S Introduction to the Sikhs"
-  ],
+  "Emiily Murai": ["ENVS 100L Ecology and Society Writing Laboratory"],
+  "Naindeep Chann": ["CRES 70S Introduction to the Sikhs"],
   "Demos": [
     "HAVC 141K Activist Art Since 1960: Art, Technology, Activism",
     "HAVC 141O Sex, Lies, and Surveillance: Contemporary Documentary Arts",
@@ -500,9 +428,7 @@
     "ARTG 118 Character Creation for Video Games",
     "ARTG 132 3D Character Rigging and Animation for Video Games"
   ],
-  "Will Parish": [
-    "HISC 75 Ecological Crisis and Human Freedom"
-  ],
+  "Will Parish": ["HISC 75 Ecological Crisis and Human Freedom"],
   "Annapurna Pandey": [
     "ANTH 110P India and Indian Diaspora through Film",
     "ANTH 125 Magic, Science, and Religion",
@@ -558,9 +484,7 @@
   "Bristol Cave-LaCoste": [
     "HIS 139C Queer Pasts: A Radical Telling of LGBTQ History in the United States"
   ],
-  "Leslie": [
-    "KRSG 100 University Learning with Intention and Purpose"
-  ],
+  "Leslie": ["KRSG 100 University Learning with Intention and Purpose"],
   "Yu Zhang": [
     "CSE208: Introduction to Information Theory",
     "ECE103: Signals and Systems",
@@ -605,9 +529,7 @@
   "Clementine Bordeaux Bordeaux": [
     "HAVC 64 Indigenous North American Materiality and Resistance"
   ],
-  "Andrea Knight Dolan": [
-    "CMPM290A: Topics in Computational Media"
-  ],
+  "Andrea Knight Dolan": ["CMPM290A: Topics in Computational Media"],
   "Anna Tsing": [
     "ANTH 130E Culture and Politics of Island Southeast Asia",
     "ANTH 147 Anthropology and the Anthropocene",
@@ -624,18 +546,10 @@
     "AM20: Ordinary Differential Equations for Engineers",
     "AM230: Numerical Optimization"
   ],
-  "Judith Clymo": [
-    "NLP243: Deep Learning for Natural Language Processing"
-  ],
-  "Nelson Hutchinson": [
-    "MUSC 57 Survey of Jazz Guitar Styles"
-  ],
-  "Bryan Miller": [
-    "APLX 101 Second-Language Acquisition"
-  ],
-  "Malin Pinksy": [
-    "BIOE 107 Ecology"
-  ],
+  "Judith Clymo": ["NLP243: Deep Learning for Natural Language Processing"],
+  "Nelson Hutchinson": ["MUSC 57 Survey of Jazz Guitar Styles"],
+  "Bryan Miller": ["APLX 101 Second-Language Acquisition"],
+  "Malin Pinksy": ["BIOE 107 Ecology"],
   "Nathan Altice": [
     "CMPM120: Game Development Experience",
     "CMPM170: Rapid Prototyping",
@@ -644,15 +558,9 @@
     "CMPM290A: Topics in Computational Media",
     "CMPM80J: Games as Technical Culture"
   ],
-  "Emily Sinclair": [
-    "MUSC 51 Vocal Repertoire Class"
-  ],
-  "Terry Alan Smith": [
-    "GAME272: Game & Playable Media Studio III"
-  ],
-  "Julie Gilgoff": [
-    "LGST 154 The Legal Profession"
-  ],
+  "Emily Sinclair": ["MUSC 51 Vocal Repertoire Class"],
+  "Terry Alan Smith": ["GAME272: Game & Playable Media Studio III"],
+  "Julie Gilgoff": ["LGST 154 The Legal Profession"],
   "Angela Brooks": [
     "BME 105 Genetics in the Genomics Era",
     "BME 110 Computational Biology Tools",
@@ -676,9 +584,7 @@
     "LING 280 Proseminar in Experimental Linguistics",
     "LING 80D Language and Mind"
   ],
-  "Jack Davies": [
-    "HISC 113 History of Capitalism"
-  ],
+  "Jack Davies": ["HISC 113 History of Capitalism"],
   "Sean Reilly": [
     "BIOE 114 Herpetology",
     "BIOE 114L Field Methods in Herpetological Research",
@@ -722,9 +628,7 @@
     "LALS 55 AIDS Across the Americas",
     "LALS 56 The Right to Health"
   ],
-  "Angelo Hillary": [
-    "SOCY 201 The Making of Classical Theory"
-  ],
+  "Angelo Hillary": ["SOCY 201 The Making of Classical Theory"],
   "Bradley Colquitt": [
     "BIOL 280G Molecular Mechanisms of Behavioral Development and Evolution"
   ],
@@ -755,12 +659,8 @@
     "CSE280G: Hardware Systems Collective Seminar",
     "CSE280S: Seminar on Computer Systems"
   ],
-  "Stephen Clabuesch": [
-    "BIOE 75 Scientific Diving Certification"
-  ],
-  "Heeyoung Choi": [
-    "MUSC 81L Music in Animated Film"
-  ],
+  "Stephen Clabuesch": ["BIOE 75 Scientific Diving Certification"],
+  "Heeyoung Choi": ["MUSC 81L Music in Animated Film"],
   "Ronald Glass": [
     "EDUC 104 Ethical Issues and Teaching",
     "EDUC 292 Ideology and Education",
@@ -795,9 +695,7 @@
     "BME205: Bioinformatics Models and Algorithms",
     "BME281Z: Seminar in Population and Evolutionary Genomics"
   ],
-  "Tatiane Santa Rosa": [
-    "KRSG 60C Narratives of Incarceration and Abolition"
-  ],
+  "Tatiane Santa Rosa": ["KRSG 60C Narratives of Incarceration and Abolition"],
   "Richard Konrad Jullig": [
     "CSE115A: Introduction to Software Engineering",
     "CSE115B: Software Design Project",
@@ -820,12 +718,8 @@
     "POLI 245 Latin American Politics",
     "POLI 61 Politics of Social Policy"
   ],
-  "Miranda Allen": [
-    "COWL 11F Slug Ambassador"
-  ],
-  "Kevin MacClaren": [
-    "STEV 80G Self and Society Through Film"
-  ],
+  "Miranda Allen": ["COWL 11F Slug Ambassador"],
+  "Kevin MacClaren": ["STEV 80G Self and Society Through Film"],
   "Julie Simons": [
     "AM11A: Mathematical Methods for Economists I",
     "AM11B: Mathematical Methods for Economists II",
@@ -833,9 +727,7 @@
     "AM200: Teaching in Applied Mathematics",
     "AM280B: Seminar in Applied Mathematical Modeling"
   ],
-  "Christina Verdugo": [
-    "ANTH 103I Forensic Anthropology"
-  ],
+  "Christina Verdugo": ["ANTH 103I Forensic Anthropology"],
   "Nader Pourmand": [
     "BME 129A Project Design and Implementation in Biomolecular Engineering I",
     "BME 129C Project Design and Implementation in Biomolecular Engineering III",
@@ -851,15 +743,9 @@
     "BME281P: Seminar on Nanotechnology and Biosensors",
     "BME5: Introduction to Biotechnology"
   ],
-  "Michael Roberts": [
-    "CSE111: Advanced Programming"
-  ],
-  "Soleste Hillberg": [
-    "EDUC 180 Introduction to Teaching"
-  ],
-  "Sarah Sandford": [
-    "ART 20G Introduction to Print Media and Drawing"
-  ],
+  "Michael Roberts": ["CSE111: Advanced Programming"],
+  "Soleste Hillberg": ["EDUC 180 Introduction to Teaching"],
+  "Sarah Sandford": ["ART 20G Introduction to Print Media and Drawing"],
   "Brenda Avila-Hanna": [
     "KRSG 1 Academic Literacy and Ethos: Learning in Community",
     "KRSG 1 Academic Literacy and Ethos: Power and Representation",
@@ -954,15 +840,9 @@
     "FMST 194A Feminist Jurisprudence",
     "FMST 40 Sexuality and Globalization"
   ],
-  "Saori": [
-    "APLX 80 Introduction to Applied Linguistics"
-  ],
-  "Elliott Oakley": [
-    "CMMU 137 Communities and Climate Change"
-  ],
-  "Barreto": [
-    "ART 190A Writing for Artists"
-  ],
+  "Saori": ["APLX 80 Introduction to Applied Linguistics"],
+  "Elliott Oakley": ["CMMU 137 Communities and Climate Change"],
+  "Barreto": ["ART 190A Writing for Artists"],
   "Andrea David": [
     "CSE200: Research and Teaching in Computer Science and Engineering"
   ],
@@ -985,12 +865,8 @@
     "CMPM151: Algorithmic Music for Games",
     "CMPM35:  Data Structures for Interactive Media"
   ],
-  "Sakae Fujita": [
-    "JAPN 106 Advanced Japanese"
-  ],
-  "Jim Jackson": [
-    "LIT 61W Writing and Research Methods"
-  ],
+  "Sakae Fujita": ["JAPN 106 Advanced Japanese"],
+  "Jim Jackson": ["LIT 61W Writing and Research Methods"],
   "Caroline Casey": [
     "BIOE 140 Behavioral Ecology",
     "BIOE 146 Acoustic Ecology"
@@ -1030,18 +906,14 @@
     "LIT 61F Introduction to Reading Fiction",
     "LIT 61Z Introduccion a generos literarios de Espana y America Latina"
   ],
-  "David Keenan": [
-    "COWL 85 Introduction to Chinese Writing Systems"
-  ],
+  "David Keenan": ["COWL 85 Introduction to Chinese Writing Systems"],
   "Nathan Daniel Altice": [
     "CMPM120: Game Development Experience",
     "CMPM170: Rapid Prototyping",
     "CMPM201: Introduction to Computational Media",
     "CMPM80J: Games as Technical Culture"
   ],
-  "Alison Hanson": [
-    "ANTH 110Y Feeding California"
-  ],
+  "Alison Hanson": ["ANTH 110Y Feeding California"],
   "Mary Pudup": [
     "CMMU 105A Field Study",
     "CMMU 105B Field Study",
@@ -1089,9 +961,7 @@
     "LIT 80O Love, Anarchy, Revolution",
     "LIT 81G The Good Life"
   ],
-  "Jorge Menna": [
-    "ART 190A Writing for Artists"
-  ],
+  "Jorge Menna": ["ART 190A Writing for Artists"],
   "Olena Vaske": [
     "BIOL 104A Human Genetic Variation Laboratory I",
     "BIOL 104B Human Genetic Variation Laboratory II",
@@ -1117,9 +987,7 @@
   "Abrams Zsuzsanna": [
     "APLX 55 Pardon My French: Politeness, Impoliteness, Swearing, Slang, and Humor"
   ],
-  "John O": [
-    "LIT 112C Charles Dickens"
-  ],
+  "John O": ["LIT 112C Charles Dickens"],
   "Zhu Wang": [
     "BIOL 110 Cell Biology",
     "BIOL 120 Developmental Biology",
@@ -1134,9 +1002,7 @@
     "AM160: Introduction to Scientific Machine Learning",
     "AM280B: Seminar in Applied Mathematical Modeling"
   ],
-  "John V Dzimianski": [
-    "BME21L: Introduction to Basic Laboratory Techniques"
-  ],
+  "John V Dzimianski": ["BME21L: Introduction to Basic Laboratory Techniques"],
   "Adam French": [
     "ENVS 143 Sustainable Development: Economy, Policy, and Environment",
     "ENVS 143 The Future of Sustainable Development"
@@ -1148,21 +1014,15 @@
     "HIS 217 Critical Conversations in Native American History",
     "HIS 9 Introduction to Native American History"
   ],
-  "Cooppan Vilashini": [
-    "LIT 200 Proseminar"
-  ],
-  "Kimberly Hulmer": [
-    "WRIT 26 Writing About Language"
-  ],
+  "Cooppan Vilashini": ["LIT 200 Proseminar"],
+  "Kimberly Hulmer": ["WRIT 26 Writing About Language"],
   "Nidhi Mahajan": [
     "ANTH 110U Histories and Cultures of Piracy",
     "ANTH 129 Beyond Borders: Other Globalizations and Histories of Interconnection",
     "ANTH 194K Reading Ethnographies",
     "ANTH 248 Shadowy Dealings: Anthropology of Finance, Money, and Law"
   ],
-  "Catherine Ram": [
-    "LALS 190G LALS Global Internship"
-  ],
+  "Catherine Ram": ["LALS 190G LALS Global Internship"],
   "Alma Heckman": [
     "HIS 185C Communism, Nationalism, and Zionism: Comparative Radical Jewish Politics",
     "HIS 185I Latin American Jewish History in the Modern Period",
@@ -1179,9 +1039,7 @@
   "Jennifer Figueroa": [
     "LALS 62 Chicanx Education: Race, Segregation, and Advocacy"
   ],
-  "Aide Macias-Munoz": [
-    "BIOE 109 Evolution"
-  ],
+  "Aide Macias-Munoz": ["BIOE 109 Evolution"],
   "Hannah Waterhouse": [
     "ENVS 161A Soils and Plant Nutrition",
     "ENVS 161A Soils as Living Systems",
@@ -1193,9 +1051,7 @@
     "MUSC 80Y Music, Anti-Semitism, and the Holocaust",
     "MUSC 81P History of Jewish Music"
   ],
-  "Madison Heyin": [
-    "MUSC 80S Women in Music"
-  ],
+  "Madison Heyin": ["MUSC 80S Women in Music"],
   "Oswald A Campesato": [
     "CSE20: Beginning Programming in Python",
     "CSE30: Programming Abstractions: Python"
@@ -1230,15 +1086,9 @@
     "LIT 190F Studies in Poetry",
     "LIT 230A Topics in Theory"
   ],
-  "Ana Flecha": [
-    "LALS 78 Anti-Colonial Dancing of the Americas"
-  ],
-  "Jorgge Menna Bareto": [
-    "ART 20H Introduction to Sculpture and Public Art"
-  ],
-  "Laura Harrison": [
-    "SOCY 178Z Disability and Society"
-  ],
+  "Ana Flecha": ["LALS 78 Anti-Colonial Dancing of the Americas"],
+  "Jorgge Menna Bareto": ["ART 20H Introduction to Sculpture and Public Art"],
+  "Laura Harrison": ["SOCY 178Z Disability and Society"],
   "Elliot Anderson": [
     "ART 104 Digital Video",
     "ART 106C Stop Motion Animation",
@@ -1255,9 +1105,7 @@
     "EDUC 141 Bilingualism and Schooling",
     "EDUC 225 Reading Across the Curriculum in Middle School and Secondary"
   ],
-  "Jennifer Reardon": [
-    "SOCY 121 Sociology of Health and Medicine"
-  ],
+  "Jennifer Reardon": ["SOCY 121 Sociology of Health and Medicine"],
   "Michelle Aguilera": [
     "EDUC 126 Foundations of Literacy Learning: Contemporary Perspectives",
     "EDUC 135 Gender and Education",
@@ -1272,9 +1120,7 @@
     "BME 21L Introduction to Basic Laboratory Techniques",
     "BME 22L Foundations of Design and Experimentation in Molecular Biology, Part I"
   ],
-  "Eaton Kent": [
-    "POLI 100 Politics Writing-Intensive Seminar"
-  ],
+  "Eaton Kent": ["POLI 100 Politics Writing-Intensive Seminar"],
   "Gary Griggs": [
     "CSP 290C Coastal Science and Policy Capstone Project",
     "CSP 291 Coastal Science and Policy Capstone Seminar",
@@ -1319,17 +1165,13 @@
     "HISC 278 Speculative Ecologies",
     "HISC 279 Earth-Land-Soil: Geophilosophies in Troubled Grounds"
   ],
-  "Jack Lin": [
-    "ECE13: Computer Systems and C Programming"
-  ],
+  "Jack Lin": ["ECE13: Computer Systems and C Programming"],
   "Tyler Munger": [
     "TIM147: Introduction to Data Mining for Business",
     "TIM175: Business Strategy and Information Systems",
     "TIM58: Systems Analysis and Design"
   ],
-  "Raquel Saltikov": [
-    "METX 102 Cell and Molecular Toxicology"
-  ],
+  "Raquel Saltikov": ["METX 102 Cell and Molecular Toxicology"],
   "James Doucet-Battle": [
     "SOCY 121 Sociology of Health and Medicine",
     "SOCY 127P Sociology of Drugs, Botanicals and Pharmaceuticals",
@@ -1337,9 +1179,7 @@
     "SOCY 208 Writing Practicum",
     "SOCY 268A Science and Justice: Experiments in Collaboration"
   ],
-  "Shelby Graham": [
-    "PRTR 131C Curatorial Practice"
-  ],
+  "Shelby Graham": ["PRTR 131C Curatorial Practice"],
   "Hunter Bivens": [
     "LIT 101 Theory and Interpretation",
     "LIT 109X Marxist Literary Criticism",
@@ -1382,12 +1222,8 @@
     "APLX 235 Second Language Teaching",
     "APLX 80 Introduction to Applied Linguistics"
   ],
-  "Michael Connor": [
-    "METX 160 Coastal Environmental Toxicology and Policy"
-  ],
-  "naru naru": [
-    "MUSC 203F Performance Practice in the 20th Century"
-  ],
+  "Michael Connor": ["METX 160 Coastal Environmental Toxicology and Policy"],
+  "naru naru": ["MUSC 203F Performance Practice in the 20th Century"],
   "Alan Zahler": [
     "BIOL 114 Cancer Cell Biology",
     "BIOL 15 Undergraduate Research Reports",
@@ -1472,9 +1308,7 @@
     "BIOE 163L Ecology of Reefs, Mangroves, and Seagrasses Laboratory",
     "BIOE 281U Topics in Invertebrate Biology"
   ],
-  "lklu": [
-    "AM20: Ordinary Differential Equations for Engineers"
-  ],
+  "lklu": ["AM20: Ordinary Differential Equations for Engineers"],
   "Jenny Reardon": [
     "SOCY 10 Issues and Problems in American Society",
     "SOCY 121 Sociology of Health and Medicine",
@@ -1509,9 +1343,7 @@
   "Sol Eunsol Choi": [
     "HCI202B:  Introduction to Build (Advanced): Physical Computing"
   ],
-  "Amanda The Staff": [
-    "EDUC 178 Special Topics in Education"
-  ],
+  "Amanda The Staff": ["EDUC 178 Special Topics in Education"],
   "Kathleen Greaney": [
     "CRWN 86 Professional Communication in a Digital Age",
     "CRWN 86 Storytelling in a Digital Age",
@@ -1529,25 +1361,15 @@
     "BME129A: Project Design and Implementation in Biomolecular Engineering I",
     "BME281D: Seminar on Protein Engineering"
   ],
-  "Asych Online": [
-    "CMPM80K: Foundations of Video Game Design"
-  ],
-  "Christina Hall": [
-    "CRWN 185 Career and Internship Preparation"
-  ],
+  "Asych Online": ["CMPM80K: Foundations of Video Game Design"],
+  "Christina Hall": ["CRWN 185 Career and Internship Preparation"],
   "Adwait Ratnaparkhi": [
     "NLP271A: Capstone I:  Recent Research in NLP",
     "NLP280: Seminar in Natural Language Processing"
   ],
-  "Sharron Kinoshita": [
-    "LIT 102 Translation Theory"
-  ],
-  "Karlic Karolina": [
-    "ART 156 Project Development in Photography"
-  ],
-  "Razvan V Marinescu": [
-    "CSE242: Machine Learning"
-  ],
+  "Sharron Kinoshita": ["LIT 102 Translation Theory"],
+  "Karlic Karolina": ["ART 156 Project Development in Photography"],
+  "Razvan V Marinescu": ["CSE242: Machine Learning"],
   "Judit Moschkovich": [
     "EDUC 183 Children's Mathematical Thinking",
     "EDUC 185B Introduction to Mathematics Education",
@@ -1565,9 +1387,7 @@
     "BIOL 200E Experimental Design",
     "BIOL 280E Meiotic Chromosome Dynamics"
   ],
-  "Madhavi Murthy": [
-    "FMST 232 Topics in Postcolonial Studies"
-  ],
+  "Madhavi Murthy": ["FMST 232 Topics in Postcolonial Studies"],
   "Upasna Sharma": [
     "BIOL 105 Genetics",
     "BIOL 280X RNA-mediated epigenetic inheritance"
@@ -1593,18 +1413,10 @@
     "LGST 159 Property and the Law",
     "LGST 196 Senior Capstone"
   ],
-  "Heather Wygant": [
-    "EDUC 100A Cal Teach 2: Science and Mathematics"
-  ],
-  "David Smith": [
-    "METX 202 Cell and Molecular Toxicology"
-  ],
-  "Malin Malin": [
-    "BIOE 200B Advanced Organismal Biology"
-  ],
-  "Terry Terhaar": [
-    "BME 123T Senior Thesis Writing"
-  ],
+  "Heather Wygant": ["EDUC 100A Cal Teach 2: Science and Mathematics"],
+  "David Smith": ["METX 202 Cell and Molecular Toxicology"],
+  "Malin Malin": ["BIOE 200B Advanced Organismal Biology"],
+  "Terry Terhaar": ["BME 123T Senior Thesis Writing"],
   "Vilashini Cooppan": [
     "LIT 101 Theory and Interpretation",
     "LIT 108A Literature Internships",
@@ -1627,9 +1439,7 @@
     "ENVS 215B Intermediate Geographic Information Systems",
     "ENVS 215L Exercises in Geographic Information Systems"
   ],
-  "CSE": [
-    "CSE183: Web Applications"
-  ],
+  "CSE": ["CSE183: Web Applications"],
   "Mark Amengual": [
     "APLX 101 Second-Language Acquisition",
     "APLX 102 Bilingualism",
@@ -1646,12 +1456,8 @@
   "Dave Gordon": [
     "POLI 213 Who Governs the Globe? Exploring Agency and Authority in Contemporary World Politics"
   ],
-  "Ben": [
-    "MUSC 219 Techniques in Composition"
-  ],
-  "x-listed with CSE": [
-    "ECE253: Introduction to Information Theory"
-  ],
+  "Ben": ["MUSC 219 Techniques in Composition"],
+  "x-listed with CSE": ["ECE253: Introduction to Information Theory"],
   "Bruno Sans": [
     "STAT131: Introduction to Probability Theory",
     "STAT132: Classical and Bayesian Inference",
@@ -1669,9 +1475,7 @@
     "BME280B: Seminar on Bioinformatics and Bioengineering",
     "BME281S: Seminar in Computational Functional Genomics"
   ],
-  "Camilo Rivas-Gomez": [
-    "LIT 81D The Prophet and the Qurâan"
-  ],
+  "Camilo Rivas-Gomez": ["LIT 81D The Prophet and the Qurâan"],
   "Yi Zuo": [
     "BIOL 124 Optical Imaging for Biological Research",
     "BIOL 126 Neural Plasticity and Cognitive Neuroscience",
@@ -1731,17 +1535,13 @@
     "EDUC 214 Contemporary Issues in Education",
     "EDUC 266 Program Evaluation and Action Research in Educational Reform"
   ],
-  "Brad Haddad": [
-    "ENVS 141 Ecological Economics"
-  ],
+  "Brad Haddad": ["ENVS 141 Ecological Economics"],
   "Ken Pedrotti": [
     "ECE172: Advanced Analog Circuits",
     "ECE221: Advanced Analog Integrated Circuits",
     "ECE80T: Modern Electronic Technology and How It Works"
   ],
-  "David Shaw": [
-    "ANTH 110I Cultures of Sustainability and Social Justice"
-  ],
+  "David Shaw": ["ANTH 110I Cultures of Sustainability and Social Justice"],
   "Doug Kellogg": [
     "BIOL 100 Biochemistry",
     "BIOL 186F Undergraduate Research in MCD Biology",
@@ -1767,12 +1567,8 @@
   "Chris Benner": [
     "SOCY 107F Digital Social Enterprise and Project Management"
   ],
-  "Sumita Jaggar": [
-    "EDUC 229 Teaching Mathematics in the Secondary Classroom"
-  ],
-  "Gurun Giulia": [
-    "BIOL 109L Yeast Molecular Genetics Laboratory"
-  ],
+  "Sumita Jaggar": ["EDUC 229 Teaching Mathematics in the Secondary Classroom"],
+  "Gurun Giulia": ["BIOL 109L Yeast Molecular Genetics Laboratory"],
   "Robert Nichols": [
     "HISC 128 Why Obey?",
     "HISC 142 What is a Person?",
@@ -1804,9 +1600,7 @@
     "LIT 250B Forms and Aesthetics",
     "LIT 279B Writing Studio"
   ],
-  "Phillip Woytowitz": [
-    "GAME230: Fundamentals of Game Engineering"
-  ],
+  "Phillip Woytowitz": ["GAME230: Fundamentals of Game Engineering"],
   "James Edward Davis": [
     "CMPM118: Collaborative Research Experience in Engineering",
     "CSE160: Introduction to Computer Graphics"
@@ -1832,12 +1626,8 @@
     "CRWN 97A Foundations of Applied Ethics and Values of Emerging Technologies",
     "CRWN 97B Center for Applied Ethics and Values of Emerging Technologies (CAEVET) Internship"
   ],
-  "Camila Hawthorne": [
-    "SOCY 200B Social Theory 2"
-  ],
-  "rez": [
-    "LALS 190G LALS Global Internship"
-  ],
+  "Camila Hawthorne": ["SOCY 200B Social Theory 2"],
+  "rez": ["LALS 190G LALS Global Internship"],
   "Er": [
     "ANTH 177 Environmental Archaeology",
     "ANTH 194V Who Owns the Past? Ethical and Political Dimensions of Contemporary Archaeology"
@@ -1865,12 +1655,8 @@
     "BIOE 175 Conservation Genomics",
     "BIOE 281J Topics in Evolutionary Genomics"
   ],
-  "Danil Munoz": [
-    "MUSC 80O Music, Politics, and Protest"
-  ],
-  "Radoff Sara": [
-    "KRSG 25 Successful Transfer to the Research University"
-  ],
+  "Danil Munoz": ["MUSC 80O Music, Politics, and Protest"],
+  "Radoff Sara": ["KRSG 25 Successful Transfer to the Research University"],
   "Alexyss McClellan-Ufugusuku": [
     "HIS 39H U.S. Bases in Asia Pacific: Power, Pollution, and Protest"
   ],
@@ -1900,12 +1686,8 @@
     "CSE290T: Topics in Computing for Society",
     "TIM50: Business Information Systems"
   ],
-  "Marilia Kaisar": [
-    "FILM 202 Pedagogy in Film and Digital Media"
-  ],
-  "Nelsen Hutchison": [
-    "MUSC 164 Jazz Ensembles"
-  ],
+  "Marilia Kaisar": ["FILM 202 Pedagogy in Film and Digital Media"],
+  "Nelsen Hutchison": ["MUSC 164 Jazz Ensembles"],
   "Michael J Mateas": [
     "CMPM148: Interactive Storytelling",
     "CMPM206: Computational Media Research Preparation",
@@ -1945,26 +1727,20 @@
     "LIT 138B Regions in American Literature",
     "LIT 190F Studies in Poetry"
   ],
-  "Ami Chen-Mills": [
-    "OAKS 47 Building an Inner Sanctuary"
-  ],
+  "Ami Chen-Mills": ["OAKS 47 Building an Inner Sanctuary"],
   "Hao Yue": [
     "CSE20: Beginning Programming in Python",
     "CSE30: Programming Abstractions: Python",
     "CSE40: Machine Learning Basics: Data Analysis and Empirical Methods"
   ],
-  "Brent Bell": [
-    "ENVS 18 Natural History Illustration"
-  ],
+  "Brent Bell": ["ENVS 18 Natural History Illustration"],
   "Matthew Guthaus": [
     "CSE122: Introduction to VLSI Digital System Design",
     "CSE222A: VLSI Digital System Design",
     "CSE222B: VLSI System-on-a-Chip Design",
     "CSE280G: Hardware Systems Collective Seminar"
   ],
-  "Maureen Callanan": [
-    "COWL 78 Children, Technology, and Development"
-  ],
+  "Maureen Callanan": ["COWL 78 Children, Technology, and Development"],
   "Kyle Parry": [
     "HAVC 100A Approaches to Visual Studies",
     "HAVC 141H Media History and Theory",
@@ -1991,12 +1767,8 @@
     "LIT 119A American Archives",
     "LIT 189B El Siglo XIX en América Latina: cultura, política y sociedad"
   ],
-  "Ismael Illescas": [
-    "LALS 133 Latina/o Art and Representation"
-  ],
-  "Roberto de Rook": [
-    "EDUC 60 Schooling, Democracy, and Justice"
-  ],
+  "Ismael Illescas": ["LALS 133 Latina/o Art and Representation"],
+  "Roberto de Rook": ["EDUC 60 Schooling, Democracy, and Justice"],
   "Chris Chen": [
     "LIT 1 Literary Interpretation",
     "LIT 190T Topics in Modern Literary Studies",
@@ -2018,9 +1790,7 @@
     "EDUC 102 Education, Media, and Society",
     "EDUC 166 Technology and Education"
   ],
-  "Melodie Michel": [
-    "MUSC 81E Music and Resilience in Latin America"
-  ],
+  "Melodie Michel": ["MUSC 81E Music and Resilience in Latin America"],
   "Raquel Chamorro-Garcia": [
     "METX 102 Cell and Molecular Toxicology",
     "METX 115 Environmental Health Science",
@@ -2037,9 +1807,7 @@
     "ECE177L: Power Electronics Laboratory",
     "ECE293: Advanced Topics in Electrical and Computer Engineering"
   ],
-  "Juan Bell": [
-    "LIT 230A Topics in Theory"
-  ],
+  "Juan Bell": ["LIT 230A Topics in Theory"],
   "Laura Beth Bugg": [
     "GCH 123 Migration as a Social Determinant of Health",
     "GCH 195 Global and Community Health Communication"
@@ -2051,18 +1819,10 @@
     "ART 80X Ars Erotica: Sexual Imagery in Culture and Art",
     "CT 163 Queer Art"
   ],
-  "Zoe Zhao": [
-    "SOCY 203 Sociological Methods"
-  ],
-  "Charles Lord": [
-    "FILM 236 Making...in the Anthropocene"
-  ],
-  "Liz Beaumont": [
-    "POLI 111A Constitutional Law"
-  ],
-  "Hibbert-Jones": [
-    "ART 210B Practice-Based Research Group: Systems"
-  ],
+  "Zoe Zhao": ["SOCY 203 Sociological Methods"],
+  "Charles Lord": ["FILM 236 Making...in the Anthropocene"],
+  "Liz Beaumont": ["POLI 111A Constitutional Law"],
+  "Hibbert-Jones": ["ART 210B Practice-Based Research Group: Systems"],
   "Matthew Schumaker": [
     "MUSC 123 Electronic Sound Synthesis",
     "MUSC 123A Electronic Music: Synthesis & Composition I",
@@ -2091,9 +1851,7 @@
     "BME 281E Seminar in Genomics",
     "BME 80H The Human Genome"
   ],
-  "Habibi": [
-    "CMPM80H: Human Centered AI"
-  ],
+  "Habibi": ["CMPM80H: Human Centered AI"],
   "Jennifer Jones Hinz": [
     "EDUC 220 Reading and Language Arts for Elementary Classrooms"
   ],
@@ -2127,9 +1885,7 @@
     "MUSC 219 Techniques in Composition",
     "MUSC 220 Graduate Seminar in Music Composition"
   ],
-  "Joseph Klett": [
-    "SOCY 115 Introduction to Sound Studies"
-  ],
+  "Joseph Klett": ["SOCY 115 Introduction to Sound Studies"],
   "Ingrid Parker": [
     "BIOE 145 Plant Ecology",
     "BIOE 145L Field Methods in Plant Ecology",
@@ -2139,19 +1895,13 @@
     "BIOE 279 Evolutionary Ecology",
     "BIOE 281P Topics in Plant Population Ecology"
   ],
-  "Ka-Eul Yoo": [
-    "CRES 114 Race and Disability in American Drama"
-  ],
+  "Ka-Eul Yoo": ["CRES 114 Race and Disability in American Drama"],
   "Scott Makson": [
     "MUSC 167R Recording Workshop",
     "MUSC 81T Fundamentals of Music Technology"
   ],
-  "Emily Travis": [
-    "LIT 80I Topics in American Culture"
-  ],
-  "Raquel Breejon Robinson": [
-    "CMPM179: Game Design Practicum"
-  ],
+  "Emily Travis": ["LIT 80I Topics in American Culture"],
+  "Raquel Breejon Robinson": ["CMPM179: Game Design Practicum"],
   "Kristina Chew": [
     "LIT 184A Introduction to Greek Literature",
     "LIT 184C Greek Poetry",
@@ -2184,9 +1934,7 @@
   "Fuifui Niumeitolu": [
     "CRES 188A Topics in Transnational Asian American and Pacific Islander Studies"
   ],
-  "Maria Gonz": [
-    "SPAN 141 Advanced Spanish Grammar"
-  ],
+  "Maria Gonz": ["SPAN 141 Advanced Spanish Grammar"],
   "Frank Galuszka": [
     "ART 113 Illustrating Stories: Fantasy and Documentary Narratives",
     "ART 15 Introduction to Drawing for the Major"
@@ -2210,26 +1958,16 @@
     "BIOE 262 Facilitating Change in Coastal Science Policy",
     "BIOE 281D Topics in Global Change Ecology"
   ],
-  "Nishi Mahajan": [
-    "ANTH 126 Contraband: Shadow Economies and the Law"
-  ],
+  "Nishi Mahajan": ["ANTH 126 Contraband: Shadow Economies and the Law"],
   "Paul A Parker": [
     "STAT208: Linear Statistical Models",
     "STAT280B: Seminars in Statistics",
     "STAT80A: Gambling and Gaming"
   ],
-  "Don Potts": [
-    "BIOE 183W Undergraduate Research in EEB--Writing"
-  ],
-  "Cesar Estrella": [
-    "LALS 129 America Latina: Cine, Dictadura y Memoria"
-  ],
-  "Terra Haddad": [
-    "METX 125 Practicing Safe Science"
-  ],
-  "A Flegal": [
-    "METX 281F Topics in Aquatic Toxicology"
-  ],
+  "Don Potts": ["BIOE 183W Undergraduate Research in EEB--Writing"],
+  "Cesar Estrella": ["LALS 129 America Latina: Cine, Dictadura y Memoria"],
+  "Terra Haddad": ["METX 125 Practicing Safe Science"],
+  "A Flegal": ["METX 281F Topics in Aquatic Toxicology"],
   "Fahima Ife": [
     "CRES 113 Music and Performance",
     "CRES 144 Introduction to Black Poetry",
@@ -2240,9 +1978,7 @@
     "CRES 222 Experimental Language Poetry",
     "CRES 70B Black Radical University?"
   ],
-  "Emily Underwood": [
-    "ENVS 18 Natural History Illustration"
-  ],
+  "Emily Underwood": ["ENVS 18 Natural History Illustration"],
   "Zouheir Rezki": [
     "ECE103: Signals and Systems",
     "ECE103L: Signals and Systems Laboratory",
@@ -2258,9 +1994,7 @@
     "LING 174 Neurolinguistics",
     "LING 258 Advanced Psycholinguistics"
   ],
-  "Omar Ahmadyar": [
-    "CSE111: Advanced Programming"
-  ],
+  "Omar Ahmadyar": ["CSE111: Advanced Programming"],
   "Aaron Jones": [
     "OAKS 26 Navigating the University From a Black Critical Lens"
   ],
@@ -2285,12 +2019,8 @@
     "LGST 173 Disability, Law, & Politics",
     "LGST 196 Senior Capstone"
   ],
-  "Robin Hunicke": [
-    "ARTG 145 Non-Digital Game Design"
-  ],
-  "Sherman Jeff": [
-    "ENVS 144 Global Climate Change Politics"
-  ],
+  "Robin Hunicke": ["ARTG 145 Non-Digital Game Design"],
+  "Sherman Jeff": ["ENVS 144 Global Climate Change Politics"],
   "Matthew R Guthaus": [
     "CSE122: Introduction to VLSI Digital System Design",
     "CSE127A: Chip Design Capstone I",
@@ -2363,15 +2093,11 @@
     "SOCY 200C Social Theory 3",
     "SOCY 242 Feminist Research Seminar"
   ],
-  "David M Torres-Mendoza": [
-    "CMPM15: Research Explorations"
-  ],
+  "David M Torres-Mendoza": ["CMPM15: Research Explorations"],
   "Yuki Obayashi": [
     "CRES 116 Race and the Pacific: U.S. and Japanese Empires in Comparative Perspective"
   ],
-  "GIna Dent": [
-    "VAST 199 Independent Study"
-  ],
+  "GIna Dent": ["VAST 199 Independent Study"],
   "Chari Glogovac-Smith": [
     "FILM 136C Visual Culture and Technology: History of New Media",
     "FILM 200C Theory and Praxis of Film and Digital Media 2",
@@ -2444,12 +2170,8 @@
     "MUSC 80E Race and American Music",
     "MUSC 80P Popular Music in the United States"
   ],
-  "Derr": [
-    "HIS 151A Medicine and the Body in the Colonial World"
-  ],
-  "Christian Ruvalcabra": [
-    "LIT 189C Introducción a Spanish Studies"
-  ],
+  "Derr": ["HIS 151A Medicine and the Body in the Colonial World"],
+  "Christian Ruvalcabra": ["LIT 189C Introducción a Spanish Studies"],
   "David Kant": [
     "MUSC 124 Intermediate Electronic Sound Synthesis",
     "MUSC 125 Advanced Electronic Sound Synthesis",
@@ -2475,9 +2197,7 @@
     "AM280C: Seminar in Geophysical and Astrophysical Fluid Dynamics",
     "AM30: Multivariate Calculus for Engineers"
   ],
-  "Daniel G Shapiro": [
-    "CMPM146: Game AI"
-  ],
+  "Daniel G Shapiro": ["CMPM146: Game AI"],
   "Kriti Sharma": [
     "CRES 12 Science and Justice: Critical Intro",
     "CRES 190N Science/Fiction and the Possible",
@@ -2489,9 +2209,7 @@
     "BIOL 291 Molecular, Cellular, and Developmental Biology Seminar",
     "BIOL 292 MCD Seminar"
   ],
-  "Alex Wand": [
-    "MUSC 58 Songwriting Craft and Practice"
-  ],
+  "Alex Wand": ["MUSC 58 Songwriting Craft and Practice"],
   "Kathleen Gutierrez": [
     "HIS 100 Historical Skills and Methods",
     "HIS 143B History of the Philippines, 1815 to the Present",
@@ -2513,16 +2231,9 @@
     "LIT 251 Topics in Cultural Studies",
     "LIT 81F Ghosts of Slavery, 1960-80s/2000-20s"
   ],
-  "Gizelle Hurtado": [
-    "BIOE 124 Mammalogy",
-    "BIOE 124L Mammalogy Laboratory"
-  ],
-  "Narath": [
-    "HAVC 202 Introduction to Visual Studies Methods"
-  ],
-  "Jeromw Shaw": [
-    "EDUC 233 Social Science Teaching for Secondary Classrooms"
-  ],
+  "Gizelle Hurtado": ["BIOE 124 Mammalogy", "BIOE 124L Mammalogy Laboratory"],
+  "Narath": ["HAVC 202 Introduction to Visual Studies Methods"],
+  "Jeromw Shaw": ["EDUC 233 Social Science Teaching for Secondary Classrooms"],
   "Juliana Leslie": [
     "KRSG 1 Academic Literacy and Ethos: Learning in Community",
     "KRSG 1 Academic Literacy and Ethos: Power and Representation",
@@ -2531,12 +2242,8 @@
     "KRSG 102 STARS Internship (Services for Transfer And Reentry Students)",
     "KRSG 65W Kresge Lab: Creative Writing"
   ],
-  "Dorothy": [
-    "ART 106C Stop Motion Animation"
-  ],
-  "Christian Schwarz": [
-    "ENVS 19 Topics in Natural History"
-  ],
+  "Dorothy": ["ART 106C Stop Motion Animation"],
+  "Christian Schwarz": ["ENVS 19 Topics in Natural History"],
   "Ting Ting Wu": [
     "CHIN 103 Advanced Chinese: Language and Society",
     "CHIN 107 Introduction to Classical Chinese Prose",
@@ -2558,9 +2265,7 @@
     "METX 245B Scientific Communication in Microbiology and Environmental Toxicology B",
     "METX 270 Drug Action and Development"
   ],
-  "Yulia Gilichinskaya": [
-    "FILM 20P Introduction to Production Technique"
-  ],
+  "Yulia Gilichinskaya": ["FILM 20P Introduction to Production Technique"],
   "Edward Shanken": [
     "ART 125 Environmental Art Studio",
     "FILM 136C Visual Culture and Technology: History of New Media",
@@ -2578,9 +2283,7 @@
     "SOCY 268B Science and Justice Research Seminar",
     "SOCY 290 Advanced Topics in Sociological Analysis"
   ],
-  "Bryan": [
-    "APLX 190 Research Seminar in Applied Linguistics"
-  ],
+  "Bryan": ["APLX 190 Research Seminar in Applied Linguistics"],
   "Leslie Lopez": [
     "CMMU 10 Introduction to Community Activism",
     "LALS 128 Latino Media in the U.S",
@@ -2646,9 +2349,7 @@
     "HAVC 264 Contemporary Native American Art",
     "HAVC 65 Native American Art and the Environment"
   ],
-  "Juan Manuel Pedroza": [
-    "SOCY 162 Sociology of Organizations"
-  ],
+  "Juan Manuel Pedroza": ["SOCY 162 Sociology of Organizations"],
   "Jennifer Gonzalez": [
     "HAVC 140D Chicano/Chicana Art: 1970-Present",
     "HAVC 141B Death, Desire, and Modernity",
@@ -2664,9 +2365,7 @@
     "HAVC 245 Race and Representation",
     "HAVC 40 Museum Cultures: The Politics of Display"
   ],
-  "Sack": [
-    "FILM 194C New Media Theory Seminar"
-  ],
+  "Sack": ["FILM 194C New Media Theory Seminar"],
   "Alicia Riley": [
     "SOCY 1 Introduction to Sociology",
     "SOCY 146 Introduction to Population Health",
@@ -2679,9 +2378,7 @@
     "CSE211: Compiler Design",
     "CSE280O: Languages, Systems, and Data Seminar"
   ],
-  "Les Guliasi": [
-    "ECE80H: Bending the Curve: Solutions to Climate Change"
-  ],
+  "Les Guliasi": ["ECE80H: Bending the Curve: Solutions to Climate Change"],
   "Damian Parr": [
     "ENVS 133 Agroecology Practicum",
     "ENVS 133B Agroecology Practicum",
@@ -2709,9 +2406,7 @@
     "LIT 279A Methods and Materials",
     "LIT 279B Writing Studio"
   ],
-  "Megan Thomsa": [
-    "POLI 100 Politics Writing-Intensive Seminar"
-  ],
+  "Megan Thomsa": ["POLI 100 Politics Writing-Intensive Seminar"],
   "Catherine Jones": [
     "HIS 100 Historical Skills and Methods",
     "HIS 109A Race, Gender, and Power in the Antebellum South",
@@ -2731,19 +2426,12 @@
     "CSE13S: Computer Systems and C Programming",
     "CSE30: Programming Abstractions: Python"
   ],
-  "Sarah": [
-    "ART 112 Mixed Media Works on Paper",
-    "ART 162A Intaglio I"
-  ],
+  "Sarah": ["ART 112 Mixed Media Works on Paper", "ART 162A Intaglio I"],
   "Harikrishna S Kuttivelil": [
     "CSE200: Research and Teaching in Computer Science and Engineering"
   ],
-  "Don": [
-    "APLX 101 Second-Language Acquisition"
-  ],
-  "Katharine Beaumont": [
-    "POLI 190O Constitutional Meanings and Movements"
-  ],
+  "Don": ["APLX 101 Second-Language Acquisition"],
+  "Katharine Beaumont": ["POLI 190O Constitutional Meanings and Movements"],
   "Leta Miller": [
     "MUSC 101A History of Western Art Music (Medieval, Renaissance, and Baroque)",
     "MUSC 101A History of Western Music (c. 1150 - 1750)",
@@ -2762,17 +2450,13 @@
     "STAT266A: Data Visualization and Statistical Programming in R",
     "STAT7L: Statistical Methods for the Biological, Environmental, and Health Sciences Laboratory"
   ],
-  "Gerald Casel": [
-    "PRTR 1A Introduction to University Life and Learning"
-  ],
+  "Gerald Casel": ["PRTR 1A Introduction to University Life and Learning"],
   "Thanasis Kottas": [
     "STAT209: Generalized Linear Models",
     "STAT222: Bayesian Nonparametric Methods",
     "STAT5: Statistics"
   ],
-  "Kate Hawley": [
-    "PRTR 41W Playwriting Workshop"
-  ],
+  "Kate Hawley": ["PRTR 41W Playwriting Workshop"],
   "Rebecca Killick": [
     "STAT203: Introduction to Probability Theory",
     "STAT223: Time Series Analysis",
@@ -2786,27 +2470,17 @@
     "CSE146: Ethics and Algorithms",
     "CSE40: Machine Learning Basics: Data Analysis and Empirical Methods"
   ],
-  "Kyuhyun Han": [
-    "HIS 80D Visualizing Modern East Asia"
-  ],
-  "Also offered as GCH": [
-    "CMPM20: Climate Resilience, Health, and Wellbeing"
-  ],
+  "Kyuhyun Han": ["HIS 80D Visualizing Modern East Asia"],
+  "Also offered as GCH": ["CMPM20: Climate Resilience, Health, and Wellbeing"],
   "Donald Williams": [
     "OAKS 80H Rainbow Theater Cultural Studies",
     "STEV 80H Rainbow Theater: An Introduction to Multicultural Theater",
     "THEA 56D Rainbow Theater Cultural Studies",
     "THEA 56R Rainbow Theater: An Introduction to Multicultural Theater"
   ],
-  "Greg Gilbert": [
-    "ENVS 196 Senior Seminar"
-  ],
-  "Ankit Sharma": [
-    "SOCY 167 Development and Underdevelopment"
-  ],
-  "Elena Finkbeiner": [
-    "CSP 210 Social Sciences for Coastal Sustainability"
-  ],
+  "Greg Gilbert": ["ENVS 196 Senior Seminar"],
+  "Ankit Sharma": ["SOCY 167 Development and Underdevelopment"],
+  "Elena Finkbeiner": ["CSP 210 Social Sciences for Coastal Sustainability"],
   "Martha Zuniga": [
     "BIOL 111B Immunology II",
     "BIOL 112 Virology",
@@ -2824,12 +2498,8 @@
     "GAME252: Modeling and Simulation",
     "HCI200: Introduction to HCI"
   ],
-  "Adam Millard-Ball": [
-    "ENVS 141 Ecological Economics"
-  ],
-  "Marilyn Patton": [
-    "CRWN 1A Introduction to University Life and Learning"
-  ],
+  "Adam Millard-Ball": ["ENVS 141 Ecological Economics"],
+  "Marilyn Patton": ["CRWN 1A Introduction to University Life and Learning"],
   "Beth Hernandez-Jason": [
     "KRSG 1 Academic Literacy and Ethos: Power and Representation",
     "KRSG 60C Prison Narratives"
@@ -2853,9 +2523,7 @@
     "ENVS 215A Geographic Information Systems and Environmental Applications",
     "ENVS 215B Intermediate Geographic Information Systems"
   ],
-  "Carol Shennan": [
-    "ENVS 196 Senior Seminar"
-  ],
+  "Carol Shennan": ["ENVS 196 Senior Seminar"],
   "Mircea S": [
     "ECE216: Bio-inspired Locomotion",
     "ECE280C: Seminar on Control",
@@ -2877,12 +2545,8 @@
     "FILM 222 Critical Methodologies in Film and Television",
     "SOCD 293 Studies and Practice for Social Documentation, Filmmaking, and New Media"
   ],
-  "Saori Hoshi": [
-    "JAPN 111 Japanese Arts and Beyond"
-  ],
-  "Heather Rogers": [
-    "LGST 153 Immigration, Citizenship, and Law"
-  ],
+  "Saori Hoshi": ["JAPN 111 Japanese Arts and Beyond"],
+  "Heather Rogers": ["LGST 153 Immigration, Citizenship, and Law"],
   "Allen Van Gelder": [
     "CSE101: Introduction to Data Structures and Algorithms",
     "CSE102: Introduction to Analysis of Algorithms",
@@ -2947,9 +2611,7 @@
     "STAT7: Statistical Methods for the Biological, Environmental, and Health Sciences",
     "STAT80B: Data Visualization"
   ],
-  "Debbie Gould": [
-    "SOCY 290 Advanced Topics in Sociological Analysis"
-  ],
+  "Debbie Gould": ["SOCY 290 Advanced Topics in Sociological Analysis"],
   "Hillary Angelo": [
     "SOCY 105A Classical Social Theory",
     "SOCY 200B Social Theory 2",
@@ -2960,21 +2622,11 @@
     "BIOL 113 Principles of Epidemiology",
     "BIOL 281B Mucosal Immunology and Microbiology"
   ],
-  "Ann Allstatt": [
-    "ART 106O 2D Animation"
-  ],
-  "TJ": [
-    "HAVC 48 Climate Justice Now! Art, Activism, Environment Today"
-  ],
-  "uela": [
-    "ENVS 120 Conservation Biology"
-  ],
-  "John Wang": [
-    "POLI 105A Ancient Political Thought"
-  ],
-  "Megan McNamera": [
-    "SOCY 1 Introduction to Sociology"
-  ],
+  "Ann Allstatt": ["ART 106O 2D Animation"],
+  "TJ": ["HAVC 48 Climate Justice Now! Art, Activism, Environment Today"],
+  "uela": ["ENVS 120 Conservation Biology"],
+  "John Wang": ["POLI 105A Ancient Political Thought"],
+  "Megan McNamera": ["SOCY 1 Introduction to Sociology"],
   "Borja Gonzalez Reguero": [
     "CSP 182 Quantitative Methods for Coastal Climate Resilience",
     "CSP 282 Quantitative Methods for Coastal Climate Resilience"
@@ -2991,16 +2643,12 @@
     "FILM 80S Special Topics in Film and Digital Media",
     "SOCD 203 Documentary Research Methods and Social Science Representation"
   ],
-  "Kyle Gonzalez": [
-    "CMPM148: Interactive Storytelling"
-  ],
+  "Kyle Gonzalez": ["CMPM148: Interactive Storytelling"],
   "Andrew Wood": [
     "COWL 130 Living Harmoniously: Philosophy for Healing",
     "COWL 135 The Path of Forgiveness"
   ],
-  "Charles Rivasplata": [
-    "ENVS 145 Green Cities"
-  ],
+  "Charles Rivasplata": ["ENVS 145 Green Cities"],
   "Katherine C Isbister": [
     "CMPM130: User Interface and User Experience Design",
     "CMPM177: Creative Strategies for Designing Interactive Media",
@@ -3026,9 +2674,7 @@
     "CMMU 161 Gender Health and Justice",
     "CMMU 163 Health Care Inequalities"
   ],
-  "xafsa ciise": [
-    "HISC 130 Blackness and the Psychoanalytic Imaginary"
-  ],
+  "xafsa ciise": ["HISC 130 Blackness and the Psychoanalytic Imaginary"],
   "Nathaniel Berman": [
     "MUSC 103 University Concert Choir",
     "MUSC 1C University Concert Choir",
@@ -3045,9 +2691,7 @@
     "ENVS 215L Exercises in Geographic Information Systems",
     "ENVS 291 Advanced Readings in Environmental Studies"
   ],
-  "William Coulter": [
-    "MUSC 6 Classical Guitar Ensemble"
-  ],
+  "William Coulter": ["MUSC 6 Classical Guitar Ensemble"],
   "Benjamin Breen": [
     "HIS 100 Historical Skills and Methods",
     "HIS 151 History of Science, Medicine, and Technology from Antiquity to the Enlightenment",
@@ -3059,9 +2703,7 @@
     "HIS 65B Plagues, Peasants, and Pirates: Late Medieval Europe, 1000-1500",
     "HIS 70A Modern European History, 1500-1815"
   ],
-  "Sal Moreno": [
-    "CT 120 Intermediate Creative Coding"
-  ],
+  "Sal Moreno": ["CT 120 Intermediate Creative Coding"],
   "Grace Delgado": [
     "HIS 10B United States History, 1877 to 1977",
     "HIS 12 Introduction to Latino American History",
@@ -3079,12 +2721,8 @@
     "STEV 41 Spirituality in a Modern World",
     "STEV 80F Academic Success in the College Core Course"
   ],
-  "LaTecia Yarbrough": [
-    "OAKS 46 Multiracial Visibility Project"
-  ],
-  "Jabbar Talib": [
-    "CRES 190T The War on Terror: Imperialism Past and Present"
-  ],
+  "LaTecia Yarbrough": ["OAKS 46 Multiracial Visibility Project"],
+  "Jabbar Talib": ["CRES 190T The War on Terror: Imperialism Past and Present"],
   "Matt Wagers": [
     "LING 171 Psycholinguistics I",
     "LING 172 Psycholinguistics II",
@@ -3093,9 +2731,7 @@
     "LING 279 Research Seminar in Psycholinguistics",
     "LING 50 Introduction to Linguistics"
   ],
-  "Kalina Kassadjikova": [
-    "ANTH 104 Human Variation and Adaptation"
-  ],
+  "Kalina Kassadjikova": ["ANTH 104 Human Variation and Adaptation"],
   "Cameron Archer": [
     "FILM 170B Fundamentals of Film and Video Production",
     "FILM 171S Special Topics in Film and Digital Media Production",
@@ -3141,9 +2777,7 @@
     "CSE125: Logic Design with Verilog",
     "CSE225: Introduction to ASIC Systems Design"
   ],
-  "Merve": [
-    "FILM 202 Pedagogy in Film and Digital Media"
-  ],
+  "Merve": ["FILM 202 Pedagogy in Film and Digital Media"],
   "Yasmeen Daifallah": [
     "POLI 105D Contemporary Political Theory: Modernity and its Discontents",
     "POLI 184 Shariah and Political Thinking: Law and Politics in Modern Islamic Thought",
@@ -3159,9 +2793,7 @@
     "BME281V: Immunogenomics Seminar",
     "BME80H: The Human Genome"
   ],
-  "samaram": [
-    "CMPM130: User Interface and User Experience Design"
-  ],
+  "samaram": ["CMPM130: User Interface and User Experience Design"],
   "Jim Whitehead": [
     "CMPM115: Lead by Design: Experiential Learning Collaborative",
     "CMPM118: Collaborative Research Experience in Engineering",
@@ -3201,9 +2833,7 @@
     "BIOE 239 Mathematical Modeling and Data Science in Ecology and Evolution",
     "BIOE 281I Topics in Disease Ecology, Population Biology, and Conservation"
   ],
-  "Diji Yang": [
-    "NLP255: Topics in Applied Natural Language Processing"
-  ],
+  "Diji Yang": ["NLP255: Topics in Applied Natural Language Processing"],
   "Ioannis Demertzis": [
     "CSE108: Algorithmic Foundations of Cryptography",
     "CSE108C: Computing on Encrypted Data",
@@ -3211,9 +2841,7 @@
     "CSE234: Understanding Cryptography",
     "CSE239A: Private Computation on Encrypted Data"
   ],
-  "Nirshan Perera": [
-    "OAKS 1A Introduction to University Life and Learning"
-  ],
+  "Nirshan Perera": ["OAKS 1A Introduction to University Life and Learning"],
   "Jeffrey M Flanigan": [
     "CSE40: Machine Learning Basics: Data Analysis and Empirical Methods",
     "NLP201: Natural Language Processing I",
@@ -3221,9 +2849,7 @@
     "NLP244: Advanced Machine Learning for Natural Language Processing",
     "NLP280: Seminar in Natural Language Processing"
   ],
-  "Carine Rohmer": [
-    "FREN 85 (De)constructing contemporary French identity"
-  ],
+  "Carine Rohmer": ["FREN 85 (De)constructing contemporary French identity"],
   "Jimin Lee": [
     "ART 161C Tradition and Innovation: Relief Printmaking in Korea",
     "ART 161J Mokuhanga: UCSC Printmaking in Japan",
@@ -3244,9 +2870,7 @@
     "TIM50: Business Information Systems",
     "TIM58: Systems Analysis and Design"
   ],
-  "Connell": [
-    "OAKS 1A Introduction to University Life and Learning"
-  ],
+  "Connell": ["OAKS 1A Introduction to University Life and Learning"],
   "Thien-Huong Ninh": [
     "CRES 188A Topics in Transnational Asian American and Pacific Islander Studies",
     "CRES 190B Critical Migration Studies"
@@ -3264,30 +2888,20 @@
     "ANTH 176D Colonial Encounters in the Americas",
     "ANTH 194Y Archaeologies of Space and Landscape"
   ],
-  "Carson": [
-    "MUSC 219 Techniques in Composition"
-  ],
+  "Carson": ["MUSC 219 Techniques in Composition"],
   "Catherine Carlstroem": [
     "COWL 12 Public Speaking",
     "COWL 61 Critical Journeys"
   ],
-  "Katie Keliiaa": [
-    "FMST 119 Indigenous Feminisms"
-  ],
-  "Ben Breen": [
-    "HUMN 15 Ethics and Technology"
-  ],
+  "Katie Keliiaa": ["FMST 119 Indigenous Feminisms"],
+  "Ben Breen": ["HUMN 15 Ethics and Technology"],
   "Jennifer Maytorena Taylor": [
     "FILM 175 Documentary Video Workshop",
     "FILM 196A Senior Project in Narrative Production",
     "SOCD 294C Production/Analysis/Editing"
   ],
-  "James": [
-    "MUSC 150J Intermediate Spontaneous Composition and Improvisation"
-  ],
-  "Nikolaos Tziavelis": [
-    "CSE182: Introduction to Database Management Systems"
-  ],
+  "James": ["MUSC 150J Intermediate Spontaneous Composition and Improvisation"],
+  "Nikolaos Tziavelis": ["CSE182: Introduction to Database Management Systems"],
   "Adam Sporka": [
     "CMPM119: Accessible Game Design and Evaluation",
     "CMPM150: Creating Digital Audio",
@@ -3327,15 +2941,9 @@
     "AM20: Ordinary Differential Equations for Engineers",
     "STAT5: Statistics"
   ],
-  "Weixi Cheng": [
-    "ENVS 196 Senior Seminar"
-  ],
-  "Philip Longo": [
-    "OAKS 150 Queer History and Theory in the United States"
-  ],
-  "Helen Shapiro": [
-    "UCDC 100 UCDC Prep (Remote)"
-  ],
+  "Weixi Cheng": ["ENVS 196 Senior Seminar"],
+  "Philip Longo": ["OAKS 150 Queer History and Theory in the United States"],
+  "Helen Shapiro": ["UCDC 100 UCDC Prep (Remote)"],
   "Leila Parsa": [
     "ECE101: Introduction to Electronic Circuits",
     "ECE101L: Introduction to Electronic Circuits Laboratory",
@@ -3396,12 +3004,8 @@
     "MUSC 77 Raga Jazz: Application of Indian Music to Western Instruments",
     "MUSC 78 Popular and Raga-Based Songs of South Asia"
   ],
-  "Daniel Munoz": [
-    "MUSC 81K Scenes and Subcultures"
-  ],
-  "Oliver Fregoso": [
-    "BIOL 281C Lentiviral Replication"
-  ],
+  "Daniel Munoz": ["MUSC 81K Scenes and Subcultures"],
+  "Oliver Fregoso": ["BIOL 281C Lentiviral Replication"],
   "Leilani H": [
     "CSE140: Artificial Intelligence",
     "CSE240: Artificial Intelligence",
@@ -3423,9 +3027,7 @@
     "SCIC 201A Reporting and Writing Science News",
     "SCIC 201B The Science Feature"
   ],
-  "Yinman Wang": [
-    "FILM 132A International Cinema to 1960"
-  ],
+  "Yinman Wang": ["FILM 132A International Cinema to 1960"],
   "Juhee Lee": [
     "STAT131: Introduction to Probability Theory",
     "STAT206B: Intermediate Bayesian Inference",
@@ -3433,21 +3035,11 @@
     "STAT225: Multivariate Statistical Methods",
     "STAT7: Statistical Methods for the Biological, Environmental, and Health Sciences"
   ],
-  "Kyle": [
-    "HAVC 141L Museums in the Internet Era"
-  ],
-  "Deborah Megan": [
-    "SOCY 105A Classical Social Theory"
-  ],
-  "Aashish Khan": [
-    "MUSC 54 North Indian Music Workshop"
-  ],
-  "NIdhi Mahajan": [
-    "ANTH 130A Anthropology of Africa."
-  ],
-  "Allan": [
-    "HAVC 157B Italian Renaissance: Art and Architecture"
-  ],
+  "Kyle": ["HAVC 141L Museums in the Internet Era"],
+  "Deborah Megan": ["SOCY 105A Classical Social Theory"],
+  "Aashish Khan": ["MUSC 54 North Indian Music Workshop"],
+  "NIdhi Mahajan": ["ANTH 130A Anthropology of Africa."],
+  "Allan": ["HAVC 157B Italian Renaissance: Art and Architecture"],
   "Rekia Jibrin": [
     "EDUC 135 Gender and Education",
     "EDUC 235 Introduction to Educational Inquiry",
@@ -3470,9 +3062,7 @@
     "HIS 244 Gender and Japanese History",
     "HIS 40B The Making of Modern East Asia"
   ],
-  "os": [
-    "FILM 194S Special Topics Seminar"
-  ],
+  "os": ["FILM 194S Special Topics Seminar"],
   "Kendra Dority": [
     "GRAD 215 Equitable Course Design for Graduate Student Instructors"
   ],
@@ -3481,18 +3071,12 @@
     "BME281J: Seminar in Computational Genomics and Biomedicine",
     "CSE20: Beginning Programming in Python"
   ],
-  "Matt O": [
-    "HIS 190J Mexican History in the Archives"
-  ],
-  "Renee Boucher": [
-    "ANTH 100 History and Theory of Biological Anthropology"
-  ],
+  "Matt O": ["HIS 190J Mexican History in the Archives"],
+  "Renee Boucher": ["ANTH 100 History and Theory of Biological Anthropology"],
   "Stephen Sweat": [
     "STEV 23 Monsters and the Monstrous in the Early British Novel"
   ],
-  "Synchronous Online": [
-    "TIM170: Management of Technology Seminar"
-  ],
+  "Synchronous Online": ["TIM170: Management of Technology Seminar"],
   "Eve Zyzik": [
     "APLX 101 Second-Language Acquisition",
     "APLX 102 Bilingualism",
@@ -3514,9 +3098,7 @@
     "HIS 196G Topics in Modern Germany and Europe",
     "HIS 78 Modern Authoritarianism in Europe and Beyond"
   ],
-  "Matt": [
-    "LING 50 Introduction to Linguistics"
-  ],
+  "Matt": ["LING 50 Introduction to Linguistics"],
   "Suzanne Alonzo": [
     "BIOE 109 Evolution",
     "BIOE 138 Modeling Evolution and Ecology",
@@ -3548,25 +3130,19 @@
     "LING 53 Semantics I",
     "LING 80M Language and Indigeneity in Mesoamerica"
   ],
-  "Mengyang": [
-    "SOCY 151 Media Activism"
-  ],
+  "Mengyang": ["SOCY 151 Media Activism"],
   "Darke": [
     "ARTG 80G Visual Communication and Interaction Design",
     "ARTG 80I Foundations of Play",
     "CT 195 Creative Technologies Senior Studio",
     "KRSG 1 Academic Literacy and Ethos: Power and Representation"
   ],
-  "Joan McCallum": [
-    "PHYE 5E Aquatics: Lifeguard Training (LT)"
-  ],
+  "Joan McCallum": ["PHYE 5E Aquatics: Lifeguard Training (LT)"],
   "Sri H Kurniawan": [
     "CMPM206: Computational Media Research Preparation",
     "CMPM280K: Seminar in Interactive Systems for Individuals with Special Needs"
   ],
-  "John Gabriel Prudente Pelias": [
-    "AM3: Precalculus for the Social Sciences"
-  ],
+  "John Gabriel Prudente Pelias": ["AM3: Precalculus for the Social Sciences"],
   "Dustin Chac": [
     "LING 172 Psycholinguistics II",
     "LING 174 Neurolinguistics",
@@ -3593,9 +3169,7 @@
     "BIOE 159D Marine Ecology Field Quarter: Methods in Field Ecology Laboratory",
     "BIOE 281B Topics in Molecular Evolution"
   ],
-  "Wagers": [
-    "LING 50 Introduction to Linguistics"
-  ],
+  "Wagers": ["LING 50 Introduction to Linguistics"],
   "Elliott Campbell": [
     "CSP 290A Coastal Science and Policy Capstone Project",
     "CSP 291 Coastal Science and Policy Capstone Seminar",
@@ -3622,12 +3196,8 @@
     "CRWN 92G Social Entrepreneurship in Costa Rica",
     "CRWN 94 Eco-Entrepreneurship in Costa Rica"
   ],
-  "Daniel Juon Fremont": [
-    "CSE216: Formal Methods"
-  ],
-  "Terry Smith": [
-    "GAME221: Professional Development for Game Makers"
-  ],
+  "Daniel Juon Fremont": ["CSE216: Formal Methods"],
+  "Terry Smith": ["GAME221: Professional Development for Game Makers"],
   "Michael B John": [
     "GAME200: Game Design Systems",
     "GAME201: Level Design",
@@ -3637,9 +3207,7 @@
     "GAME280A: Games Proseminar",
     "GAME290A: Advanced Topics in Games"
   ],
-  "Frank Andrews": [
-    "CRWN 123 Examining Our Life Through Writing"
-  ],
+  "Frank Andrews": ["CRWN 123 Examining Our Life Through Writing"],
   "Thiago Mota": [
     "HIS 137E Literary Culture in Africa",
     "HIS 31A African History to 1900",
@@ -3692,9 +3260,7 @@
     "CSE185S: Technical Writing and Communication in Computer Science",
     "CSE3: Computing Technology in a Changing Society"
   ],
-  "Maya Escobar": [
-    "OAKS 189 Websites for Social Movements"
-  ],
+  "Maya Escobar": ["OAKS 189 Websites for Social Movements"],
   "Todd M J Lowe": [
     "BME110: Computational Biology Tools",
     "BME129A: Project Design and Implementation in Biomolecular Engineering I",
@@ -3740,12 +3306,8 @@
     "FMST 201 Topics in Feminist Methodologies",
     "FMST 43 Rasanblaj: On Wholeness and Well-Being"
   ],
-  "Parry": [
-    "HAVC 141L Museums in the Internet Era"
-  ],
-  "Magdalena Vega": [
-    "MUSC 12B Mexican Folklorico Music and Dance"
-  ],
+  "Parry": ["HAVC 141L Museums in the Internet Era"],
+  "Magdalena Vega": ["MUSC 12B Mexican Folklorico Music and Dance"],
   "Piper Milton": [
     "HIS 139M Murderers, Witches, and Rebels: Depicting Difference in Colonial Latin America",
     "HIS 39D Floods, Epidemics, and Famine: Environmental History of the Early Modern Atlantic World"
@@ -3755,9 +3317,7 @@
     "CSE231: Advanced Operating Systems",
     "CSE237: Storage Systems"
   ],
-  "Michael McGushin": [
-    "MUSC 166 Chamber Singers"
-  ],
+  "Michael McGushin": ["MUSC 166 Chamber Singers"],
   "Kyle A Miller": [
     "CSE114A: Foundations of Programming Languages",
     "CSE16: Applied Discrete Mathematics",
@@ -3766,9 +3326,7 @@
   "Peter Koht": [
     "CRWN 100 Fundamentals of Starting and Scaling an Organization"
   ],
-  "Shay Stoklos": [
-    "CRWN 70 Introduction to Broadcast Media: Radio"
-  ],
+  "Shay Stoklos": ["CRWN 70 Introduction to Broadcast Media: Radio"],
   "Chris Yonge": [
     "CMPM25: Introduction to 3D Modeling",
     "CMPM26: Introduction to 3D Animation",
@@ -3778,9 +3336,7 @@
     "CSE114A: Foundations of Programming Languages",
     "CSE20: Beginning Programming in Python"
   ],
-  "Ivy": [
-    "LING 50 Introduction to Linguistics"
-  ],
+  "Ivy": ["LING 50 Introduction to Linguistics"],
   "Josephine Pham": [
     "EDUC 180 Introduction to Teaching",
     "EDUC 182 Social and Political Contexts of Teachersâ Work",
@@ -3809,12 +3365,8 @@
   "Murray Soraya": [
     "FILM 203 Professional Development in Film and Digital Media"
   ],
-  "Justine Parkin": [
-    "HISC 87 What is Utopia?"
-  ],
-  "Juan Diaz": [
-    "MUSC 12 Mariachi Ensemble"
-  ],
+  "Justine Parkin": ["HISC 87 What is Utopia?"],
+  "Juan Diaz": ["MUSC 12 Mariachi Ensemble"],
   "Russ Corbett-Detig": [
     "BME110: Computational Biology Tools",
     "BME129B: Project Design and Implementation in Biomolecular Engineering II",
@@ -3829,9 +3381,7 @@
     "ECE224: Device Electronics",
     "ECE228: Engineering of Thin Film Deposition"
   ],
-  "Tammy Hall": [
-    "MUSC 74 Spontaneous Composition/Improvisation I"
-  ],
+  "Tammy Hall": ["MUSC 74 Spontaneous Composition/Improvisation I"],
   "Katherine Beaumont": [
     "POLI 218 Law and/Vs. Justice: The Rule of Law and Problems of (In)Justice"
   ],
@@ -3845,9 +3395,7 @@
   "Elisabeth Remak-Honnef": [
     "HAVC 135F Art of the Book in Western Europe 500-1600"
   ],
-  "Alexey Alexander Munishkin": [
-    "ECE13: Computer Systems and C Programming"
-  ],
+  "Alexey Alexander Munishkin": ["ECE13: Computer Systems and C Programming"],
   "Jay Afrisando": [
     "MUSC 101E Musics of South and Southeast Asia",
     "MUSC 120 Seminar in Music Composition",
@@ -3888,12 +3436,8 @@
     "LIT 91B Intermediate Poetry Writing",
     "PRTR 151P Building the Poem: Process, Form, and the Embodied Text"
   ],
-  "John Jota Lea": [
-    "FILM 194S Special Topics Seminar"
-  ],
-  "Gali Stein-Rosen": [
-    "HEBR 82 Hebrew: Travel Abroad"
-  ],
+  "John Jota Lea": ["FILM 194S Special Topics Seminar"],
+  "Gali Stein-Rosen": ["HEBR 82 Hebrew: Travel Abroad"],
   "Marcia Ochoa": [
     "FMST 150 Mediating Desire",
     "FMST 175 Gender and Sexualities in Latina/o America",
@@ -3918,9 +3462,7 @@
     "ANTH 258 Experimental Cultures",
     "SOCD 204 Ethnographic Writing and Social Documentation"
   ],
-  "Isaac Blacksin": [
-    "HISC 80S War and the Media"
-  ],
+  "Isaac Blacksin": ["HISC 80S War and the Media"],
   "Cameron Monroe": [
     "ANTH 188A Practicum in Archaeology A",
     "ANTH 188B Practicum in Archaeology B",
@@ -3945,9 +3487,7 @@
     "STEV 50A Stevenson Alumni Careers in Law",
     "STEV 50B Stevenson Alumni Careers in Science and Technology"
   ],
-  "Murai Emily": [
-    "ENVS 100L Ecology and Society Writing Laboratory"
-  ],
+  "Murai Emily": ["ENVS 100L Ecology and Society Writing Laboratory"],
   "BME": [
     "BME175: Entrepreneurship in Biotechnology",
     "BME275: Entrepreneurship in Biotechnology"
@@ -3961,12 +3501,8 @@
     "FILM 136D Documentary Film and Video",
     "FILM 229 Topics in Documentary Studies"
   ],
-  "Gustafson Irene": [
-    "FILM 160 Film Genres"
-  ],
-  "Carlos Maltzahn": [
-    "CSE280S: Seminar on Computer Systems"
-  ],
+  "Gustafson Irene": ["FILM 160 Film Genres"],
+  "Carlos Maltzahn": ["CSE280S: Seminar on Computer Systems"],
   "Ron Glass": [
     "EDUC 110 Popular Education, Democracy, and Social Movements",
     "EDUC 235 Introduction to Educational Inquiry"
@@ -3978,10 +3514,7 @@
   "This class is synchronous online": [
     "TIM170: Management of Technology Seminar"
   ],
-  "Victoria May": [
-    "PRTR 161B Handmade Books",
-    "PRTR 61B Handmade Books"
-  ],
+  "Victoria May": ["PRTR 161B Handmade Books", "PRTR 61B Handmade Books"],
   "ECE": [
     "ECE163: Introduction to Small-Scale UAV Theory and Practice",
     "ECE178: Device Electronics",
@@ -3996,9 +3529,7 @@
     "BIOE 120 Marine Botany",
     "BIOE 120L Marine Botany Laboratory"
   ],
-  "DeWitt": [
-    "EDUC 227 English Teaching for Secondary Classrooms"
-  ],
+  "DeWitt": ["EDUC 227 English Teaching for Secondary Classrooms"],
   "Tae Myung Huh": [
     "ECE118: Introduction to Mechatronics",
     "ECE13: Computer Systems and C Programming",
@@ -4006,9 +3537,7 @@
     "ECE218: Mechatronics",
     "ECE8: Introduction to Robotics, Automation and Intelligent Control"
   ],
-  "Monica Multer": [
-    "LIT 121A The Heroic Epic"
-  ],
+  "Monica Multer": ["LIT 121A The Heroic Epic"],
   "Nicole Furtado": [
     "HAVC 176 Visual Sovereignty",
     "HAVC 76 Oceanic Digital Arts"
@@ -4016,12 +3545,8 @@
   "Drew Richardson": [
     "HIS 39E Monsters, Media, and the History of the Supernatural in Modern Japan"
   ],
-  "Carrie Partch": [
-    "BIOC 110L Advanced Biochemistry Laboratory"
-  ],
-  "Christopher Mallett": [
-    "MUSC 52 Guitar Repertoire and Performance"
-  ],
+  "Carrie Partch": ["BIOC 110L Advanced Biochemistry Laboratory"],
+  "Christopher Mallett": ["MUSC 52 Guitar Repertoire and Performance"],
   "Breck Tyler": [
     "ENVS 106A Natural History of Birds",
     "ENVS 106M Natural History of Birds Laboratory"
@@ -4069,9 +3594,7 @@
     "HIS 145 Gender, Colonialism, and Third-World Feminisms",
     "HIS 194J The Poor and the Everday in Modern China"
   ],
-  "Cross-Listed with PHYS": [
-    "AM107: Introduction to Fluid Dynamics"
-  ],
+  "Cross-Listed with PHYS": ["AM107: Introduction to Fluid Dynamics"],
   "Amy Argenal": [
     "SOCY 139I Community Engaged Research, Learning and Internships",
     "SOCY 15 World Society",
@@ -4085,17 +3608,12 @@
     "BIOE 272 Population Genetics",
     "BIOE 281M Topics in Host-Microbe Population Genomics"
   ],
-  "Yassi Moghaddam": [
-    "HCI272: HCI Capstone 2",
-    "HCI290: HCI Seminar"
-  ],
+  "Yassi Moghaddam": ["HCI272: HCI Capstone 2", "HCI290: HCI Seminar"],
   "Dawson Schultz": [
     "COWL 156M Medical Ethics",
     "COWL 156M Medical Ethics and Justice in Literature and Film"
   ],
-  "Katy Seto": [
-    "ENVS 250 Coastal Governance"
-  ],
+  "Katy Seto": ["ENVS 250 Coastal Governance"],
   "Eric Palkovacs": [
     "BIOE 155 Freshwater Ecology",
     "BIOE 155L Freshwater Ecology Laboratory",
@@ -4108,9 +3626,7 @@
     "WRIT 169 Theory and Practice of Tutoring Writing",
     "WRIT 30 Genre Study: STEM"
   ],
-  "R Rajan": [
-    "ENVS 147 Environmental Inequality/Environmental Justice"
-  ],
+  "R Rajan": ["ENVS 147 Environmental Inequality/Environmental Justice"],
   "Dorothy Santos": [
     "ART 10F 4D Foundation",
     "ART 20K Introduction to New Media and Digital Artmaking",
@@ -4148,9 +3664,7 @@
     "ECE173: High-Speed Digital Design",
     "ECE290: ECE Graduate Seminar"
   ],
-  "Donald The Staff": [
-    "APLX 190 Research Seminar in Applied Linguistics"
-  ],
+  "Donald The Staff": ["APLX 190 Research Seminar in Applied Linguistics"],
   "Mike Hutton": [
     "CSE100: Logic Design",
     "CSE100L: Logic Design Laboratory",
@@ -4177,9 +3691,7 @@
     "ENVS 290L Graduate Research Seminar",
     "ENVS 291 Advanced Readings in Environmental Studies"
   ],
-  "David Manuel Torres-Mendoza": [
-    "CMPM15: Research Explorations"
-  ],
+  "David Manuel Torres-Mendoza": ["CMPM15: Research Explorations"],
   "may be offered with asynchronous remote": [
     "CMPM80K: Foundations of Video Game Design"
   ],
@@ -4192,9 +3704,7 @@
     "GCH 1 Foundations for Global and Community Health",
     "POLI 89 Foundations for Global and Community Health"
   ],
-  "l": [
-    "ENVS 141 Ecological Economics"
-  ],
+  "l": ["ENVS 141 Ecological Economics"],
   "James Ackman": [
     "BIOL 125 Introduction to Neuroscience",
     "BIOL 280G Physiology of the Developing Brain"
@@ -4208,12 +3718,8 @@
   "Johnnie Wilson": [
     "EDUC 222 Mathematics Learning and Teaching in Elementary Classrooms"
   ],
-  "David Duncan": [
-    "HIS 39G History in Action: Oral History in Practice"
-  ],
-  "Jordan": [
-    "LIT 112C Charles Dickens"
-  ],
+  "David Duncan": ["HIS 39G History in Action: Oral History in Practice"],
+  "Jordan": ["LIT 112C Charles Dickens"],
   "Pete Raimondi": [
     "CSP 290A Coastal Science and Policy Capstone Project",
     "CSP 291 Coastal Science and Policy Capstone Seminar"
@@ -4224,12 +3730,8 @@
     "ECE241: Introduction to Feedback Control Systems",
     "ECE290: ECE Graduate Seminar"
   ],
-  "Erica Michelle Kleinman": [
-    "GAME251: Games User Research"
-  ],
-  "Samantha The Staff": [
-    "CRES 60E Blackness and Indigeneity in Europe"
-  ],
+  "Erica Michelle Kleinman": ["GAME251: Games User Research"],
+  "Samantha The Staff": ["CRES 60E Blackness and Indigeneity in Europe"],
   "Allan Langdale": [
     "HAVC 137E Renaissance Prints",
     "HAVC 154 Byzantine Visual Culture: Politics and Religion in the Empire of Constantinople, 330-1453 A. C",
@@ -4245,9 +3747,7 @@
     "EDUC 273 Language Acquisition, Bilingualism, and Education",
     "EDUC 280 Language and Literacy Across Disciplines"
   ],
-  "Santos": [
-    "ART 106C Stop Motion Animation"
-  ],
+  "Santos": ["ART 106C Stop Motion Animation"],
   "Dave Benet": [
     "BIOE 75 Scientific Diving Certification",
     "BIOE 75 Scientific Diving Methods"
@@ -4290,9 +3790,7 @@
     "FMST 194W Politics of Space, Time, and Matter",
     "FMST 214 Topics in Feminist Science Studies"
   ],
-  "Stephanie Lain": [
-    "SPAN 156L Society and Sustainability in Latin America"
-  ],
+  "Stephanie Lain": ["SPAN 156L Society and Sustainability in Latin America"],
   "Malin Pinsky": [
     "BIOE 107 Ecology",
     "BIOE 276 Data Science for Ecology and Evolutionary Biology",
@@ -4303,9 +3801,7 @@
     "ANTH 130L Ethnographies of Latin America",
     "ANTH 194W The Anthropology of Social Movements"
   ],
-  "Cameron Vanderscoff": [
-    "COWL 158A Special Topics: Oral History"
-  ],
+  "Cameron Vanderscoff": ["COWL 158A Special Topics: Oral History"],
   "Jennifer Mogannam": [
     "CRES 101 Research Methods and Writing in Critical Race and Ethnic Studies",
     "CRES 170 Arab Diasporic Communities",
@@ -4336,9 +3832,7 @@
     "BIOE 151D Ecology and Conservation in Practice Supercourse: Conservation in Practice",
     "BIOE 281N Topics in Marine Vertebrate Ecology"
   ],
-  "Massimo Di Pierro": [
-    "CSE183: Web Applications"
-  ],
+  "Massimo Di Pierro": ["CSE183: Web Applications"],
   "Jessie Dubreuil": [
     "GCH 10 COVID, Culture and Community Health",
     "PRTR 20 Deciding: A Partnership for Your Path to Major and Meaning"
@@ -4379,12 +3873,8 @@
     "METX 250 Environmental Microbiology",
     "METX 281C Topics in Environmental Microbiology"
   ],
-  "Brad Colquitt": [
-    "BIOL 125 Introduction to Neuroscience"
-  ],
-  "micha cardenas": [
-    "CRES 70U (Un)docu Studies"
-  ],
+  "Brad Colquitt": ["BIOL 125 Introduction to Neuroscience"],
+  "micha cardenas": ["CRES 70U (Un)docu Studies"],
   "David Lau": [
     "PRTR 90A Aesthetics and Politics: Spanish Civil War",
     "PRTR 90B Art and Politics After Google"
@@ -4397,10 +3887,7 @@
     "CMMU 167 Special Topics in Health Equity",
     "CMMU 167 Special Topics in Heath Equity"
   ],
-  "Bernardi": [
-    "BIOE 127 Ichthyology",
-    "BIOE 127L Ichthyology Laboratory"
-  ],
+  "Bernardi": ["BIOE 127 Ichthyology", "BIOE 127L Ichthyology Laboratory"],
   "James E Davis": [
     "CMPM118: Collaborative Research Experience in Engineering",
     "CMPM15: Research Explorations",
@@ -4422,12 +3909,8 @@
     "HIS 41 The Making of the Modern Middle East",
     "HIS 58 From Pirates to Refugees: The History of the Modern Mediterranean"
   ],
-  "Morgan Gates": [
-    "LIT 154D Literature and Sound (and Soundscapes)"
-  ],
-  "Shay Stocklos": [
-    "CRWN 70L Broadcast Production: Radio"
-  ],
+  "Morgan Gates": ["LIT 154D Literature and Sound (and Soundscapes)"],
+  "Shay Stocklos": ["CRWN 70L Broadcast Production: Radio"],
   "Charles Hedrick": [
     "HIS 160A Athenian Democracy",
     "HIS 59 The History of the English Language",
@@ -4449,10 +3932,7 @@
     "GCH 1 Foundations for Global and Community Health",
     "POLI 89 Foundations for Global and Community Health"
   ],
-  "Sara Sanford": [
-    "ART 162A Intaglio I",
-    "ART 164A Screenprinting"
-  ],
+  "Sara Sanford": ["ART 162A Intaglio I", "ART 164A Screenprinting"],
   "Dee Hibbert Jones": [
     "ART 181 Art, Power & Politics",
     "ART 20H Introduction to Sculpture and Public Art"
@@ -4491,9 +3971,7 @@
   "Linda Ulbrich": [
     "HIS 139J Britain Made Digital: A History of the Nation and its Empire"
   ],
-  "Shadi Haddad": [
-    "AM229: Convex Optimization"
-  ],
+  "Shadi Haddad": ["AM229: Convex Optimization"],
   "David Anthony": [
     "HIS 121A African American History to 1877",
     "HIS 121B African American History: 1877 to the Present",
@@ -4509,9 +3987,7 @@
     "CSE182: Introduction to Database Management Systems",
     "CSE214: Principles of Database Systems"
   ],
-  "Rachel Myer": [
-    "BIOE 16 Introduction to Horticulture"
-  ],
+  "Rachel Myer": ["BIOE 16 Introduction to Horticulture"],
   "GCH Affiliate Faculty GCH Affiliate Faculty": [
     "GCH 199A Global and Community Health Senior Thesis",
     "GCH 199B Global and Community Health Senior Thesis B"
@@ -4556,9 +4032,7 @@
     "ECE224: Device Electronics",
     "ECE228: Engineering of Thin Film Deposition"
   ],
-  "Taught by Econ Faculty": [
-    "CSE166A: Game Theory and Applications I"
-  ],
+  "Taught by Econ Faculty": ["CSE166A: Game Theory and Applications I"],
   "Alejandra Kramer": [
     "ANTH 110A Public Life and Contemporary Issues",
     "ANTH 110S Evolution of Democracy",
@@ -4576,33 +4050,21 @@
     "STAT7: Statistical Methods for the Biological, Environmental, and Health Sciences",
     "STAT80A: Gambling and Gaming"
   ],
-  "The Staff The Staff": [
-    "SPAN 6 Second-Year Spanish"
-  ],
-  "Keith Rozendal": [
-    "CRWN 70L Broadcast Production: Radio"
-  ],
+  "The Staff The Staff": ["SPAN 6 Second-Year Spanish"],
+  "Keith Rozendal": ["CRWN 70L Broadcast Production: Radio"],
   "Jeremy Lee": [
     "BIOL 100 Biochemistry",
     "BIOL 105 Genetics",
     "BIOL 129L Neurobiology Lab",
     "BIOL 25 Frosh/Soph Seminar in Neuroscience"
   ],
-  "Ana England": [
-    "EDUC 229 Teaching Mathematics in the Secondary Classroom"
-  ],
-  "Adriana Lopez-Hillebrecht": [
-    "OAKS 20 STEM Success"
-  ],
-  "Lara Galas": [
-    "COWL 89 Faculty Research Colloquium"
-  ],
+  "Ana England": ["EDUC 229 Teaching Mathematics in the Secondary Classroom"],
+  "Adriana Lopez-Hillebrecht": ["OAKS 20 STEM Success"],
+  "Lara Galas": ["COWL 89 Faculty Research Colloquium"],
   "Henry Martin": [
     "LGST 188A Introduction to the Legal Profession and Legal Aid Work"
   ],
-  "Reza Habibi": [
-    "CMPM80H: Human Centered AI"
-  ],
+  "Reza Habibi": ["CMPM80H: Human Centered AI"],
   "Gage Dayton": [
     "BIOE 151A Ecology and Conservation in Practice Supercourse: Ecological Field Methods",
     "BIOE 151B Ecology and Conservation in Practice Supercourse: Ecological Field Methods Laboratory",
@@ -4626,9 +4088,7 @@
     "FILM 185D Sound and Image in Theory and Criticism",
     "FILM 236 Making...in the Anthropocene"
   ],
-  "Angelo": [
-    "SOCY 206 Comparative Historical Methods"
-  ],
+  "Angelo": ["SOCY 206 Comparative Historical Methods"],
   "Christopher Fraser Yonge": [
     "CMPM25: Introduction to 3D Modeling",
     "CMPM26: Introduction to 3D Animation",
@@ -4652,9 +4112,7 @@
     "FILM 170B Fundamentals of Film and Video Production",
     "FILM 196A Senior Project in Narrative Production"
   ],
-  "TBA": [
-    "ART 260 Curatorial Collective"
-  ],
+  "TBA": ["ART 260 Curatorial Collective"],
   "Ricardo Sanfelice": [
     "ECE149: Introduction to Cyber-physical Systems",
     "ECE246: Hybrid Dynamical Systems",
@@ -4662,21 +4120,13 @@
     "ECE280C: Seminar on Control",
     "ECE8: Introduction to Robotics, Automation and Intelligent Control"
   ],
-  "Richard Green": [
-    "BME281E: Seminar in Genomics"
-  ],
+  "Richard Green": ["BME281E: Seminar in Genomics"],
   "Eugene Switkes": [
     "CRWN 85 Visual Perception: A Window to Brain and Behavior"
   ],
-  "Alessia Cecchet": [
-    "FILM 20A Introduction to Film Studies"
-  ],
-  "Raval": [
-    "CMPM290A: Topics in Computational Media"
-  ],
-  "Caileen Brison": [
-    "BIOC 110L Advanced Biochemistry Laboratory"
-  ],
+  "Alessia Cecchet": ["FILM 20A Introduction to Film Studies"],
+  "Raval": ["CMPM290A: Topics in Computational Media"],
+  "Caileen Brison": ["BIOC 110L Advanced Biochemistry Laboratory"],
   "Charles Hamilton": [
     "MUSC 150J Intermediate Spontaneous Composition and Improvisation",
     "MUSC 150K Intermediate Jazz Theory",
@@ -4703,17 +4153,13 @@
   "Linda Stroh": [
     "COWL 107 Trust Rules: How to Tell the Good People from the Bad"
   ],
-  "Joannna Kelley": [
-    "BIOE 183W Undergraduate Research in EEB--Writing"
-  ],
+  "Joannna Kelley": ["BIOE 183W Undergraduate Research in EEB--Writing"],
   "Amanda Reiterman": [
     "HIS 160C Topics in Greek History",
     "LIT 154B Literature and the Arts",
     "LIT 186D Special Topics in Latin Literature"
   ],
-  "Philip Conklin": [
-    "HISC 65 What is Belief?"
-  ],
+  "Philip Conklin": ["HISC 65 What is Belief?"],
   "Kim": [
     "BIOL 291 Molecular, Cellular, and Developmental Biology Seminar",
     "BIOL 292 MCD Seminar",
@@ -4727,13 +4173,8 @@
     "FILM 194S Special Topics Seminar",
     "FILM 238 The Politics of Information"
   ],
-  "Kira Tait": [
-    "POLI 146 The Politics of Sub-Saharan Africa"
-  ],
-  "Ryan": [
-    "LING 101 Phonology I",
-    "LING 102 Phonology II"
-  ],
+  "Kira Tait": ["POLI 146 The Politics of Sub-Saharan Africa"],
+  "Ryan": ["LING 101 Phonology I", "LING 102 Phonology II"],
   "Stacy The Staff": [
     "ENVS 130C Field Experiences in Agroecology and Sustainable Food"
   ],
@@ -4743,9 +4184,7 @@
     "MUSC 166 Chamber Singers",
     "MUSC 2 University Orchestra"
   ],
-  "Suzana Serboi": [
-    "STAT17: Statistical Methods for Business and Economics"
-  ],
+  "Suzana Serboi": ["STAT17: Statistical Methods for Business and Economics"],
   "Bin Chen": [
     "BIOL 128 Developmental Neurobiology",
     "BIOL 129B Advanced Topics in Developmental Neurobiology",
@@ -4761,15 +4200,9 @@
     "BIOL 200A Critical Analysis of Scientific Literature",
     "BIOL 280R Gene regulation in C. elegans and human parasitic namtodes"
   ],
-  "Monroy Monroy": [
-    "KRSG 65W Kresge Lab: Creative Writing"
-  ],
-  "Emily Reigh": [
-    "EDUC 214 Contemporary Issues in Education"
-  ],
-  "Heather Shearer": [
-    "WRIT 30 Genre Study: STEM"
-  ],
+  "Monroy Monroy": ["KRSG 65W Kresge Lab: Creative Writing"],
+  "Emily Reigh": ["EDUC 214 Contemporary Issues in Education"],
+  "Heather Shearer": ["WRIT 30 Genre Study: STEM"],
   "Arshad Ali": [
     "EDUC 235 Introduction to Educational Inquiry",
     "EDUC 237 Qualitative Research Methods"
@@ -4780,9 +4213,7 @@
   "Bobby Gordon": [
     "ART 172 Public Art: Memory, Landscape, and Artist as Activist"
   ],
-  "Chris Gray": [
-    "CRWN 80J Cyborg Society: Myths, Realities, Choices"
-  ],
+  "Chris Gray": ["CRWN 80J Cyborg Society: Myths, Realities, Choices"],
   "Jess Law": [
     "LING 116 Semantics II",
     "LING 117 Pragmatics",
@@ -4834,16 +4265,12 @@
     "LALS 225 Race in the Americas",
     "LALS 80H Comparative Latina/o Histories"
   ],
-  "Sophie Azeb": [
-    "CRES 68 Approaches to Black Studies"
-  ],
+  "Sophie Azeb": ["CRES 68 Approaches to Black Studies"],
   "Martine Schlag": [
     "CSE100: Logic Design",
     "CSE100L: Logic Design Laboratory"
   ],
-  "Veronica Alissa Rivera": [
-    "HCI220: Ethics and Activism in Tech and Design"
-  ],
+  "Veronica Alissa Rivera": ["HCI220: Ethics and Activism in Tech and Design"],
   "Ruby Rodriguez": [
     "MUSC 80F Music in Latin American Culture: Regional Traditions"
   ],
@@ -4854,9 +4281,7 @@
     "BIOL 205 Epigenetics",
     "BIOL 20A Cell and Molecular Biology"
   ],
-  "Shaun Terry": [
-    "HISC 138 Fascism and Film"
-  ],
+  "Shaun Terry": ["HISC 138 Fascism and Film"],
   "Mark Baker": [
     "OAKS 167 Food Systems: Culture, Social Justice, Sustainability",
     "OAKS 67 The Politics of Food: Labor and Social Justice"
@@ -4884,9 +4309,7 @@
     "CMPM280X: Expressive AI",
     "CMPM80K: Foundations of Video Game Design"
   ],
-  "Matthew Romero": [
-    "BIOL 280D Muscle Biology and Gene Regulation"
-  ],
+  "Matthew Romero": ["BIOL 280D Muscle Biology and Gene Regulation"],
   "Wesley Modes": [
     "ART 101 Introduction to Computer Programming for the Arts",
     "ART 10F 4D Foundation"
@@ -4916,9 +4339,7 @@
     "HCI202A: Introduction to Build: Bootcamp",
     "HCI272: HCI Capstone 2"
   ],
-  "Susan Harding": [
-    "ANTH 133 Narratives of the Popular"
-  ],
+  "Susan Harding": ["ANTH 133 Narratives of the Popular"],
   "Yannis Demertzis": [
     "CSE101: Introduction to Data Structures and Algorithms",
     "CSE108: Algorithmic Foundations of Cryptography",
@@ -4964,12 +4385,8 @@
     "KRSG 3 Campus Natural History Practicum",
     "MUSC 220 Graduate Seminar in Music Composition"
   ],
-  "Hillary Deborah": [
-    "SOCY 105A Classical Social Theory"
-  ],
-  "Larry Gerston": [
-    "POLI 110 Law and Social Issues"
-  ],
+  "Hillary Deborah": ["SOCY 105A Classical Social Theory"],
+  "Larry Gerston": ["POLI 110 Law and Social Issues"],
   "Pancheva": [
     "LING 239 Semantics Seminar",
     "LING 50 Introduction to Linguistics"
@@ -5016,9 +4433,7 @@
     "LALS 80J Race, Nation, and War",
     "LALS 80X Central American Peoples and Cultures"
   ],
-  "Rayn Coonerty": [
-    "LGST 133 Law of Democracy"
-  ],
+  "Rayn Coonerty": ["LGST 133 Law of Democracy"],
   "Grant Whipple": [
     "ART 10D 2D Foundation",
     "ART 114 Landscape Drawing",
@@ -5050,18 +4465,10 @@
     "CSE108: Algorithmic Foundations of Cryptography",
     "CSE206C: Foundations of Modern Cryptography"
   ],
-  "Samual Cushman": [
-    "MUSC 80X Music of India"
-  ],
-  "Shariati Ali": [
-    "BME 280B Seminar on Bioinformatics and Bioengineering"
-  ],
-  "Lisa Berkley": [
-    "CRWN 81 Theory and Practices for a Purposeful Life"
-  ],
-  "Lisa Rofel": [
-    "ANTH 194Z Emerging Worlds"
-  ],
+  "Samual Cushman": ["MUSC 80X Music of India"],
+  "Shariati Ali": ["BME 280B Seminar on Bioinformatics and Bioengineering"],
+  "Lisa Berkley": ["CRWN 81 Theory and Practices for a Purposeful Life"],
+  "Lisa Rofel": ["ANTH 194Z Emerging Worlds"],
   "Flora Lu": [
     "ENVS 154 Amazonian Cultures and Conservation",
     "ENVS 196 Senior Seminar",
@@ -5114,12 +4521,8 @@
     "LING 50 Introduction to Linguistics",
     "LING 80H The Human Voice"
   ],
-  "Ben Read": [
-    "POLI 60 Comparative Politics"
-  ],
-  "Baltaxe-Admony": [
-    "CMPM131: User Experience for Interactive Media"
-  ],
+  "Ben Read": ["POLI 60 Comparative Politics"],
+  "Baltaxe-Admony": ["CMPM131: User Experience for Interactive Media"],
   "Kathleen Deck": [
     "ART 135 Digital Painting",
     "ART 145 Vector Art and Illustration"
@@ -5133,23 +4536,15 @@
     "SOCY 209 The Analysis of Cultural Forms",
     "SOCY 260 Culture, Knowledge, Power"
   ],
-  "Newsome": [
-    "POLI 101 Analyzing Political Data"
-  ],
-  "Roxanne Hamilton": [
-    "PRTR 61Q Queering the Arts"
-  ],
+  "Newsome": ["POLI 101 Analyzing Political Data"],
+  "Roxanne Hamilton": ["PRTR 61Q Queering the Arts"],
   "Benedict Paten": [
     "BME 230A Introduction to Computational Genomics and Systems Biology",
     "BME 230B Advanced Computational Genomics and Systems Biology",
     "BME 281J Seminar in Computational Genomics and Biomedicine"
   ],
-  "Tod Haddow": [
-    "ENVS 179 Environmental Interpretation"
-  ],
-  "Zoe": [
-    "SOCY 151 Media Activism"
-  ],
+  "Tod Haddow": ["ENVS 179 Environmental Interpretation"],
+  "Zoe": ["SOCY 151 Media Activism"],
   "Mark Gardner": [
     "JRLC 120 Practical Activism Conference Planning and Development",
     "JRLC 191 Teaching Social Justice",
@@ -5167,9 +4562,7 @@
     "BIOE 281T Species Interactions and Coevolution",
     "BIOE 281T Topics in Evolutionary Developmental Biology"
   ],
-  "Stan Poplin": [
-    "MUSC 164 Jazz Ensembles"
-  ],
+  "Stan Poplin": ["MUSC 164 Jazz Ensembles"],
   "Camilla E Forsberg": [
     "BME178: Stem Cell Biology",
     "BME278: Stem Cell Biology",
@@ -5257,9 +4650,7 @@
     "BIOL 280P Quality Control in Gene Expression",
     "BIOL 86 Research Deconstruction:  MCD Biology"
   ],
-  "Silvia Austerlic": [
-    "OAKS 47 Building an Inner Sanctuary"
-  ],
+  "Silvia Austerlic": ["OAKS 47 Building an Inner Sanctuary"],
   "Ahmet A Yanik": [
     "ECE130: Introduction to Optoelectronics and Photonics",
     "ECE130L: Introduction to Optoelectronics Laboratory",
@@ -5275,9 +4666,7 @@
     "JRLC 92 Social Justice Issues Colloquium",
     "JRLC 98 Alternative Spring Break"
   ],
-  "Patricia Gallagher": [
-    "PRTR 141C Shakespeare's Clown Characters"
-  ],
+  "Patricia Gallagher": ["PRTR 141C Shakespeare's Clown Characters"],
   "Rebecca Dubois": [
     "BME 128 Protein Engineering",
     "BME 128L Protein Engineering Laboratory",
@@ -5301,9 +4690,7 @@
     "CSE233: Advanced Computer Security",
     "CSE235: Cyber-Physical Systems Security"
   ],
-  "Gustafson": [
-    "SOCD 294A Production/Analysis/Editing"
-  ],
+  "Gustafson": ["SOCD 294A Production/Analysis/Editing"],
   "T": [
     "HAVC 141K Activist Art Since 1960: Art, Technology, Activism",
     "HAVC 141O Sex, Lies, and Surveillance: Contemporary Documentary Arts",
@@ -5321,9 +4708,7 @@
     "SOCY 268B Science and Justice Research Seminar",
     "SOCY 290 Advanced Topics in Sociological Analysis"
   ],
-  "Patricia Kelly": [
-    "COWL 52 Personal Finance and Investing"
-  ],
+  "Patricia Kelly": ["COWL 52 Personal Finance and Investing"],
   "Ruth Langridge": [
     "LGST 131 Wildlife, Wilderness, and the Law",
     "POLI 132 California Water Law and Policy"
@@ -5332,9 +4717,7 @@
     "NLP243: Deep Learning for Natural Language Processing",
     "NLP255: Topics in Applied Natural Language Processing"
   ],
-  "Mark": [
-    "APLX 190 Research Seminar in Applied Linguistics"
-  ],
+  "Mark": ["APLX 190 Research Seminar in Applied Linguistics"],
   "Sarah Stanford": [
     "ART 163A Lithography I",
     "ART 165 Print Media in Visual Communication"
@@ -5350,12 +4733,8 @@
     "LALS 129S Memoria en Las Americas",
     "LALS 143J Global Political Economy"
   ],
-  "Juan Camilo Lozano": [
-    "CSE16: Applied Discrete Mathematics"
-  ],
-  "Irene Gustafsonq": [
-    "FILM 223 The Film/Video Essay"
-  ],
+  "Juan Camilo Lozano": ["CSE16: Applied Discrete Mathematics"],
+  "Irene Gustafsonq": ["FILM 223 The Film/Video Essay"],
   "Karlton Hester": [
     "MUSC 101F Musics of Africa and the Americas",
     "MUSC 105H Hip Hop Music and Culture in the 20th Century",
@@ -5443,21 +4822,15 @@
     "COWL 11D ELP Elective Course: Risk Management and Social Justice Through the Lens of Outdoor Leadership",
     "COWL 11E Leadership Spring Break Intensive: Backpacking the Canyons of Southern Utah"
   ],
-  "Byron Barahona": [
-    "SPAN 156J Contemporary Central America"
-  ],
-  "Gonzalez": [
-    "HAVC 141B Death, Desire, and Modernity"
-  ],
+  "Byron Barahona": ["SPAN 156J Contemporary Central America"],
+  "Gonzalez": ["HAVC 141B Death, Desire, and Modernity"],
   "This is a lab with hybrid designation": [
     "STAT17L: Statistical Methods for Business and Economics Laboratory"
   ],
   "Ian May": [
     "AM129: Foundations of Scientific Computing for Scientists and Engineers"
   ],
-  "Zachary Hejny": [
-    "MUSC 81I Music of Indonesia"
-  ],
+  "Zachary Hejny": ["MUSC 81I Music of Indonesia"],
   "Baldo Marinovic": [
     "BIOE 122 Invertebrate Zoology",
     "BIOE 122L Invertebrate Zoology Laboratory",
@@ -5514,9 +4887,7 @@
     "CSE101: Introduction to Data Structures and Algorithms",
     "CSE180: Database Systems I"
   ],
-  "Abram Stern": [
-    "CT 120 Intermediate Creative Coding"
-  ],
+  "Abram Stern": ["CT 120 Intermediate Creative Coding"],
   "David Draper": [
     "STAT17: Statistical Methods for Business and Economics",
     "STAT206: Applied Bayesian Statistics"
@@ -5542,9 +4913,7 @@
     "BIOL 206L Current Protocols in Stem Cell Biology",
     "BIOL 280F Development of Vertebrate Neural Connections"
   ],
-  "Langdale": [
-    "HAVC 157B Italian Renaissance: Art and Architecture"
-  ],
+  "Langdale": ["HAVC 157B Italian Renaissance: Art and Architecture"],
   "Nasreen Broomandkhoshbacht": [
     "ANTH 107A Methods and Research in Biological Anthropology: Genetics"
   ],
@@ -5601,9 +4970,7 @@
     "LING 249 Morphology Seminar",
     "LING 50 Introduction to Linguistics"
   ],
-  "Shane Baker": [
-    "LIT 167F Animals and Literature"
-  ],
+  "Shane Baker": ["LIT 167F Animals and Literature"],
   "Tracy Larrabee": [
     "CSE16: Applied Discrete Mathematics",
     "CSE20: Beginning Programming in Python"
@@ -5621,9 +4988,7 @@
     "LIT 288Z Literatura y sociedad",
     "LIT 80N Latino Expressions in the U.S"
   ],
-  "Dillon Lindsey": [
-    "SOCY 223 Sociology of the Environment"
-  ],
+  "Dillon Lindsey": ["SOCY 223 Sociology of the Environment"],
   "Adrian Brasoveanu": [
     "LING 116 Semantics II",
     "LING 117 Pragmatics",
@@ -5679,20 +5044,14 @@
     "LIT 222 Topics in English Language Literature",
     "PRTR 151S Introduction to Shakespeare"
   ],
-  "Katherine Ann Green": [
-    "CMPM171: Game Design Studio"
-  ],
+  "Katherine Ann Green": ["CMPM171: Game Design Studio"],
   "Sean Monaghan": [
     "ART 188 Foundry: Metal Casting",
     "ART 188 Intermediate to Advanced Sculpture (Foundry)",
     "ART 20I Introduction to Photography"
   ],
-  "Sahotoa": [
-    "LIT 116I Philosophy in India"
-  ],
-  "Marcela Alfaro-Cordoba": [
-    "CRWN 155 Methods in Data Science"
-  ],
+  "Sahotoa": ["LIT 116I Philosophy in India"],
+  "Marcela Alfaro-Cordoba": ["CRWN 155 Methods in Data Science"],
   "Mark Carr": [
     "BIOE 108 Marine Ecology",
     "BIOE 161 Kelp Forest Ecology",
@@ -5716,9 +5075,7 @@
     "SOCY 202 Contemporary Sociological Theory",
     "SOCY 208 Writing Practicum"
   ],
-  "Dion Farquahar": [
-    "POLI 103 Feminist Interventions"
-  ],
+  "Dion Farquahar": ["POLI 103 Feminist Interventions"],
   "Asynchronous Online": [
     "CMPM110: Writing for Game Technologies",
     "CMPM80K: Foundations of Video Game Design"
@@ -5734,9 +5091,7 @@
     "GCH 190 Global and Community Health Task Force",
     "GCH 195 Global and Community Health Communication"
   ],
-  "Xin Eric Wang": [
-    "CSE142: Machine Learning"
-  ],
+  "Xin Eric Wang": ["CSE142: Machine Learning"],
   "Kathleen Perry": [
     "ART 150 Darkroom Practices",
     "ART 152A Photographic Book",
@@ -5747,12 +5102,8 @@
     "ART 20H Introduction to Sculpture and Public Art",
     "ART 20I Introduction to Photography"
   ],
-  "Jody Greene": [
-    "LIT 80U Introduction to Contemplative Reading"
-  ],
-  "Gong": [
-    "LING 113 Syntax II"
-  ],
+  "Jody Greene": ["LIT 80U Introduction to Contemplative Reading"],
+  "Gong": ["LING 113 Syntax II"],
   "Adam M": [
     "CMPM121: Game Development Patterns",
     "CMPM170: Rapid Prototyping",
@@ -5767,12 +5118,8 @@
     "NLP202: Natural Language Processing II",
     "NLP280: Seminar in Natural Language Processing"
   ],
-  "Whitney Cohen": [
-    "ENVS 177 Teaching Environmental Education"
-  ],
-  "Aaron Wistar": [
-    "HISC 113 History of Capitalism"
-  ],
+  "Whitney Cohen": ["ENVS 177 Teaching Environmental Education"],
+  "Aaron Wistar": ["HISC 113 History of Capitalism"],
   "Edward Smyth": [
     "HIS 104C Celluloid Natives: American Indian History on Film",
     "HIS 104D Museums and the Representation of Native American History, Memory, and Culture",
@@ -5784,21 +5131,11 @@
     "HIS 2A The World to 1500",
     "HIS 9 Introduction to Native American History"
   ],
-  "Kamehiro": [
-    "HAVC 190X Art and Identity in Oceania"
-  ],
-  "Sichel": [
-    "LING 50 Introduction to Linguistics"
-  ],
-  "Kathryn Gougelet": [
-    "ANTH 113 Tutoring Writing in Anthropology"
-  ],
-  "Pearce Pearce": [
-    "KRSG 65W Kresge Lab: Creative Writing"
-  ],
-  "Carrie Rohmer": [
-    "FREN 136 La Francophonie"
-  ],
+  "Kamehiro": ["HAVC 190X Art and Identity in Oceania"],
+  "Sichel": ["LING 50 Introduction to Linguistics"],
+  "Kathryn Gougelet": ["ANTH 113 Tutoring Writing in Anthropology"],
+  "Pearce Pearce": ["KRSG 65W Kresge Lab: Creative Writing"],
+  "Carrie Rohmer": ["FREN 136 La Francophonie"],
   "Martin Rizzo-Martinez": [
     "FILM 160H Film Genres, Horror",
     "FILM 160W Film Genres, The Western",
@@ -5813,12 +5150,8 @@
     "CT 10 Understanding Digital Design",
     "CT 195 Creative Technologies Senior Studio"
   ],
-  "Won Jeon": [
-    "HISC 240 Basic Principles of University-Level Pedagogy"
-  ],
-  "Emre Keser": [
-    "HISC 164 Monster Theory"
-  ],
+  "Won Jeon": ["HISC 240 Basic Principles of University-Level Pedagogy"],
+  "Emre Keser": ["HISC 164 Monster Theory"],
   "Ann Altstatt": [
     "ART 106C Stop Motion Animation",
     "ART 125 Environmental Art Studio",
@@ -5835,9 +5168,7 @@
   "Jaqueline Kimmey": [
     "METX 210 Molecular and Cellular Basis of Bacterial Pathogenesis"
   ],
-  "Paul K Wintz": [
-    "AM10: Linear Algebra for Engineers"
-  ],
+  "Paul K Wintz": ["AM10: Linear Algebra for Engineers"],
   "Abhishek Halder": [
     "AM147: Computational Methods and Applications",
     "AM229: Convex Optimization",
@@ -5851,12 +5182,8 @@
     "FMST 215 Postcolonial and Postsocialist Transactional Analytics",
     "FMST 222 Religion, Feminism, and Sexual Politics"
   ],
-  "Gordon": [
-    "POLI 70 Global Politics"
-  ],
-  "James Doucet-Battie": [
-    "SOCY 205 Field Research Methods"
-  ],
+  "Gordon": ["POLI 70 Global Politics"],
+  "James Doucet-Battie": ["SOCY 205 Field Research Methods"],
   "Isabel Cruz": [
     "KRSG 1 Academic Literacy and Ethos: Learning in Community",
     "KRSG 1 Academic Literacy and Ethos: Power and Representation",
@@ -5868,9 +5195,7 @@
     "CSE242: Machine Learning",
     "CSE290C: Advanced Topics in Machine Learning"
   ],
-  "Lise C Getoor": [
-    "CSE146: Ethics and Algorithms"
-  ],
+  "Lise C Getoor": ["CSE146: Ethics and Algorithms"],
   "Sanjay Barbora": [
     "SOCY 15 World Society",
     "SOCY 179 Nature, Poverty, and Progress: Dilemmas of Development and Environment",
@@ -5905,9 +5230,7 @@
     "LALS 240 Culture and Politics of Human Rights",
     "LALS 50 Transnational Feminist Organizing in the Americas"
   ],
-  "Erik Bachman": [
-    "LIT 155H The Horror Film"
-  ],
+  "Erik Bachman": ["LIT 155H The Horror Film"],
   "Himadri Basu": [
     "ECE129B: Capstone Project II",
     "ECE149: Introduction to Cyber-physical Systems",
@@ -5919,12 +5242,8 @@
     "BME280B: Seminar on Bioinformatics and Bioengineering",
     "BME281Y: Seminar on Protein Design"
   ],
-  "TJ Demos": [
-    "HAVC 191H Climate Havoc: Art and Environmental Crisis Today"
-  ],
-  "Triloki Pandey": [
-    "ANTH 194N Comparison of Cultures"
-  ],
+  "TJ Demos": ["HAVC 191H Climate Havoc: Art and Environmental Crisis Today"],
+  "Triloki Pandey": ["ANTH 194N Comparison of Cultures"],
   "course will be taught in conjunction with ECE": [
     "ECE183: Special Topics in Electrical Engineering",
     "ECE293: Advanced Topics in Electrical and Computer Engineering"
@@ -5937,12 +5256,8 @@
     "CRWN 70 Introduction to Broadcast Media: Radio",
     "CRWN 70B Introduction to Broadcast Media and Podcasting"
   ],
-  "Isaac Julien": [
-    "HISC 133 What Freedom is to Me"
-  ],
-  "Zsuzsanna": [
-    "APLX 190 Research Seminar in Applied Linguistics"
-  ],
+  "Isaac Julien": ["HISC 133 What Freedom is to Me"],
+  "Zsuzsanna": ["APLX 190 Research Seminar in Applied Linguistics"],
   "rdenas": [
     "ARTG 139 Queer and Trans Art and Games",
     "CRES 151 After Man: Race, Gender and Technology"
@@ -5997,9 +5312,7 @@
     "ANTH 106 Primate Behavior and Ecology",
     "ANTH 107C Methods and Research in Biological Anthropology: Chimpanzee Behavior and Culture"
   ],
-  "Danielle Crawford": [
-    "CRES 112 AsianAm Enviro Justice"
-  ],
+  "Danielle Crawford": ["CRES 112 AsianAm Enviro Justice"],
   "Mike Parsa": [
     "CSE156: Network Programming",
     "CSE156L: Network Programming Laboratory"
@@ -6023,15 +5336,11 @@
     "CSE151L: Advanced Computer Networks Laboratory",
     "CSE80N: Introduction to Networking and the Internet"
   ],
-  "Karlton Karlton": [
-    "MUSC 11B Introduction to Jazz"
-  ],
+  "Karlton Karlton": ["MUSC 11B Introduction to Jazz"],
   "Lakshmi Krishnaswamy": [
     "CSE200: Research and Teaching in Computer Science and Engineering"
   ],
-  "Noopur Raval": [
-    "CMPM290A: Topics in Computational Media"
-  ],
+  "Noopur Raval": ["CMPM290A: Topics in Computational Media"],
   "Sheila Willey": [
     "MUSC 159A Opera Workshop",
     "MUSC 160 University Opera Theater",
@@ -6045,9 +5354,7 @@
     "BIOL 280S Stem Cell Genomics and Neurodevelopment",
     "BIOL 289 Practice of Science"
   ],
-  "Jacqueline Olive": [
-    "SOCD 200 Approaches to Social Documentation"
-  ],
+  "Jacqueline Olive": ["SOCD 200 Approaches to Social Documentation"],
   "Karen Ottemann": [
     "METX 100 Introduction to Microbiology",
     "METX 119 Microbiology",
@@ -6059,15 +5366,9 @@
     "METX 281O Topics in Bacterial Pathogenesis",
     "METX 282 Current Approaches to Molecular Pathogenesis"
   ],
-  "Garcia-Luna-Aceves": [
-    "CSE250B: Principles of Computer Communication"
-  ],
-  "Alessandra Rodriguez Y Baena": [
-    "BME273: Stem Cell Epi/Genomics"
-  ],
-  "Lauren Lyons": [
-    "HUMN 15 Ethics and Technology"
-  ],
+  "Garcia-Luna-Aceves": ["CSE250B: Principles of Computer Communication"],
+  "Alessandra Rodriguez Y Baena": ["BME273: Stem Cell Epi/Genomics"],
+  "Lauren Lyons": ["HUMN 15 Ethics and Technology"],
   "Ed Green": [
     "BME130: Genomes",
     "BME175: Entrepreneurship in Biotechnology",
@@ -6075,9 +5376,7 @@
     "BME281E: Seminar in Genomics",
     "BME80H: The Human Genome"
   ],
-  "will be offered synchronous online": [
-    "CSE183: Web Applications"
-  ],
+  "will be offered synchronous online": ["CSE183: Web Applications"],
   "Roberto deRoock": [
     "SOCY 107F Digital Social Enterprise and Project Management"
   ],
@@ -6087,15 +5386,9 @@
     "METX 238 Pathogenesis: Molecular Mechanisms of Disease",
     "METX 281S Cellular and Organismal Responses to Toxicants"
   ],
-  "Leal": [
-    "ART 159 Special Topics in Photography"
-  ],
-  "Josh Stuart": [
-    "BME 280B Seminar on Bioinformatics and Bioengineering"
-  ],
-  "William Saxton": [
-    "BIOL 200C Advanced Cell Biology"
-  ],
+  "Leal": ["ART 159 Special Topics in Photography"],
+  "Josh Stuart": ["BME 280B Seminar on Bioinformatics and Bioengineering"],
+  "William Saxton": ["BIOL 200C Advanced Cell Biology"],
   "Dustin Chacon": [
     "LING 155 Language and Cognition",
     "LING 172 Psycholinguistics II",
@@ -6120,17 +5413,13 @@
   "Camilo": [
     "LIT 61C Devils, Dervishes, and Bawdy Tales from Baghdad to Canterbury: The Story within the Story"
   ],
-  "Eve": [
-    "APLX 190 Research Seminar in Applied Linguistics"
-  ],
+  "Eve": ["APLX 190 Research Seminar in Applied Linguistics"],
   "Cindy Larive": [
     "COWL 184A Leadership and Institution Building",
     "COWL 184B Leadership and Institution Building",
     "COWL 184C Leadership and Institution Building"
   ],
-  "Jorge Jorge Aladro": [
-    "LIT 189C Introducción a Spanish Studies"
-  ],
+  "Jorge Jorge Aladro": ["LIT 189C Introducción a Spanish Studies"],
   "Lora Bartlett": [
     "EDUC 250 Teaching and Teachers",
     "EDUC 256 Intermediate Qualitative Analysis",
@@ -6143,9 +5432,7 @@
     "SCIC 201D Policy and Investigative Reporting",
     "SCIC 201E Multimedia Science News"
   ],
-  "Steve Coulter": [
-    "WRIT 2GS WRIT 2GS Rhetoric & Inquiry, Global Seminar"
-  ],
+  "Steve Coulter": ["WRIT 2GS WRIT 2GS Rhetoric & Inquiry, Global Seminar"],
   "Hao Ye": [
     "ECE103: Signals and Systems",
     "ECE103L: Signals and Systems Laboratory",
@@ -6177,9 +5464,7 @@
     "HIS 40B The Making of Modern East Asia",
     "HIS 80Y World War II Memories in the U.S. and Japan"
   ],
-  "Tonia Beglari": [
-    "OAKS 189 Building Websites for Social Change"
-  ],
+  "Tonia Beglari": ["OAKS 189 Building Websites for Social Change"],
   "Dean Mathiowetz": [
     "POLI 100 Politics Writing-Intensive Seminar",
     "POLI 105A Ancient Political Thought",
@@ -6191,9 +5476,7 @@
     "POLI 207 Political Economies of Affect",
     "POLI 292 Professional Development"
   ],
-  "David Deamer": [
-    "BME 18 Scientific Principles of Life"
-  ],
+  "David Deamer": ["BME 18 Scientific Principles of Life"],
   "Nhan Nguyen": [
     "ECE153: Digital Signal Processing",
     "ECE240: Introduction to Linear Dynamical Systems",
@@ -6214,12 +5497,8 @@
     "BME280B: Seminar on Bioinformatics and Bioengineering",
     "BME281T: Seminar in Neuroengineering and Systems Neuroscience"
   ],
-  "Kirsten Rodrigo": [
-    "LIT 146F The Dissenting Tradition in America"
-  ],
-  "Sean Reily": [
-    "BIOE 82 Introduction to Field Research and Conservation"
-  ],
+  "Kirsten Rodrigo": ["LIT 146F The Dissenting Tradition in America"],
+  "Sean Reily": ["BIOE 82 Introduction to Field Research and Conservation"],
   "Gregory O": [
     "HIS 110B Revolutionary America, 1740-1815",
     "HIS 116 Slavery Across the Americas",
@@ -6233,12 +5512,8 @@
     "HIS 211B Research Seminar in Early American History",
     "HIS 2B The World Since 1500"
   ],
-  "Nubra Floyd": [
-    "KRSG 45 Achieving Consensus in Diverse Communities"
-  ],
-  "Marcella M Gomez": [
-    "AM112: Introduction to Partial Differential Equations"
-  ],
+  "Nubra Floyd": ["KRSG 45 Achieving Consensus in Diverse Communities"],
+  "Marcella M Gomez": ["AM112: Introduction to Partial Differential Equations"],
   "Athanasios Kottas": [
     "STAT132: Classical and Bayesian Inference",
     "STAT209: Generalized Linear Models",
@@ -6270,9 +5545,7 @@
   "Victoria Auerbuch Stone": [
     "METX 210 Molecular and Cellular Basis of Bacterial Pathogenesis"
   ],
-  "Brenda Sanfilippo": [
-    "PRTR 63W Ways of Knowing"
-  ],
+  "Brenda Sanfilippo": ["PRTR 63W Ways of Knowing"],
   "Anjuli Verma": [
     "POLI 121 Racism & Justice in America",
     "POLI 182 The Power to Punish",
@@ -6283,9 +5556,7 @@
     "CRWN 90 Start-up Entrepreneurship Academy",
     "CRWN 91 Marketing for Good"
   ],
-  "Esra Ozban": [
-    "FILM 202 Pedagogy in Film and Digital Media"
-  ],
+  "Esra Ozban": ["FILM 202 Pedagogy in Film and Digital Media"],
   "GCH Affiliate Faculty": [
     "GCH 199A Global and Community Health Senior Thesis",
     "GCH 199B Global and Community Health Senior Thesis B"
@@ -6320,9 +5591,7 @@
     "FILM 20A Introduction to Film Studies",
     "SOCD 200 Approaches to Social Documentation"
   ],
-  "Zhao": [
-    "SOCY 151 Media Activism"
-  ],
+  "Zhao": ["SOCY 151 Media Activism"],
   "Christina Parsa": [
     "CSE150: Introduction to Computer Networks",
     "CSE80N: Introduction to Networking and the Internet"
@@ -6341,16 +5610,12 @@
   "Erick Zavaleta": [
     "BIOE 203 Introductory Seminar in Ecology and Evolutionary Biology"
   ],
-  "Williams": [
-    "MUSC 74 Beginning Spontaneous Composition and Improvisation"
-  ],
+  "Williams": ["MUSC 74 Beginning Spontaneous Composition and Improvisation"],
   "Felicity Amaya Schaeffer": [
     "CRES 101 Research Methods and Writing in Critical Race and Ethnic Studies",
     "HUMN 45 Race and Technology"
   ],
-  "Natalie Jones": [
-    "SOCY 10 Issues and Problems in American Society"
-  ],
+  "Natalie Jones": ["SOCY 10 Issues and Problems in American Society"],
   "Jason Eshraghian": [
     "CMPM118: Collaborative Research Experience in Engineering",
     "ECE110:  Brain-Inspired Machine Learning",
@@ -6361,9 +5626,7 @@
     "ECE210: Brain-Inspired Machine Learning",
     "ECE293: Advanced Topics in Electrical and Computer Engineering"
   ],
-  "Myra Finkelstein": [
-    "ENVS 123 Animal Ecology and Conservation"
-  ],
+  "Myra Finkelstein": ["ENVS 123 Animal Ecology and Conservation"],
   "Anjali Arondekar": [
     "FMST 1 Feminist Studies: An Introduction",
     "FMST 10 Feminisms of/and the Global South",
@@ -6427,18 +5690,13 @@
     "COWL 184B Leadership and Institution Building",
     "COWL 184C Leadership and Institution Building"
   ],
-  "Sanford": [
-    "ART 112 Mixed Media Works on Paper",
-    "ART 162A Intaglio I"
-  ],
+  "Sanford": ["ART 112 Mixed Media Works on Paper", "ART 162A Intaglio I"],
   "Naya Jones": [
     "GCH 1 Foundations for Global and Community Health",
     "SOCY 10 Issues and Problems in American Society",
     "SOCY 290 Advanced Topics in Sociological Analysis"
   ],
-  "Abigail Brown": [
-    "SOCY 173X Water and Sanitation Justice"
-  ],
+  "Abigail Brown": ["SOCY 173X Water and Sanitation Justice"],
   "Mircea Teodorescu": [
     "ECE216: Bio-inspired Locomotion",
     "ECE280C: Seminar on Control",
@@ -6479,12 +5737,8 @@
     "LING 101 Phonology I",
     "LING 50 Introduction to Linguistics"
   ],
-  "Andrew Schiffrin": [
-    "ENVS 151 Environmental Assessment"
-  ],
-  "Shireen Nabatian": [
-    "MUSC 204 Pedagogy of Music"
-  ],
+  "Andrew Schiffrin": ["ENVS 151 Environmental Assessment"],
+  "Shireen Nabatian": ["MUSC 204 Pedagogy of Music"],
   "Jinghong Zhang": [
     "HIS 139G Herbs, Potions, and Viruses: History of Medicine and Public Health in Modern China"
   ],
@@ -6493,9 +5747,7 @@
     "FILM 179A Special Topics in Animation",
     "SOCD 293 Studies and Practice for Social Documentation, Filmmaking, and New Media"
   ],
-  "Samual Severance": [
-    "EDUC 230 Science Education: Research and Practice"
-  ],
+  "Samual Severance": ["EDUC 230 Science Education: Research and Practice"],
   "David Timothy Lee": [
     "CMPM118: Collaborative Research Experience in Engineering",
     "CMPM15: Research Explorations",
@@ -6529,9 +5781,7 @@
     "LALS 205 Comparison as Method",
     "LALS 32 Citizens, Denizens, Aliens"
   ],
-  "Wagers Matt": [
-    "LING 280 Proseminar in Experimental Linguistics"
-  ],
+  "Wagers Matt": ["LING 280 Proseminar in Experimental Linguistics"],
   "Zsuzsanna Abrams": [
     "APLX 101 Second-Language Acquisition",
     "APLX 113 Inter-Cultural Communication",
@@ -6604,9 +5854,7 @@
     "CSP 281A Hacking for OceansâLean Design Methods",
     "ENVS 155 Hacking4Oceans"
   ],
-  "Home": [
-    "FILM 194A Film Theory Seminar"
-  ],
+  "Home": ["FILM 194A Film Theory Seminar"],
   "Patrick Tantalo": [
     "CSE101: Introduction to Data Structures and Algorithms",
     "CSE102: Introduction to Analysis of Algorithms",
@@ -6619,12 +5867,8 @@
   "Subhra Baran Saha": [
     "STAT17L: Statistical Methods for Business and Economics Laboratory"
   ],
-  "Jared Nassar Pettitt": [
-    "CMPM176: Game Systems"
-  ],
-  "Jared Gampel": [
-    "HISC 80O Understanding Popular Music"
-  ],
+  "Jared Nassar Pettitt": ["CMPM176: Game Systems"],
+  "Jared Gampel": ["HISC 80O Understanding Popular Music"],
   "Robert Meister": [
     "HISC 1 Introduction to History of Consciousness",
     "HISC 119 Politics of Recognition",
@@ -6655,12 +5899,8 @@
     "POLI 111A Constitutional Law",
     "POLI 151 Politics of Law"
   ],
-  "rjhangia": [
-    "CMPM170: Rapid Prototyping"
-  ],
-  "James Wilson": [
-    "COWL 61 Critical Journeys"
-  ],
+  "rjhangia": ["CMPM170: Rapid Prototyping"],
+  "James Wilson": ["COWL 61 Critical Journeys"],
   "Elu Tu": [
     "CHIN 80 Chinese for Traveling: Introduction to Spoken Chinese and the Cultures of the Chinese-Speaking World"
   ],
@@ -6670,9 +5910,7 @@
     "POLI 190F Topics in Urban Governance",
     "POLI 70 Global Politics"
   ],
-  "Spafford Spafford": [
-    "KRSG 65W Kresge Lab: Creative Writing"
-  ],
+  "Spafford Spafford": ["KRSG 65W Kresge Lab: Creative Writing"],
   "John Brown Childs": [
     "JRLC 125A Transcommunal Peace Making",
     "JRLC 125B Transcommunal Peace Making"
@@ -6684,12 +5922,8 @@
     "HEBR 4 Second-Year Hebrew",
     "HEBR 80 Introduction to Biblical Hebrew"
   ],
-  "Amanda Poblete": [
-    "LIT 288Y Teoria Critica en America Latina"
-  ],
-  "Elizabeth Gillette": [
-    "ARTG 172 Game Design Studio III"
-  ],
+  "Amanda Poblete": ["LIT 288Y Teoria Critica en America Latina"],
+  "Elizabeth Gillette": ["ARTG 172 Game Design Studio III"],
   "Rebecca London": [
     "SOCY 141 Social Welfare",
     "SOCY 203 Sociological Methods",
@@ -6701,46 +5935,32 @@
     "GAME232: Advanced Game Technologies",
     "GAME250: Foundations of Serious Games and Gamification"
   ],
-  "Susanna Ruiz": [
-    "FILM 197 Senior Digital Media Workshop"
-  ],
+  "Susanna Ruiz": ["FILM 197 Senior Digital Media Workshop"],
   "Hi Kim": [
     "MUSC 120 Seminar in Music Composition",
     "MUSC 219 Techniques in Composition"
   ],
-  "Bill Coulter": [
-    "MUSC 52 Guitar Repertoire and Performance"
-  ],
-  "Amy Angenal": [
-    "SOCY 168 Social Justice"
-  ],
+  "Bill Coulter": ["MUSC 52 Guitar Repertoire and Performance"],
+  "Amy Angenal": ["SOCY 168 Social Justice"],
   "Pallab Sarker": [
     "ENVS 130A Agroecology and Sustainable Agriculture",
     "ENVS 130C Field Experiences in Agroecology and Sustainable Food",
     "ENVS 130L Agroecology and Sustainable Agriculture Laboratory",
     "ENVS 135 Sustainable Aquaculture"
   ],
-  "Maziar Toosarvadani": [
-    "LING 149 Research Skills in Linguistics"
-  ],
-  "Jaye": [
-    "LING 100 Sounds of the World's Languages: Phonetics I"
-  ],
+  "Maziar Toosarvadani": ["LING 149 Research Skills in Linguistics"],
+  "Jaye": ["LING 100 Sounds of the World's Languages: Phonetics I"],
   "Andi Quinn": [
     "CSE130: Principles of Computer Systems Design",
     "CSE134: Embedded Operating Systems",
     "CSE231: Advanced Operating Systems",
     "CSE280S: Seminar on Computer Systems"
   ],
-  "x-listed with ECE": [
-    "CSE208: Introduction to Information Theory"
-  ],
+  "x-listed with ECE": ["CSE208: Introduction to Information Theory"],
   "Josefina Bitta": [
     "SPAN 150 Topics in Hispanic Linguistics: Introduction to Hispanic Linguistics"
   ],
-  "Luca De Alfaro": [
-    "NLP220: Data Science and Machine Learning Fundamentals"
-  ],
+  "Luca De Alfaro": ["NLP220: Data Science and Machine Learning Fundamentals"],
   "Gina Dent": [
     "FMST 112 Women and the Law",
     "FMST 176 Law, Prisons, and Popular Culture",
@@ -6770,9 +5990,7 @@
     "CRWN 92G Social Entrepreneurship in Costa Rica",
     "CRWN 94 Eco-Entrepreneurship in Costa Rica"
   ],
-  "Wei Kang": [
-    "AM232: Applied Optimal Control"
-  ],
+  "Wei Kang": ["AM232: Applied Optimal Control"],
   "Peter Limbrick": [
     "FILM 132B International Cinema, 1960 to Present",
     "FILM 168A Arab and North African Cinemas",
@@ -6780,9 +5998,7 @@
     "FILM 226 Queer Theory and Global Film and Media",
     "FILM 231 Topics in Postcolonial Theories, Film, and Media"
   ],
-  "Ralph Abraham": [
-    "PRTR 63F Fractals, Chaos Theory, and the Arts"
-  ],
+  "Ralph Abraham": ["PRTR 63F Fractals, Chaos Theory, and the Arts"],
   "Natalie": [
     "SOCY 135 Healing Justice",
     "SOCY 143 Black Botanical Medicine in the Americas",
@@ -6790,9 +6006,7 @@
     "SOCY 240 Inequality and Identity",
     "SOCY 290 Advanced Topics in Sociological Analysis"
   ],
-  "Akua Naru": [
-    "MUSC 105H Hip Hop Music and Culture in the 20th Century"
-  ],
+  "Akua Naru": ["MUSC 105H Hip Hop Music and Culture in the 20th Century"],
   "Lindsay Hinck": [
     "BIOL 189 Health Sciences Internship",
     "BIOL 189W Disciplinary Communication: Human Biology",
@@ -6816,15 +6030,9 @@
     "FILM 223 The Film/Video Essay",
     "FILM 237 Graduate Critique"
   ],
-  "Spafford": [
-    "KRSG 65W Kresge Lab: Creative Writing"
-  ],
-  "Jalal Mahmud": [
-    "NLP220: Data Science and Machine Learning Fundamentals"
-  ],
-  "Bob Majzler": [
-    "JRLC 135 Apprenticeship in Community Engaged Research"
-  ],
+  "Spafford": ["KRSG 65W Kresge Lab: Creative Writing"],
+  "Jalal Mahmud": ["NLP220: Data Science and Machine Learning Fundamentals"],
+  "Bob Majzler": ["JRLC 135 Apprenticeship in Community Engaged Research"],
   "Madhavi Murty": [
     "FMST 100 Feminist Theories",
     "FMST 132 Gender and Postcoloniality",
@@ -6851,28 +6059,16 @@
     "NLP244: Advanced Machine Learning for Natural Language Processing",
     "TIM147: Introduction to Data Mining for Business"
   ],
-  "Yiman The Staff": [
-    "FILM 132A International Cinema to 1960"
-  ],
-  "James Sirigotis": [
-    "SOCY 178T Special Topics in Sociology"
-  ],
-  "Taught in conjunction with AM": [
-    "AM107: Introduction to Fluid Dynamics"
-  ],
-  "Adam Smith": [
-    "CMPM120: Game Development Experience"
-  ],
+  "Yiman The Staff": ["FILM 132A International Cinema to 1960"],
+  "James Sirigotis": ["SOCY 178T Special Topics in Sociology"],
+  "Taught in conjunction with AM": ["AM107: Introduction to Fluid Dynamics"],
+  "Adam Smith": ["CMPM120: Game Development Experience"],
   "Abel Cornejo": [
     "CRWN 79 Introduction to Social and Ethical Implications of Emerging Technologies",
     "CRWN 96 Digital Theater Workshop: Theorizing Culture and the Future"
   ],
-  "Linda Hirsch": [
-    "CMPM180: Topics in Computational Media"
-  ],
-  "Justin Gilmore": [
-    "HISC 115 The Radical Right, A Symptom of Capitalism"
-  ],
+  "Linda Hirsch": ["CMPM180: Topics in Computational Media"],
+  "Justin Gilmore": ["HISC 115 The Radical Right, A Symptom of Capitalism"],
   "Marshall Leicester": [
     "LIT 111B Geoffrey Chaucer",
     "LIT 111E Edmund Spenser",
@@ -6913,9 +6109,7 @@
     "MUSC 254X Minimalism",
     "MUSC 254Z Issues in Contemporary and Experimental Music"
   ],
-  "Oskar Elek": [
-    "CSE117: Open Source Programming"
-  ],
+  "Oskar Elek": ["CSE117: Open Source Programming"],
   "Victoria Stone": [
     "METX 112 Immunity and Infection",
     "METX 119 Microbiology",
@@ -6926,9 +6120,7 @@
   "High-Performance Power Converter Design": [
     "ECE293: Advanced Topics in Electrical and Computer Engineering"
   ],
-  "Darcey Evans": [
-    "ANTH 145X Special Topics in Socio-Cultural Anthropology"
-  ],
+  "Darcey Evans": ["ANTH 145X Special Topics in Socio-Cultural Anthropology"],
   "Tandy Beal": [
     "PRTR 61O Documenting Oral History",
     "PRTR 95A Arts Education in the Community"
@@ -6938,12 +6130,8 @@
     "SOCY 15 World Society",
     "SOCY 220 Global Transformation: Macrosociological Perspectives"
   ],
-  "Vilashini": [
-    "LIT 108B Literature Internships 2"
-  ],
-  "Allan Peter Young": [
-    "CSE109: Quantum Computing"
-  ],
+  "Vilashini": ["LIT 108B Literature Internships 2"],
+  "Allan Peter Young": ["CSE109: Quantum Computing"],
   "Alvaro Cardenas": [
     "CMPM118: Collaborative Research Experience in Engineering",
     "CSE132: Computer Security"
@@ -6955,9 +6143,7 @@
     "CSE290D: Neural Computation",
     "CSE40: Machine Learning Basics: Data Analysis and Empirical Methods"
   ],
-  "Maya Chinchilla": [
-    "OAKS 134 Diasporic Central Americans"
-  ],
+  "Maya Chinchilla": ["OAKS 134 Diasporic Central Americans"],
   "Rob Wilson": [
     "LIT 179B Advanced Writing: Poetry",
     "LIT 179C Methods and Materials"
@@ -6990,16 +6176,9 @@
     "FMST 194L Comparative Settler Colonial Studies",
     "FMST 20 Feminism and Social Justice"
   ],
-  "Emmett Peixoto": [
-    "HISC 12 Historical Introduction to Philosophy"
-  ],
-  "Maya Peterson": [
-    "HIS 173C The Soviet Union and its Aftermath"
-  ],
-  "Bennett": [
-    "LING 101 Phonology I",
-    "LING 102 Phonology II"
-  ],
+  "Emmett Peixoto": ["HISC 12 Historical Introduction to Philosophy"],
+  "Maya Peterson": ["HIS 173C The Soviet Union and its Aftermath"],
+  "Bennett": ["LING 101 Phonology I", "LING 102 Phonology II"],
   "Wes Modes": [
     "ART 106E 3D Modeling and Animation",
     "CMPM147: Generative Design",
@@ -7009,18 +6188,10 @@
     "CMPM172: Game Production Studio",
     "CMPM179: Game Design Practicum"
   ],
-  "Juilie Bettie": [
-    "SOCY 205 Field Research Methods"
-  ],
-  "Melissa Casumbal": [
-    "LIT 179E Writing for Transformation"
-  ],
-  "Jon Ayon": [
-    "FILM 20P Introduction to Production Technique"
-  ],
-  "Rache Walker": [
-    "LING 105 Morphology"
-  ],
+  "Juilie Bettie": ["SOCY 205 Field Research Methods"],
+  "Melissa Casumbal": ["LIT 179E Writing for Transformation"],
+  "Jon Ayon": ["FILM 20P Introduction to Production Technique"],
+  "Rache Walker": ["LING 105 Morphology"],
   "Josefina Bittar": [
     "APLX 199 Tutorial",
     "LIT 189C Introducción a Spanish Studies",
@@ -7033,9 +6204,7 @@
     "FILM 194S Special Topics Seminar",
     "FILM 238 The Politics of Information"
   ],
-  "Donaldson": [
-    "APLX 101 Second-Language Acquisition"
-  ],
+  "Donaldson": ["APLX 101 Second-Language Acquisition"],
   "Kevin Karplus": [
     "BME 123T Senior Thesis Writing",
     "BME 185 Technical Writing for Biomolecular Engineers",
@@ -7044,18 +6213,10 @@
     "BME 51B Applied Electronics for Bioengineers Part 2",
     "BME 55 Introduction to Lab Groups"
   ],
-  "Emily Murai": [
-    "ENVS 173 An Introduction to World Environmental History"
-  ],
-  "Stacy": [
-    "ENVS 230 Agroecology and Sustainable Agriculture"
-  ],
-  "Jennifer Lynn Kelly": [
-    "FMST 218 Militarism and Tourism"
-  ],
-  "Hayley Vandercook": [
-    "EDUC 50B CAL Teach 1: Mathematics"
-  ],
+  "Emily Murai": ["ENVS 173 An Introduction to World Environmental History"],
+  "Stacy": ["ENVS 230 Agroecology and Sustainable Agriculture"],
+  "Jennifer Lynn Kelly": ["FMST 218 Militarism and Tourism"],
+  "Hayley Vandercook": ["EDUC 50B CAL Teach 1: Mathematics"],
   "Shlomo Chein": [
     "STEV 18 Eighteenth Century Kabalistic Thought and Literature",
     "STEV 36 Women in the Bible"
@@ -7069,15 +6230,11 @@
     "BME 281V Immunogenomics Seminar",
     "BME 80H The Human Genome"
   ],
-  "Murray": [
-    "FILM 194C New Media Theory Seminar"
-  ],
+  "Murray": ["FILM 194C New Media Theory Seminar"],
   "Enrollment is allowed via permission codes only": [
     "CMPM110: Writing for Game Technologies"
   ],
-  "Jackie Gehring": [
-    "POLI 117 Manufactured Truth and Narratives of Power"
-  ],
+  "Jackie Gehring": ["POLI 117 Manufactured Truth and Narratives of Power"],
   "Andy Yeh": [
     "BME128: Protein Engineering",
     "BME128L: Protein Engineering Laboratory",
@@ -7106,9 +6263,7 @@
     "CRES 200 Black Studies Methods",
     "CRES 201 Exile & Diaspora"
   ],
-  "Anja Ulfeldt": [
-    "ART 180B Intermediate/Advanced Sculpture"
-  ],
+  "Anja Ulfeldt": ["ART 180B Intermediate/Advanced Sculpture"],
   "Nina Treadwell": [
     "MUSC 101A History of Western Art Music (Medieval, Renaissance, and Baroque)",
     "MUSC 101A History of Western Music (c. 1150 - 1750)",
@@ -7142,9 +6297,7 @@
     "HAVC 122E Art and Propaganda in China",
     "HAVC 190H Constructions of Identity in 20th c. Tibetan Visual Culture"
   ],
-  "Francis Akotuah": [
-    "MUSC 53A Beginning Ghanaian Ensemble"
-  ],
+  "Francis Akotuah": ["MUSC 53A Beginning Ghanaian Ensemble"],
   "Grant Pogson": [
     "BIOE 109 Evolution",
     "BIOE 172 Population Genetics",
@@ -7157,9 +6310,7 @@
     "BIOL 201 RNA Processing",
     "BIOL 280A Topics in Research on Molecular Genetics of Yeast"
   ],
-  "Jay Kim": [
-    "CRWN 89 Workshop in Computational Biology"
-  ],
+  "Jay Kim": ["CRWN 89 Workshop in Computational Biology"],
   "Beth Ann Hockey": [
     "NLP203: Natural Language Processing III",
     "NLP271A: Capstone I:  Recent Research in NLP",
@@ -7232,9 +6383,7 @@
   "Subhra Saha": [
     "STAT17L: Statistical Methods for Business and Economics Laboratory"
   ],
-  "Emily Maddox": [
-    "EDUC 50C CAL Teach 1: Science"
-  ],
+  "Emily Maddox": ["EDUC 50C CAL Teach 1: Science"],
   "Alex Rudnick": [
     "CSE13S: Computer Systems and C Programming",
     "CSE142: Machine Learning",
@@ -7262,12 +6411,8 @@
     "HIS 173C The Soviet Union and its Aftermath",
     "HIS 176 Eastern Europe, 1848-2000"
   ],
-  "Joe Fletcher": [
-    "POLI 101 Introduction to Research Methods"
-  ],
-  "Alex Jones": [
-    "KRSG 3 Campus Natural History Practicum"
-  ],
+  "Joe Fletcher": ["POLI 101 Introduction to Research Methods"],
+  "Alex Jones": ["KRSG 3 Campus Natural History Practicum"],
   "Magy Seif El-Nasr": [
     "CMPM180: Topics in Computational Media",
     "CMPM20: Climate Resilience, Health, and Wellbeing",
@@ -7279,9 +6424,7 @@
   "Victoria Gonzalez Pagani": [
     "SPAN 142 El mundo de las palabras. Spanish Morphology and Lexicon"
   ],
-  "Chiung-Chi Chen": [
-    "MUSC 80B Music of Asia"
-  ],
+  "Chiung-Chi Chen": ["MUSC 80B Music of Asia"],
   "Melisa Casumbal-Salazar": [
     "CRES 179A Critical Filipinx Poetics: A Workshop for Reading and Writing Poetry",
     "CRES 179C Artivist Creative Nonfiction Workshop",
@@ -7293,22 +6436,14 @@
     "SOCY 150 Sociology of Death and Dying",
     "SOCY 168 Social Justice"
   ],
-  "Darrell Long": [
-    "CSE13S: Computer Systems and C Programming"
-  ],
-  "Remy Franklin": [
-    "COWL 140 Designing Your Life"
-  ],
-  "Mia": [
-    "LING 113 Syntax II"
-  ],
+  "Darrell Long": ["CSE13S: Computer Systems and C Programming"],
+  "Remy Franklin": ["COWL 140 Designing Your Life"],
+  "Mia": ["LING 113 Syntax II"],
   "Kerry Veenstra": [
     "CSE130: Principles of Computer Systems Design",
     "CSE13S: Computer Systems and C Programming"
   ],
-  "Patrick Robinson": [
-    "BIOE 128L Large Marine Vertebrates Field Course"
-  ],
+  "Patrick Robinson": ["BIOE 128L Large Marine Vertebrates Field Course"],
   "James Collin Fey": [
     "CMPM130: User Interface and User Experience Design",
     "CMPM179: Game Design Practicum",
@@ -7339,16 +6474,12 @@
     "PRTR 61J Jewish Personal Narratives on Film",
     "PRTR 61N Personal Narratives in Theater and Film"
   ],
-  "Al Zahler": [
-    "BIOL 110 Cell Biology"
-  ],
+  "Al Zahler": ["BIOL 110 Cell Biology"],
   "Euiseok": [
     "BIOL 291 Molecular, Cellular, and Developmental Biology Seminar",
     "BIOL 292 MCD Seminar"
   ],
-  "Nelson Hutchison": [
-    "MUSC 11B Introduction to Jazz"
-  ],
+  "Nelson Hutchison": ["MUSC 11B Introduction to Jazz"],
   "Shawn Nichols": [
     "POLI 160B International Law",
     "POLI 165 Global Organization",
@@ -7384,16 +6515,12 @@
     "LALS 54 Racism, Science, and Health: Colonial and Carceral Legacies",
     "LALS 57 Drugs, Addiction, and Recovery in the Americas"
   ],
-  "Jasmine Alinder": [
-    "HIS 186A Public History Workshop"
-  ],
+  "Jasmine Alinder": ["HIS 186A Public History Workshop"],
   "Camilo G": [
     "LIT 108A Literature Internships",
     "LIT 108B Literature Internships 2"
   ],
-  "Courtney Kersten": [
-    "LIT 123C History of the Essay: From Seneca to Solnit"
-  ],
+  "Courtney Kersten": ["LIT 123C History of the Essay: From Seneca to Solnit"],
   "Rachel Meyer": [
     "BIOE 109 Evolution",
     "BIOE 118 Plants and Society: the Biology of Food, Shelter, and Medicine",
@@ -7405,9 +6532,7 @@
     "CRWN 85 Mathematical Problems in Data Science",
     "PBS 198 Summer Undergraduate Research in Science and Technology"
   ],
-  "Kathleen Greany": [
-    "CRWN 90 Start-up Entrepreneurship Academy"
-  ],
+  "Kathleen Greany": ["CRWN 90 Start-up Entrepreneurship Academy"],
   "Roberto Manduchi": [
     "CSE264: Computer Vision",
     "CSE280V: Seminar on Computer Vision",
@@ -7418,9 +6543,7 @@
     "ECE103L: Signals and Systems Laboratory",
     "ECE255: Error Control Coding"
   ],
-  "Joy Hagen": [
-    "BME 185 Technical Writing for Biomolecular Engineers"
-  ],
+  "Joy Hagen": ["BME 185 Technical Writing for Biomolecular Engineers"],
   "Benjamin Topacio": [
     "BME105: Genetics in the Genomics Era",
     "BME177L: Engineering Stem Cell Laboratory"
@@ -7445,16 +6568,12 @@
     "CSE150: Introduction to Computer Networks",
     "CSE80N: Introduction to Networking and the Internet"
   ],
-  "Delbert D Bailey": [
-    "CSE102: Introduction to Analysis of Algorithms"
-  ],
+  "Delbert D Bailey": ["CSE102: Introduction to Analysis of Algorithms"],
   "Daisy Martin": [
     "EDUC 232 Social Science: Theory and Curriculum",
     "EDUC 233 Social Science Teaching for Secondary Classrooms"
   ],
-  "Robert The Staff": [
-    "LIT 138B Regions in American Literature"
-  ],
+  "Robert The Staff": ["LIT 138B Regions in American Literature"],
   "Dan Costa": [
     "BIOE 129 Biology of Marine Mammals",
     "BIOE 129L Biology of Marine Mammals Laboratory",
@@ -7463,9 +6582,7 @@
     "CSP 290B Coastal Science and Policy Capstone Project",
     "CSP 291 Coastal Science and Policy Capstone Seminar"
   ],
-  "Limbrick": [
-    "FILM 194E International Cinemas"
-  ],
+  "Limbrick": ["FILM 194E International Cinemas"],
   "Kimberly Lau": [
     "LIT 190I Individual Authors",
     "LIT 230C Feminist Theories/Historical Perspectives",
@@ -7477,9 +6594,7 @@
     "CSE183: Web Applications",
     "CSE290T: Topics in Computing for Society"
   ],
-  "Suresh Kumar Lodha": [
-    "CSE163: Data Programming for Visualization"
-  ],
+  "Suresh Kumar Lodha": ["CSE163: Data Programming for Visualization"],
   "Judith The Staff": [
     "EDUC 125 Multicultural Children's Literature for Elementary Classrooms"
   ],
@@ -7491,12 +6606,8 @@
     "BME 280B Seminar on Bioinformatics and Bioengineering",
     "BME 281F Blood Cell Development"
   ],
-  "Baldwin": [
-    "ANTH 97 Laboratory Safety Practicum"
-  ],
-  "Frank Gluszka": [
-    "ART 133 Abstract Painting"
-  ],
+  "Baldwin": ["ANTH 97 Laboratory Safety Practicum"],
+  "Frank Gluszka": ["ART 133 Abstract Painting"],
   "Robert B Lund": [
     "STAT132: Classical and Bayesian Inference",
     "STAT203: Introduction to Probability Theory"
@@ -7512,9 +6623,7 @@
     "CRWN 80F Science Fictions",
     "PRTR 151F Writing the Future: Science Fiction"
   ],
-  "Peter Raiondi": [
-    "BIOE 95 Seymour Center Docent Training"
-  ],
+  "Peter Raiondi": ["BIOE 95 Seymour Center Docent Training"],
   "Pranav Anand": [
     "HUMN 35 Language Technology: Themes Across Cultures and Histories",
     "LING 119 Narrative Structure: The linguistics of storytelling",
@@ -7524,9 +6633,7 @@
     "LING 80K Invented Languages, from Elvish to Esperanto",
     "LING 80L Predicting Words with Numbers: From Code-Breaking to Spell-Check, and Large Language Models"
   ],
-  "Jon Myers": [
-    "MUSC 125 Advanced Electronic Sound Synthesis"
-  ],
+  "Jon Myers": ["MUSC 125 Advanced Electronic Sound Synthesis"],
   "Cynthia Polecritti": [
     "HIS 164A Late-Medieval Italy, c. 1200-1400",
     "HIS 164B Renaissance Italy, c. 1400-1600",
@@ -7536,9 +6643,7 @@
     "HIS 196D City of Rome",
     "HIS 196Y Saints and Holiness in Medieval Europe"
   ],
-  "Chris Connery": [
-    "LIT 231A Studies in Literary and Cultural History"
-  ],
+  "Chris Connery": ["LIT 231A Studies in Literary and Cultural History"],
   "Mohsen Lesani": [
     "CSE113: Parallel and Concurrent Programming",
     "CSE232: Distributed Systems"
@@ -7551,12 +6656,8 @@
     "ENVS 80E Climate Justice",
     "POLI 270 Advanced Topics in Global Environmental Governance: Agency Beyond the State"
   ],
-  "Bettina Aptheker": [
-    "FMST 139 African American Women's History"
-  ],
-  "Donald Hoshi": [
-    "APLX 80 Introduction to Applied Linguistics"
-  ],
+  "Bettina Aptheker": ["FMST 139 African American Women's History"],
+  "Donald Hoshi": ["APLX 80 Introduction to Applied Linguistics"],
   "Alexander Ioannidis": [
     "BME110: Computational Biology Tools",
     "BME205: Bioinformatics Models and Algorithms",
@@ -7595,15 +6696,11 @@
     "CMPM206: Computational Media Research Preparation",
     "CMPM280K: Seminar in Interactive Systems for Individuals with Special Needs"
   ],
-  "Padgett": [
-    "LING 100 Sounds of the World's Languages: Phonetics I"
-  ],
+  "Padgett": ["LING 100 Sounds of the World's Languages: Phonetics I"],
   "Michael Mikio Oye": [
     "ECE291: Tomorrow's Professors, Engineers, and Entrepreneurs"
   ],
-  "Marisol LeBr": [
-    "CRES 159 Latinxs and the History of U.S. Policing"
-  ],
+  "Marisol LeBr": ["CRES 159 Latinxs and the History of U.S. Policing"],
   "Dustin Richmond": [
     "CSE100: Logic Design",
     "CSE125: Logic Design with Verilog",
@@ -7611,9 +6708,7 @@
     "CSE280G: Hardware Systems Collective Seminar",
     "CSE293: Advanced Topics in Computer Science & Engineering"
   ],
-  "Kazem Halima": [
-    "FMST 12 Podcasting: Feminist Files"
-  ],
+  "Kazem Halima": ["FMST 12 Podcasting: Feminist Files"],
   "Christian Christian": [
     "SPAN 150 Topics in Hispanic Linguistics: Introduction to Hispanic Linguistics"
   ],
@@ -7641,9 +6736,7 @@
     "EDUC 166 Technology and Education",
     "EDUC 237 Qualitative Research Methods"
   ],
-  "lez Pagani": [
-    "SPAN 141 Advanced Spanish Grammar"
-  ],
+  "lez Pagani": ["SPAN 141 Advanced Spanish Grammar"],
   "Benjamin Read": [
     "POLI 140D Politics of East Asia",
     "POLI 141 Politics of China",
@@ -7656,9 +6749,7 @@
     "EDUC 100A Cal Teach 2: Science and Mathematics",
     "EDUC 100B Cal Teach 2: Mathematics"
   ],
-  "Scot Winton": [
-    "ENVS 196 Senior Seminar"
-  ],
+  "Scot Winton": ["ENVS 196 Senior Seminar"],
   "Tela Favaloro": [
     "CMPM115: Lead by Design: Experiential Learning Collaborative",
     "CMPM115A: Lead by Design: Design-Build Collaborative",
@@ -7675,9 +6766,7 @@
     "ENVS 108 General Entomology",
     "ENVS 108L General Entomology Laboratory"
   ],
-  "lez": [
-    "HAVC 141Z Deep Dive: Museums of the Bay Area"
-  ],
+  "lez": ["HAVC 141Z Deep Dive: Museums of the Bay Area"],
   "Zac Emerzian": [
     "CMPM121: Game Development Patterns",
     "CMPM176: Game Systems",
@@ -7721,9 +6810,7 @@
     "MUSC 80H The Hollywood Musical",
     "MUSC 81C Global Popular Music"
   ],
-  "Aishwary Kumar": [
-    "HISC 109 Liberalism and Violence"
-  ],
+  "Aishwary Kumar": ["HISC 109 Liberalism and Violence"],
   "Rasmus Winther": [
     "HISC 136 Latin American Thought",
     "HISC 166 Race, Science, and Humanities",
@@ -7753,9 +6840,7 @@
     "CMPM171: Game Design Studio",
     "CMPM280G: Seminar in Generative Methods"
   ],
-  "Martin Rizzo-Martine": [
-    "FILM 194S Special Topics Seminar"
-  ],
+  "Martin Rizzo-Martine": ["FILM 194S Special Topics Seminar"],
   "Sahota": [
     "LIT 101 Theory and Interpretation",
     "LIT 131D Literature in a Global Context",
@@ -7794,25 +6879,15 @@
   "Jack Chapman": [
     "ART 155 Photo Field Research Quarter (PFRQ): California Road Trip"
   ],
-  "Steven Isaac Reeves": [
-    "AM148: GPU Programming for Scientific Computations"
-  ],
-  "Gillian Bogart": [
-    "ANTH 130E Culture and Politics of Island Southeast Asia"
-  ],
+  "Steven Isaac Reeves": ["AM148: GPU Programming for Scientific Computations"],
+  "Gillian Bogart": ["ANTH 130E Culture and Politics of Island Southeast Asia"],
   "Kyo": [
     "HAVC 122E Art and Propaganda in China",
     "HAVC 190H Constructions of Identity in 20th c. Tibetan Visual Culture"
   ],
-  "Martha Mendoza": [
-    "SCIC 201D Policy and Investigative Reporting"
-  ],
-  "Pedroza": [
-    "SOCY 253 Race, Crime, and Justice"
-  ],
-  "Mengyang Zhao": [
-    "SOCY 175 Technology and Labor"
-  ],
+  "Martha Mendoza": ["SCIC 201D Policy and Investigative Reporting"],
+  "Pedroza": ["SOCY 253 Race, Crime, and Justice"],
+  "Mengyang Zhao": ["SOCY 175 Technology and Labor"],
   "Christian Ruvalcaba": [
     "SPAN 152 Topics in Hispanic Linguistics: Spanish in the U.S.",
     "SPAN 158 Spanish in the U.S.-Mexico Borderlands"
@@ -7822,9 +6897,7 @@
     "CSE103: Computational Models",
     "CSE216: Formal Methods"
   ],
-  "Jennifer Gonz": [
-    "HAVC 141Z Deep Dive: Museums of the Bay Area"
-  ],
+  "Jennifer Gonz": ["HAVC 141Z Deep Dive: Museums of the Bay Area"],
   "Patricia Pinho": [
     "LALS 136 Tourism, Culture, and Identity",
     "LALS 149 Whiteness in Latin America",
@@ -7839,15 +6912,9 @@
     "BME163: Applied Visualization and Analysis of Scientific Data",
     "BME281V: Immunogenomics Seminar"
   ],
-  "Kirsten Rudestam": [
-    "SOCY 173X Water and Sanitation Justice"
-  ],
-  "Shaheen Sikander": [
-    "BIOL 114 Cancer Cell Biology"
-  ],
-  "Talib Jabbar": [
-    "CRES 70S Introduction to the Sikhs"
-  ],
+  "Kirsten Rudestam": ["SOCY 173X Water and Sanitation Justice"],
+  "Shaheen Sikander": ["BIOL 114 Cancer Cell Biology"],
+  "Talib Jabbar": ["CRES 70S Introduction to the Sikhs"],
   "Pranav The Staff": [
     "LING 133 Language OnLine (LOL): Communication in the Digital Era"
   ],
@@ -7867,9 +6934,7 @@
     "ENVS 272 Qualitative Field Methods",
     "ENVS 291 Advanced Readings in Environmental Studies"
   ],
-  "Douglas Bushey": [
-    "ENVS 149 Environmental Law and Policy"
-  ],
+  "Douglas Bushey": ["ENVS 149 Environmental Law and Policy"],
   "Katherine Seto": [
     "ENVS 100 Ecology and Society",
     "ENVS 150 Coastal and Marine Policy",
@@ -7879,9 +6944,7 @@
     "OAKS 152 Transformative Literacies",
     "OAKS 188B Legal Field Practice: Professional Skills and Ethics"
   ],
-  "Cindy J Wong": [
-    "CMPM20: Climate Resilience, Health, and Wellbeing"
-  ],
+  "Cindy J Wong": ["CMPM20: Climate Resilience, Health, and Wellbeing"],
   "Glenn Milhauser": [
     "BIOC 163B Biochemical Thermodynamics and Statistical Mechanics for Biochemistry and Molecular Biology"
   ],
@@ -7906,9 +6969,7 @@
     "HIS 220 The Atlantic World, 1500-1800",
     "HIS 265 History of the Body"
   ],
-  "Judith Todd": [
-    "PRTR 171N Nature in Indigenous American Culture"
-  ],
+  "Judith Todd": ["PRTR 171N Nature in Indigenous American Culture"],
   "Jerome Shaw": [
     "EDUC 221 Science Learning and Teaching in Elementary Classrooms",
     "EDUC 231 Teaching Science in the Secondary Classroom"
@@ -7941,15 +7002,9 @@
     "BIOE 19 Biodiversity in the Age of Humans",
     "BIOE 281S Topics in Ancient DNA and Paleogenomics"
   ],
-  "Seth Rubin": [
-    "PBS 199 Summer Research Experience in Science"
-  ],
-  "Lusztig": [
-    "SOCD 294B Production/Analysis/Editing"
-  ],
-  "Amy Reid": [
-    "FILM 202 Pedagogy in Film and Digital Media"
-  ],
+  "Seth Rubin": ["PBS 199 Summer Research Experience in Science"],
+  "Lusztig": ["SOCD 294B Production/Analysis/Editing"],
+  "Amy Reid": ["FILM 202 Pedagogy in Film and Digital Media"],
   "Enrique Leal": [
     "ART 163A Lithography I",
     "ART 163C Magnified Imagination: A Printmaking Approach",
@@ -7962,9 +7017,7 @@
     "ENVS 167L Freshwater and Wetland Ecology Lab",
     "ENVS 23 The Physical and Chemical Environment"
   ],
-  "Carlos E Dobkin": [
-    "STAT17: Statistical Methods for Business and Economics"
-  ],
+  "Carlos E Dobkin": ["STAT17: Statistical Methods for Business and Economics"],
   "Paulo Tan": [
     "EDUC 10 Introduction to Learning",
     "EDUC 211 Teaching Special Populations in the General Education Classroom",
@@ -7974,9 +7027,7 @@
     "CSE142: Machine Learning",
     "CSE244B: Machine Learning for Natural Language Processing"
   ],
-  "Tyler Rey Munger": [
-    "TIM150: Optimization for Management"
-  ],
+  "Tyler Rey Munger": ["TIM150: Optimization for Management"],
   "Amanda Smith": [
     "COWL 89 Faculty Research Colloquium",
     "LIT 124B The Contemporary Latin American Short Story",
@@ -8018,9 +7069,7 @@
   "This is just for test of S": [
     "CMPM280F: Seminar in Creative Coding and Computational Media"
   ],
-  "Jonathan Van Harmelen": [
-    "HIS 139L A More Perfect Union"
-  ],
+  "Jonathan Van Harmelen": ["HIS 139L A More Perfect Union"],
   "Ivy Sichel": [
     "LING 112 Syntax I",
     "LING 113 Syntax II",
@@ -8062,9 +7111,7 @@
     "BME 281C Seminar in Cancer Genomics",
     "BME 281S Seminar in Computational Functional Genomics"
   ],
-  "Renee Cailloux": [
-    "FREN 130 French for Professions"
-  ],
+  "Renee Cailloux": ["FREN 130 French for Professions"],
   "Robin Dunkin": [
     "BIOE 136 Environmental Physiology",
     "BIOE 20B Development and Physiology"
@@ -8080,9 +7127,7 @@
     "CMPM202: Computation Media Research",
     "CMPM244: Artificial Intelligence in Games"
   ],
-  "David Abramov": [
-    "CMPM125: Game Technologies"
-  ],
+  "David Abramov": ["CMPM125: Game Technologies"],
   "Viktoria Oelze": [
     "ANTH 106B Chimpanzee Behavior and Culture",
     "ANTH 106C Chimpanzee Behavior and Culture",
@@ -8090,9 +7135,7 @@
     "ANTH 110F Evolution of Human Diet",
     "ANTH 294R Advanced Readings in Biological Anthropology"
   ],
-  "Andrew Le": [
-    "STAT80B: Data Visualization"
-  ],
+  "Andrew Le": ["STAT80B: Data Visualization"],
   "Marcela Alfaro-C": [
     "STAT108: Linear Regression",
     "STAT131: Introduction to Probability Theory",
@@ -8121,17 +7164,12 @@
     "CSE280X: Seminar in Distributed Systems",
     "CSE290S: Advanced Topics in Computer Systems"
   ],
-  "Giacomo": [
-    "BIOE 127 Ichthyology",
-    "BIOE 127L Ichthyology Laboratory"
-  ],
+  "Giacomo": ["BIOE 127 Ichthyology", "BIOE 127L Ichthyology Laboratory"],
   "Karen Hayden Miga": [
     "BME281M: Seminar on Chromosome Biology and Function",
     "BME80G: Bioethics in the 21st Century: Science, Business, and Society"
   ],
-  "Murai Murai": [
-    "ENVS 100 Ecology and Society"
-  ],
+  "Murai Murai": ["ENVS 100 Ecology and Society"],
   "Zachary Zimmer": [
     "LIT 126F Speculative Fiction As Cultural Theory and Practice",
     "LIT 189A De la conquista a Sor Juana",
@@ -8205,9 +7243,7 @@
     "MUSC 80S Women in Music",
     "MUSC 81C Global Popular Music"
   ],
-  "Jorge S Hurtarte": [
-    "ECE121: Microcontroller System Design"
-  ],
+  "Jorge S Hurtarte": ["ECE121: Microcontroller System Design"],
   "Marcella Gomez": [
     "AM229: Convex Optimization",
     "AM280B: Seminar in Applied Mathematical Modeling"
@@ -8230,16 +7266,12 @@
     "BIOE 136 Environmental Physiology",
     "BIOE 281W Topics in Exercise and Environmental Physiology"
   ],
-  "Law Jess": [
-    "LING 231 Semantics A"
-  ],
+  "Law Jess": ["LING 231 Semantics A"],
   "Jessica Kendall-Bar": [
     "SCIC 110 Data-Driven Animation for Science Communication",
     "SCIC 210 Data-Driven Animation for Science Communication"
   ],
-  "Alonso": [
-    "FILM 20P Introduction to Production Technique"
-  ],
+  "Alonso": ["FILM 20P Introduction to Production Technique"],
   "Marco A Rolandi": [
     "ECE104: Bioelectronics",
     "ECE204: Bioelectronics",

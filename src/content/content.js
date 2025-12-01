@@ -315,7 +315,6 @@ async function renderIntoCartPanels(panels) {
   for (const panel of panels) {
     if (panel.querySelector(".about-my-professor-root")) return; // avoid duplicate mounts(will come in handy when we cache the results)
 
-    
     let name = getProfNameInCart(panel);
     if (name == null) {
       continue;

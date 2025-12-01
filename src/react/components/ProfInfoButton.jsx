@@ -17,7 +17,6 @@ export default function ProfInfoButton(props) {
 
   const localResearchTopic = props.localResearchTopic;
   const localClassesTaught = props.localClassesTaught;
-  
 
   // rate my professor data - I.K
   const rateMyProfessor = props.rateMyProfessor;
@@ -49,7 +48,8 @@ export default function ProfInfoButton(props) {
   const researchInterest = getFirst(
     props.apiData?.ucscpersonpubresearchinterest,
   );
-  const courses = localClassesTaught || props.apiData?.ucscpersonpubfacultycourses; // assumes this is already an array
+  const courses =
+    localClassesTaught || props.apiData?.ucscpersonpubfacultycourses; // assumes this is already an array
 
   const normalize = (value) =>
     String(value || "")
@@ -377,7 +377,7 @@ export default function ProfInfoButton(props) {
                       </p>
                     </div>
                   )}
-                  
+
                   {/* Selected publications and website */}
                   {detailItems.length > 0 && (
                     <div className="campus-card-grid">
@@ -403,7 +403,6 @@ export default function ProfInfoButton(props) {
                       ))}
                     </div>
                   )}
-
                 </div>
               )}
             </div>
