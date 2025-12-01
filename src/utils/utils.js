@@ -93,11 +93,11 @@ export function StarRating({ rating, numRatings }) {
   // Decide color bucket
   let colorClass = "";
   if (safeRating <= 2) {
-    colorClass = "star-rating-low";   // red
+    colorClass = "star-rating-low"; // red
   } else if (safeRating === 3) {
-    colorClass = "star-rating-mid";   // yellow
+    colorClass = "star-rating-mid"; // yellow
   } else if (safeRating >= 4) {
-    colorClass = "star-rating-high";  // green
+    colorClass = "star-rating-high"; // green
   }
 
   return (

@@ -448,8 +448,8 @@ export default function ProfInfoButton(props) {
                               ? roundedDifficulty >= 4
                                 ? "diff-high"
                                 : roundedDifficulty >= 2.6
-                                ? "diff-mid"
-                                : "diff-low"
+                                  ? "diff-mid"
+                                  : "diff-low"
                               : ""
                           }`}
                         >
@@ -473,8 +473,8 @@ export default function ProfInfoButton(props) {
                               ? roundedWouldTakeAgain <= 40
                                 ? "wta-low"
                                 : roundedWouldTakeAgain <= 70
-                                ? "wta-mid"
-                                : "wta-high"
+                                  ? "wta-mid"
+                                  : "wta-high"
                               : ""
                           }`}
                         >
@@ -511,9 +511,7 @@ export default function ProfInfoButton(props) {
                                   ? `${tag.tagName.substring(0, 20)}...`
                                   : tag.tagName}
                               </span>
-                              <span className="tag-count">
-                                {tag.tagCount}
-                              </span>
+                              <span className="tag-count">{tag.tagCount}</span>
                             </span>
                           ))}
                         </div>
@@ -533,7 +531,6 @@ export default function ProfInfoButton(props) {
                 )}
               </div>
             )}
-
           </div>
         </div>
       )}

@@ -482,29 +482,35 @@
 /* text colors for difficulty, and would-take */
 
 /* Would Take Again color buckets */
-.wta-low {     /* 0–40% */
-  color: #dc2626;   /* red */
+.wta-low {
+  /* 0–40% */
+  color: #dc2626; /* red */
 }
 
-.wta-mid {     /* 41–70% */
-  color: #eab308;   /* yellow */
+.wta-mid {
+  /* 41–70% */
+  color: #eab308; /* yellow */
 }
 
-.wta-high {    /* 71–100% */
-  color: #16a34a;   /* green */
+.wta-high {
+  /* 71–100% */
+  color: #16a34a; /* green */
 }
 
 /* Difficulty color buckets */
-.diff-low {     /* easy */
-  color: #16a34a;   /* green */
+.diff-low {
+  /* easy */
+  color: #16a34a; /* green */
 }
 
-.diff-mid {     /* moderate */
-  color: #eab308;   /* yellow */
+.diff-mid {
+  /* moderate */
+  color: #eab308; /* yellow */
 }
 
-.diff-high {    /* hard */
-  color: #dc2626;   /* red */
+.diff-high {
+  /* hard */
+  color: #dc2626; /* red */
 }
 
 /* Stronger selectors to override .rmp-metric .metric-value */
@@ -519,7 +525,6 @@
 .rmp-metric.difficulty .metric-value.diff-high {
   color: #dc2626 !important;
 }
-
 
 .star-rating {
   display: flex;
@@ -562,7 +567,6 @@
 .star-rating-high {
   color: #16a34a;
 }
-
 
 /* top tags */
 .rmp-tags {
