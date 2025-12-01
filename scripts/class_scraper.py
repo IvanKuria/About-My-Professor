@@ -29,7 +29,10 @@ def scrape_classes_taught():
     and only writes to the json if new data is found.
     Could also scrape all links in the catalog & older catalogs if had more time - B.C.
     """
-    baseURL = "https://catalog.ucsc.edu/en/current/general-catalog/courses/"
+    baseURLFirstHalf = "https://catalog.ucsc.edu/en/"
+    baseURLSecondHalf = "/general-catalog/courses/"
+    #scrape through catalogs of previous years so students know if they taught something in the past 4-5 years B.C
+    baseURLYear = ["current", "2024-2025", "2023-2024","2022-2023", "2021-2022"]
     baseEngineeringURL = "https://courses.engineering.ucsc.edu/courses/"
     baseEngineeringURLEndings = ["/2025","/2024","/2023","/2022"]
     EngineeringURLExtensions = ["am","bme", "cmpm", "cse", "ece", "game", "hci", "nlp", "stat", "tim"]
@@ -55,87 +58,88 @@ def scrape_classes_taught():
     print(f"\n--- Starting Class Scrape (HTML Parse Method) ---")
 
     
-    #scrape from current catalog links
+    #scrape from catalog links
     for urlExtension in URLExtensions:
-        URL = baseURL+urlExtension
-       
-        print(f"Fetching data from {URL}...")
+        for year in baseURLYear:
+            URL = baseURLFirstHalf+ year + baseURLSecondHalf+urlExtension
+        
+            print(f"Fetching data from {URL}...")
 
-        try:
-            # Fetch the page content (no browser needed, but requires a user agent)
-            headers = {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
-            }
-            response = requests.get(URL, timeout=10, headers=headers)
-            response.raise_for_status() # Check for errors
-            
-            # Parse the HTML with BeautifulSoup
-            print("Parsing HTML response...")
-            soup = BeautifulSoup(response.text, 'html.parser')
+            try:
+                # Fetch the page content (no browser needed, but requires a user agent)
+                headers = {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+                }
+                response = requests.get(URL, timeout=10, headers=headers)
+                response.raise_for_status() # Check for errors
+                
+                # Parse the HTML with BeautifulSoup
+                print("Parsing HTML response...")
+                soup = BeautifulSoup(response.text, 'html.parser')
 
-            #All of the courses are under one big div
-            # so will jump straight to the instructor div
-            # and then back track to get the associated course name - B.C.
-            instructorLists = soup.find_all('div', class_='instructor')
+                #All of the courses are under one big div
+                # so will jump straight to the instructor div
+                # and then back track to get the associated course name - B.C.
+                instructorLists = soup.find_all('div', class_='instructor')
 
-            if not instructorLists:
-                print("Error: Could not find any 'instructor' divs.")
-                print("This may be due to a change in the page structure.")
-                return
-            
-            for instructors in instructorLists:
-                try:
-                    #use find previous sibling to get to the course name Element which is always 5 elements prior - B.C.
-                    previousSibling1 = instructors.find_previous_sibling()
-                    previousSibling2 = previousSibling1.find_previous_sibling()
-                    previousSibling3 = previousSibling2.find_previous_sibling()
-                    previousSibling4 = previousSibling3.find_previous_sibling()
-                    courseNameElement = previousSibling4.find_previous_sibling()
-                    
-
-                    #parse instructors
-                    innerText_tag = instructors.find('p')
-                    innerText = innerText_tag.text.strip()
-                    instructorList = []
-                    rePattern =  r"[A-Za-z]+(?:[-\s][A-Za-z]+)*"
-                    iListStr = re.findall(rePattern, innerText)
-                    for potentialInstructor in iListStr:
-                        if potentialInstructor != "The Staff" and potentialInstructor != "Instructor" and potentialInstructor != "Staff":
-                            instructorList.append(potentialInstructor)
-                    
-                    #added for unit test
-                    #print(f"instructors found: {instructorList} from {innerText}")
-
-                    #check if got correct course name element then add them to the new dict of lists
-                    if 'course-name' in courseNameElement['class']:
-                        courseName = courseNameElement.text.strip()
-                        for instructor in instructorList:
-                            freshly_scraped_data[instructor].append(courseName) 
-                    else:
-                        previousSibling6 = courseNameElement.find_previous_sibling()
-                        courseNameElementSomtimes = previousSibling6.find_previous_sibling()
-                        courseNameElementRarely = courseNameElementSomtimes.find_previous_sibling()
-                        if 'course-name' in courseNameElementSomtimes['class']:
-                            courseName = courseNameElementSomtimes.text.strip()
-                            for instructor in instructorList:
-                                freshly_scraped_data[instructor].append(courseName)
-                        elif 'course-name' in courseNameElementRarely['class']:
-                            courseName = courseNameElementRarely.text.strip()
-                            for instructor in instructorList:
-                                freshly_scraped_data[instructor].append(courseName)
+                if not instructorLists:
+                    raise ValueError("No Instructor Divs on this page")
+                
+                for instructors in instructorLists:
+                    try:
+                        #use find previous sibling to get to the course name Element which is always 5 elements prior - B.C.
+                        previousSibling1 = instructors.find_previous_sibling()
+                        previousSibling2 = previousSibling1.find_previous_sibling()
+                        previousSibling3 = previousSibling2.find_previous_sibling()
+                        previousSibling4 = previousSibling3.find_previous_sibling()
+                        courseNameElement = previousSibling4.find_previous_sibling()
                         
-                        else:
-                            raise ValueError("didn't find course name element as the 5th previous sibling")
-                    
-                except ValueError as e:
-                    print(e)    
-                except Exception as e:
-                    print(f"WARNING - Skipping an entry, error parsing: {e}")
 
-        except requests.exceptions.RequestException as e:
-            print(f"Error during request: {e}")
-        except Exception as e:
-            print(f"An error occurred: {e}")
+                        #parse instructors
+                        innerText_tag = instructors.find('p')
+                        innerText = innerText_tag.text.strip()
+                        instructorList = []
+                        rePattern =  r"[A-Za-z]+(?:[-\s][A-Za-z]+)*"
+                        iListStr = re.findall(rePattern, innerText)
+                        for potentialInstructor in iListStr:
+                            if potentialInstructor != "The Staff" and potentialInstructor != "Instructor" and potentialInstructor != "Staff":
+                                instructorList.append(potentialInstructor)
+                        
+                        #added for unit test
+                        #print(f"instructors found: {instructorList} from {innerText}")
+
+                        #check if got correct course name element then add them to the new dict of lists
+                        if 'course-name' in courseNameElement['class']:
+                            courseName = courseNameElement.text.strip()
+                            for instructor in instructorList:
+                                freshly_scraped_data[instructor].append(courseName) 
+                        else:
+                            previousSibling6 = courseNameElement.find_previous_sibling()
+                            courseNameElementSomtimes = previousSibling6.find_previous_sibling()
+                            courseNameElementRarely = courseNameElementSomtimes.find_previous_sibling()
+                            if 'course-name' in courseNameElementSomtimes['class']:
+                                courseName = courseNameElementSomtimes.text.strip()
+                                for instructor in instructorList:
+                                    freshly_scraped_data[instructor].append(courseName)
+                            elif 'course-name' in courseNameElementRarely['class']:
+                                courseName = courseNameElementRarely.text.strip()
+                                for instructor in instructorList:
+                                    freshly_scraped_data[instructor].append(courseName)
+                            
+                            else:
+                                raise ValueError("didn't find course name element as the 5th previous sibling")
+                        
+                    except ValueError as e:
+                        print(e)    
+                    except Exception as e:
+                        print(f"WARNING - Skipping an entry, error parsing: {e}")
+
+            except requests.exceptions.RequestException as e:
+                print(f"Error during request: {e}")
+            except ValueError as e:
+                        print(e)  
+            except Exception as e:
+                print(f"An error occurred: {e}")
 
     #also scrape Engineering website links
     for ending in baseEngineeringURLEndings:
