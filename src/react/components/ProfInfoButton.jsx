@@ -271,16 +271,17 @@ export default function ProfInfoButton(props) {
       </button>
 
       {/* Popup content — only visible if `open` is true */}
-      {isOpen && (
-        <div className="prof-info-modal-overlay" onClick={handleOverlayClick}>
-          <div className="prof-info-modal" role="dialog" aria-modal="true">
-            <div className="prof-info-header">
-              <h3 className="prof-info-title">Professor Info</h3>
-              <button className="prof-info-close" onClick={handleOpen}>
-                X
-              </button>
-            </div>
-
+      <div className="prof-info-header">
+        <h3 className="prof-info-title">Professor Info</h3>
+        <button
+          className="prof-info-close"
+          onClick={handleOpen}
+          type="button"
+          aria-label="Close"
+        >
+          X
+        </button>
+      </div>
             {/* AMP section */}
             <div className="campus-card">
               <div className="campus-card-header">
@@ -538,6 +539,134 @@ export default function ProfInfoButton(props) {
                 </div>
               )}
             </div>
+<<<<<<< Updated upstream
+=======
+
+            {/* RMP section*/}
+            {/* will only show if the prof does have a existing rmp profile */}
+            {rateMyProfessor && (
+              <div className="rmp-section">
+                {rateMyProfessor ? (
+                  <div className="rmp-card">
+                    <div className="rmp-card-header">
+                      <h4>Rate My Professor</h4>
+                      {profileUrl && (
+                        <a href={profileUrl} target="_blank" rel="noreferrer">
+                          View Profile
+                        </a>
+                      )}
+                    </div>
+
+                    <div className="rmp-card-grid">
+                      {/* stars rating */}
+                      <div className="rmp-metric rating">
+                        {numRatings > 0 ? (
+                          <StarRating
+                            rating={roundedRating}
+                            numRatings={numRatings}
+                          />
+                        ) : (
+                          <span className="metric-value-na">N/A</span>
+                        )}
+                        <span className="metric-sub">
+                          {numRatings > 0 ? "Average score" : "No ratings yet"}
+                        </span>
+                      </div>
+
+                      {/* difficulty */}
+                      <div className="rmp-metric difficulty">
+                        <span className="metric-label">Difficulty</span>
+                        <span
+                          className={`metric-value ${
+                            roundedDifficulty && roundedDifficulty > 0 && numRatings > 0
+                              ? roundedDifficulty >= 4
+                                ? "diff-high"
+                                : roundedDifficulty >= 2.6
+                                ? "diff-mid"
+                                : "diff-low"
+                              : ""
+                          }`}
+                        >
+                          {roundedDifficulty &&
+                          roundedDifficulty > 0 &&
+                          numRatings > 0
+                            ? `${formatNumber(roundedDifficulty)}/5`
+                            : "N/A"}
+                        </span>
+                        <span className="metric-sub">Avg difficulty</span>
+                      </div>
+
+                      {/* would take */}
+                      <div className="rmp-metric would-take">
+                        <span className="metric-label">Would Take Again</span>
+                        <span
+                          className={`metric-value ${
+                            roundedWouldTakeAgain != null &&
+                            roundedWouldTakeAgain >= 0 &&
+                            numRatings > 0
+                              ? roundedWouldTakeAgain <= 40
+                                ? "wta-low"
+                                : roundedWouldTakeAgain <= 70
+                                ? "wta-mid"
+                                : "wta-high"
+                              : ""
+                          }`}
+                        >
+                          {roundedWouldTakeAgain != null &&
+                          roundedWouldTakeAgain >= 0 &&
+                          numRatings > 0
+                            ? `${roundedWouldTakeAgain}%`
+                            : "N/A"}
+                        </span>
+
+                        <span className="metric-sub">Student approval</span>
+                      </div>
+
+                      <div className="rmp-metric total-ratings">
+                        <span className="metric-label">Reviews</span>
+                        <span className="metric-value">
+                          {roundedWouldTakeAgain != null ? numRatings : "N/A"}
+                        </span>
+                        <span className="metric-sub">Total reviews</span>
+                      </div>
+                    </div>
+
+                    {/* top tags */}
+                    {topTags.length > 0 && (
+                      <div className="rmp-tags">
+                        <span className="tags-label">Top Tags</span>
+                        <div className="tags-grid">
+                          {topTags.slice(0, 5).map((tag) => (
+                            <span
+                              className="tag-chip"
+                              key={tag.id || tag.legacyId || Math.random()}
+                            >
+                              <span className="tag-name">
+                                {tag.tagName.length > 20
+                                  ? tag.tagName.substring(0, 20) + "..."
+                                  : tag.tagName}
+                              </span>
+                              <span className="tag-count">{tag.tagCount}</span>
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  // empty state
+                  <div className="rmp-card empty">
+                    <div className="rmp-card-header">
+                      <h4>Rate My Professors</h4>
+                    </div>
+                    <p className="rmp-empty">
+                      Rate My Professors data not available.
+                    </p>
+                  </div>
+                )}
+              </div>
+            )}
+>>>>>>> Stashed changes
           </div>
         </div>
       )}
