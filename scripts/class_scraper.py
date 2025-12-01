@@ -217,8 +217,11 @@ def scrape_classes_taught():
         list2_values = cached_data.get(key, [])
 
         # Combine the lists and convert to a set to remove duplicates, then back to a list
-        unique_values = list(set(list1_values + list2_values))
-        
+        if(list2_values):
+            unique_values = list(set(list1_values + list2_values))
+        else:
+            unique_values = list(set(list1_values))
+        unique_values.sort()
         merged_dict[key] = unique_values
 
     # Compare the newly scraped data to the old cached data
