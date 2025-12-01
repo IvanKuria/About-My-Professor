@@ -32,7 +32,7 @@ def scrape_classes_taught():
     baseURLFirstHalf = "https://catalog.ucsc.edu/en/"
     baseURLSecondHalf = "/general-catalog/courses/"
     #scrape through catalogs of previous years so students know if they taught something in the past 4-5 years B.C
-    baseURLYear = ["current", "2024-2025", "2023-2024","2022-2023", "2021-2022"]
+    baseURLYear = ["current", "2024-2025", "2023-2024","2022-2023"]
     baseEngineeringURL = "https://courses.engineering.ucsc.edu/courses/"
     baseEngineeringURLEndings = ["/2025","/2024","/2023","/2022"]
     EngineeringURLExtensions = ["am","bme", "cmpm", "cse", "ece", "game", "hci", "nlp", "stat", "tim"]
@@ -52,6 +52,7 @@ def scrape_classes_taught():
                       "phye-physical-education", "poli-politics", "prtr-porter-college", "punj-punjabi", "scic-science-communication",
                       "socd-social-documentation", "socy-sociology", "span-spanish", "sphs-spanish-for-heritage-speakers",
                       "stev-stevenson-college", "ucdc-ucdc", "vast-visualizing-abolition-studies", "writ-writing"]
+    badStrings = ["The Staff", "Instructor", 'Section','Session', 'In Person', 'Staff', "In-person", "In person", "Week", "Online", "Taught in Conjunction", "online", "G", "n", "A", "Weeks", "S", "L", "M", "H", "T", "R"]
     freshly_scraped_data = defaultdict(list)
     cached_data = load_classes_taught_cache()
 
@@ -102,7 +103,7 @@ def scrape_classes_taught():
                         rePattern =  r"[A-Za-z]+(?:[-\s][A-Za-z]+)*"
                         iListStr = re.findall(rePattern, innerText)
                         for potentialInstructor in iListStr:
-                            if potentialInstructor != "The Staff" and potentialInstructor != "Instructor" and potentialInstructor != "Staff":
+                            if potentialInstructor not in badStrings:
                                 instructorList.append(potentialInstructor)
                         
                         #added for unit test
@@ -185,7 +186,6 @@ def scrape_classes_taught():
                             instructorList = []
                             rePattern =  r"[A-Za-z]+(?:[-\s][A-Za-z]+)*"
                             iListStr = re.findall(rePattern, textWOutUIDs)
-                            badStrings = ['Section','Session', 'In Person', 'Staff', "In-person", "In person", "Week", "Online", "online", "G", "n", "A", "Weeks", "S", "L"]
                             for potentialInstructor in iListStr:
                                 if(potentialInstructor not in badStrings ):
                                     instructorList.append(potentialInstructor)

@@ -1988,12 +1988,6 @@
     "ECE256: Statistical Signal Processing",
     "ECE293: Advanced Topics in Electrical and Computer Engineering"
   ],
-  "n": [
-    "CRES 159 Latinxs and the History of U.S. Policing",
-    "LING 172 Psycholinguistics II",
-    "LING 174 Neurolinguistics",
-    "LING 258 Advanced Psycholinguistics"
-  ],
   "Omar Ahmadyar": ["CSE111: Advanced Programming"],
   "Aaron Jones": [
     "OAKS 26 Navigating the University From a Black Critical Lens"
@@ -2558,23 +2552,6 @@
     "SOCY 107A Designing ICT Projects for Social Enterprise",
     "SOCY 107B Project Implementation and Grant Writing for Social Entrepreneurs",
     "SOCY 196G Project Practicum: Global Information and Social Enterprise"
-  ],
-  "G": [
-    "LIT 101 Theory and Interpretation",
-    "LIT 116I Philosophy in India",
-    "LIT 131D Literature in a Global Context",
-    "LIT 133D Topics in the Literatures and Cultures of Southern Asia",
-    "LIT 133J Colonial Punjab",
-    "LIT 151L Theater in India",
-    "LIT 155A Cinema and Subjectivity",
-    "LIT 155N Cinema in India",
-    "LIT 160L Literature and Philosophy",
-    "LIT 181G Sanskrit, Part 1",
-    "LIT 181H Sanskrit, Part 2",
-    "LIT 182H Auteur et culture",
-    "LIT 190L Topics in World Literature and Cultural Studies",
-    "LIT 282C Texts and Contexts",
-    "LIT 80D Literary Traditions of India"
   ],
   "Warren Sack": [
     "FILM 120 Introduction to Media Theory",
@@ -4246,14 +4223,6 @@
     "BIOL 288 Pedagogy in STEM",
     "BIOL 88 Studies in Medicine: Its Art, History, Science, and Philosophy"
   ],
-  "Taught in Conjunction": [
-    "BME175: Entrepreneurship in Biotechnology",
-    "BME275: Entrepreneurship in Biotechnology",
-    "ECE163: Introduction to Small-Scale UAV Theory and Practice",
-    "ECE178: Device Electronics",
-    "ECE224: Device Electronics",
-    "ECE263: Small-Scale UAV Theory and Practice"
-  ],
   "Gabriela Arredondo": [
     "LALS 10 Introduction to Chicanx & Latinx Studies",
     "LALS 144 Mexicana/Chicana Histories",
@@ -4691,16 +4660,6 @@
     "CSE235: Cyber-Physical Systems Security"
   ],
   "Gustafson": ["SOCD 294A Production/Analysis/Editing"],
-  "T": [
-    "HAVC 141K Activist Art Since 1960: Art, Technology, Activism",
-    "HAVC 141O Sex, Lies, and Surveillance: Contemporary Documentary Arts",
-    "HAVC 142 Contemporary Art and Ecology",
-    "HAVC 191K Decolonial Visual Culture",
-    "HAVC 202 Introduction to Visual Studies Methods",
-    "HAVC 241 Decolonizing Nature: Contemporary Art and Ecology",
-    "HAVC 242 Radical Futurisms",
-    "HAVC 48 Climate Justice Now! Art, Activism, Environment Today"
-  ],
   "Julie Bettie": [
     "SOCY 120 Gender, Race/Ethnicity, Sexuality and Cultural Politics",
     "SOCY 126 Sex and Sexuality as Social Practice and Representation",
@@ -4770,16 +4729,6 @@
     "BME280B: Seminar on Bioinformatics and Bioengineering",
     "BME281G: Seminar on Cell Fate Decisions"
   ],
-  "H": [
-    "LIT 111B Geoffrey Chaucer",
-    "LIT 111E Edmund Spenser",
-    "LIT 121D Medieval Epic",
-    "LIT 146A Studies in Romanticism",
-    "LIT 155H The Horror Film",
-    "LIT 155J The Films of John Carpenter",
-    "LIT 155L Vampire Film",
-    "LIT 190T Topics in Modern Literary Studies"
-  ],
   "Javier Gonzalez-Rocha": [
     "AM147: Computational Methods and Applications",
     "AM213B: Numerical Methods for the Solution of Differential Equations",
@@ -4835,13 +4784,6 @@
     "BIOE 122 Invertebrate Zoology",
     "BIOE 122L Invertebrate Zoology Laboratory",
     "BIOE 20C Ecology and Evolution"
-  ],
-  "M": [
-    "ARTG 80G Visual Communication and Interaction Design",
-    "ARTG 80I Foundations of Play",
-    "CT 195 Creative Technologies Senior Studio",
-    "KRSG 1 Academic Literacy and Ethos: Power and Representation",
-    "SPAN 142 El mundo de las palabras. Spanish Morphology and Lexicon"
   ],
   "Alison Alkon": [
     "CMMU 105A Field Study",
@@ -6148,28 +6090,6 @@
     "LIT 179B Advanced Writing: Poetry",
     "LIT 179C Methods and Materials"
   ],
-  "A": [
-    "ARTG 80G Visual Communication and Interaction Design",
-    "ARTG 80I Foundations of Play",
-    "CT 195 Creative Technologies Senior Studio",
-    "KRSG 1 Academic Literacy and Ethos: Power and Representation",
-    "LIT 101 Theory and Interpretation",
-    "LIT 109X Marxist Literary Criticism",
-    "LIT 112I Kafka",
-    "LIT 112I Kafka in Translation",
-    "LIT 125D Modern German Fiction",
-    "LIT 125D Modern and Contemporary German Literature",
-    "LIT 137A Global Cities",
-    "LIT 149A Behind the Berlin Wall",
-    "LIT 155C New German Cinema",
-    "LIT 183A Einführung in der deutschen Literatur",
-    "LIT 183B Themen in deutscher Literatur und Kultur",
-    "LIT 183F Die deutsche Novelle",
-    "LIT 183K Moderne deutsche Literatur und Film",
-    "LIT 183M Moderne deutsche Fiktion",
-    "LIT 190Z Topics in German Literature and Culture",
-    "LIT 283A Deutsche Literatur und Kultur"
-  ],
   "Jenny Kelly": [
     "CRES 100 Comparative Theories of Race and Ethnicity",
     "CRES 101 Research Methods and Writing in Critical Race and Ethnic Studies",
@@ -6973,27 +6893,6 @@
   "Jerome Shaw": [
     "EDUC 221 Science Learning and Teaching in Elementary Classrooms",
     "EDUC 231 Teaching Science in the Secondary Classroom"
-  ],
-  "S": [
-    "FILM 136B History of Television",
-    "FILM 165D Asian Americans and Media",
-    "FILM 194S Special Topics Seminar",
-    "FILM 238 The Politics of Information",
-    "LIT 101 Theory and Interpretation",
-    "LIT 116I Philosophy in India",
-    "LIT 131D Literature in a Global Context",
-    "LIT 133D Topics in the Literatures and Cultures of Southern Asia",
-    "LIT 133J Colonial Punjab",
-    "LIT 151L Theater in India",
-    "LIT 155A Cinema and Subjectivity",
-    "LIT 155N Cinema in India",
-    "LIT 160L Literature and Philosophy",
-    "LIT 181G Sanskrit, Part 1",
-    "LIT 181H Sanskrit, Part 2",
-    "LIT 182H Auteur et culture",
-    "LIT 190L Topics in World Literature and Cultural Studies",
-    "LIT 282C Texts and Contexts",
-    "LIT 80D Literary Traditions of India"
   ],
   "Beth Shapiro": [
     "BIOE 153A Introduction to Arctic Ecology",
