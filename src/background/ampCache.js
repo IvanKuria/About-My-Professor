@@ -6,7 +6,7 @@
 
 // --- Constants ---
 const CAMPUS_DIRECTORY_BASE_URL = "https://campusdirectory.ucsc.edu/api/uid/";
-const CACHE_DURATION_MS = 24 * 60 * 60 * 1000; // 24 hours
+const CACHE_DURATION_MS = 24 * 60 * 60 * 1000 * 7; // 1 week
 
 /**
  * Fetches profile data directly from the campus directory API.

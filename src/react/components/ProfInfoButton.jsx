@@ -486,7 +486,7 @@ export default function ProfInfoButton(props) {
                         onClick={handleToggleMoreInfo}
                         type="button"
                       >
-                        {showMoreInfo ? "Show Less ▼" : "More Info ▶"}
+                        {showMoreInfo ? "Show Less ▼" : "More Info ▲"}
                       </button>
                     )}
 

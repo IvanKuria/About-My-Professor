@@ -9,7 +9,7 @@ import Fuse from "fuse.js";
 // --- Constants ---
 const RATE_MY_PROFESSORS_ENDPOINT = "https://www.ratemyprofessors.com/graphql";
 const UCSC_SCHOOL_ID = "U2Nob29sLTEwNzg="; // Base64 encoded "School-1078"
-const CACHE_DURATION_MS = 24 * 60 * 60 * 1000; // 24 hours
+const CACHE_DURATION_MS = 24 * 60 * 60 * 1000 * 7; // 1 week
 let hasLoggedSuccessfulRmpConnection = false;
 
 // GraphQL query for RateMyProfessors
