@@ -49,7 +49,7 @@ function getProfNameInCart(panel) {
   const nameBox = panel.querySelector(
     '[id^="win0divDERIVED_REGFRM1_SSR_INSTR_LONG$"]',
   );
-  console.log(nameBox);
+  //console.log(nameBox);
   if (nameBox == null) {
     return null;
   }
@@ -184,6 +184,25 @@ async function fetchLocalResearchData() {
 }
 
 /**
+ * Fetches prof w/ classes taught from the local JSON file.
+ * @returns A dictionary mapping Full Name to list of classes taught. - B.C.
+ */
+async function fetchLocalClassesData() {
+  const url = chrome.runtime.getURL("prof_classes.json");
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      console.error(`Failed to load classes JSON: ${response.status}`);
+      return {};
+    }
+    return await response.json();
+  } catch (e) {
+    console.error("Error parsing classes JSON:", e);
+    return {};
+  }
+}
+
+/**
  * functions to inject the React info-button component into each course pannel.
  * Main function to find all course panels on the page and inject
  * the React info-button component into each one.
@@ -193,6 +212,7 @@ async function fetchLocalResearchData() {
 async function renderIntoSearchPanels(panels) {
   // maps full name -> research topic
   const researchTopics = await fetchLocalResearchData();
+  const classesTaught = await fetchLocalClassesData();
 
   for (const panel of panels) {
     if (panel.querySelector(".about-my-professor-root")) continue; // avoid duplicate mounts(will come in handy when we cache the results)
@@ -230,6 +250,7 @@ async function renderIntoSearchPanels(panels) {
     let profData,
       rateMyProfessorData,
       researchTopicText,
+      classesTaughtList,
       fullName = null;
     // get full data from API
     if (profileDict != null) {
@@ -237,6 +258,7 @@ async function renderIntoSearchPanels(panels) {
       rateMyProfessorData = profileDict.rateMyProfessor;
       fullName = getFirst(profData?.cn);
       researchTopicText = researchTopics[[fullName]];
+      classesTaughtList = classesTaught[[fullName]];
     }
     //1. Find the main course title header (the <h2>)
 
@@ -279,6 +301,7 @@ async function renderIntoSearchPanels(panels) {
             apiData={profData}
             rateMyProfessor={rateMyProfessorData}
             localResearchTopic={researchTopicText} // Pass the specific research topic as a string
+            localClassesTaught={classesTaughtList} // Pass classes taught as a list
           />
         </React.StrictMode>,
       );
@@ -287,10 +310,11 @@ async function renderIntoSearchPanels(panels) {
 }
 
 async function renderIntoCartPanels(panels) {
+  const researchTopics = await fetchLocalResearchData();
+  const classesTaught = await fetchLocalClassesData();
   for (const panel of panels) {
     if (panel.querySelector(".about-my-professor-root")) return; // avoid duplicate mounts(will come in handy when we cache the results)
 
-    const researchTopics = await fetchLocalResearchData();
     let name = getProfNameInCart(panel);
     if (name == null) {
       continue;
@@ -317,6 +341,7 @@ async function renderIntoCartPanels(panels) {
     let profData,
       rateMyProfessorData,
       researchTopicText,
+      classesTaughtList,
       fullName = null;
     // get full data from API
 
@@ -325,6 +350,7 @@ async function renderIntoCartPanels(panels) {
       rateMyProfessorData = profileDict.rateMyProfessor;
       fullName = getFirst(profData?.cn);
       researchTopicText = researchTopics[[fullName]];
+      classesTaughtList = classesTaught[[fullName]];
     }
 
     //create a mount and add it to the page's html
@@ -350,6 +376,8 @@ async function renderIntoCartPanels(panels) {
           <ProfInfoButton
             apiData={profData}
             rateMyProfessor={rateMyProfessorData}
+            localResearchTopic={researchTopicText} // Pass the specific research topic as a string
+            localClassesTaught={classesTaughtList} // Pass classes taught as a list
           />
         </React.StrictMode>,
       );

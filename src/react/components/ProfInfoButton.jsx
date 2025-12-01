@@ -14,7 +14,9 @@ export default function ProfInfoButton(props) {
   const [isOpen, setIsOpen] = useState(false);
   const [isPhoto, setIsPhoto] = useState("");
   const [showMoreInfo, setShowMoreInfo] = useState(false);
+
   const localResearchTopic = props.localResearchTopic;
+  const localClassesTaught = props.localClassesTaught;
 
   // rate my professor data - I.K
   const rateMyProfessor = props.rateMyProfessor;
@@ -46,7 +48,8 @@ export default function ProfInfoButton(props) {
   const researchInterest = getFirst(
     props.apiData?.ucscpersonpubresearchinterest,
   );
-  const courses = props.apiData?.ucscpersonpubfacultycourses; // assumes this is already an array
+  const courses =
+    localClassesTaught || props.apiData?.ucscpersonpubfacultycourses; // assumes this is already an array
 
   const normalize = (value) =>
     String(value || "")
@@ -337,32 +340,6 @@ export default function ProfInfoButton(props) {
                     </div>
                   )}
 
-                  {/* Selected publications and website */}
-                  {detailItems.length > 0 && (
-                    <div className="campus-card-grid">
-                      {detailItems.map((item, index) => (
-                        <div
-                          className="campus-detail"
-                          key={`${item.label}-${index}`}
-                        >
-                          <span className="detail-label">{item.label}</span>
-                          {item.href ? (
-                            <a
-                              className="detail-value"
-                              href={item.href}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              {item.value}
-                            </a>
-                          ) : (
-                            <span className="detail-value">{item.value}</span>
-                          )}
-                        </div>
-                      ))}
-                    </div>
-                  )}
-
                   {/* research interests/topics */}
                   {researchTopicText || researchInterest ? (
                     <div className="campus-card-section">
@@ -398,6 +375,32 @@ export default function ProfInfoButton(props) {
                         <strong>Research Info:</strong> Not listed in public
                         directory.
                       </p>
+                    </div>
+                  )}
+
+                  {/* Selected publications and website */}
+                  {detailItems.length > 0 && (
+                    <div className="campus-card-grid">
+                      {detailItems.map((item, index) => (
+                        <div
+                          className="campus-detail"
+                          key={`${item.label}-${index}`}
+                        >
+                          <span className="detail-label">{item.label}</span>
+                          {item.href ? (
+                            <a
+                              className="detail-value"
+                              href={item.href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              {item.value}
+                            </a>
+                          ) : (
+                            <span className="detail-value">{item.value}</span>
+                          )}
+                        </div>
+                      ))}
                     </div>
                   )}
                 </div>

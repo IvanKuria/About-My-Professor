@@ -9,6 +9,7 @@ import json
 import re
 
 from research_scraper import scrape_research_topics
+from class_scraper import scrape_classes_taught
 
 TIMEOUT = 2
 JSON_FILE = "prof_names.json"
@@ -248,5 +249,16 @@ if __name__ == "__main__":
         # Always close the browser when done
         driver.quit()
         print("\nBrowser closed.")
+
+    # --- Task 3: Scrape Class Taught ---
+    try:
+        scrape_classes_taught()
+    except Exception as e:
+        print(f"An error occurred during the class professor scrape: {e}")
+    finally:
+        # Always close the browser when done
+        driver.quit()
+        print("\nBrowser closed.")
+
 
     print("\nAll scraping tasks complete.")
