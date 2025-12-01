@@ -23,6 +23,15 @@ export default {
           from: path.resolve("src/images"),
           to: path.resolve("dist/images"),
         },
+
+        {
+          from: path.resolve("scripts/prof_research_topics.json"),
+          to: path.resolve("dist/prof_research_topics.json"),
+        },
+        {
+          from: path.resolve("scripts/prof_classes.json"),
+          to: path.resolve("dist/prof_classes.json"),
+        },
       ],
     }),
   ],
@@ -63,6 +72,12 @@ export default {
   },
   resolve: {
     extensions: [".js", ".jsx"],
+  },
+  performance: {
+    // Increase limit to 512KB (or higher)
+    maxAssetSize: 512000,
+    maxEntrypointSize: 512000,
+    hints: "warning",
   },
 };
 

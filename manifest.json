@@ -2,7 +2,12 @@
   "manifest_version": 3,
   "name": "About My Professor",
   "version": "1.0",
-  "permissions": ["storage", "scripting"],
+  "icons": {
+    "16": "images/icons/icon16.png",
+    "48": "images/icons/icon48.png",
+    "128": "images/icons/icon128.png"
+  },
+  "permissions": ["storage"],
   "host_permissions": [
     "https://my.ucsc.edu/*",
     "https://pisa.ucsc.edu/*",
@@ -21,7 +26,11 @@
   ],
   "web_accessible_resources": [
     {
-      "resources": ["images/*"],
+      "resources": [
+        "images/*",
+        "prof_research_topics.json",
+        "prof_classes.json"
+      ],
       "matches": ["https://pisa.ucsc.edu/*", "https://my.ucsc.edu/*"]
     }
   ]

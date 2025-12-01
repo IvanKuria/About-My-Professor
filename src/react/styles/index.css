@@ -141,6 +141,11 @@
   position: relative;
 }
 
+/*This is used in shopping cart by content.js - B.C.*/
+.prof-cart-panel {
+  position: relative;
+}
+
 .prof-photo {
   border-radius: 50%;
   width: 96px;

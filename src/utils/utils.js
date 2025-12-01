@@ -81,9 +81,16 @@ export const formatNumber = (num) => {
  * @param {number} props.numRatings - The total number of ratings.
  */
 export function StarRating({ rating, numRatings }) {
+  // If rating is null or there are no ratings, display "N/A"
+  if (rating == null || numRatings === 0) {
+    return <span className="metric-value">N/A</span>;
+  }
+
   // rating is already rounded in ProfInfoButton (roundedRating)
   const safeRating = Math.max(0, Math.min(5, Number(rating) || 0));
+  const totalStars = 5;
 
+  // Decide color bucket
   let colorClass = "";
   if (safeRating <= 2) {
     colorClass = "star-rating-low";   // red
@@ -93,10 +100,11 @@ export function StarRating({ rating, numRatings }) {
     colorClass = "star-rating-high";  // green
   }
 
-  const totalStars = 5;
-
   return (
-    <div className={`star-rating ${colorClass}`}>
+    <div
+      className={`star-rating ${colorClass}`}
+      aria-label={`Rating: ${safeRating} out of 5 based on ${numRatings} reviews`}
+    >
       {Array.from({ length: totalStars }).map((_, index) => {
         const filled = index < safeRating;
         return (
@@ -104,12 +112,12 @@ export function StarRating({ rating, numRatings }) {
             key={index}
             viewBox="0 0 24 24"
             className={filled ? "star-filled" : "star-empty"}
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <polygon points="12,2 15,9 22,9 17,14 19,21 12,17 5,21 7,14 2,9 9,9" />
+            <path d="M12 17.27L18.18 21 16.54 13.97 22 9.24 14.81 8.63 12 2 9.19 8.63 2 9.24 7.46 13.97 5.82 21 12 17.27z" />
           </svg>
         );
       })}
     </div>
   );
 }
-
