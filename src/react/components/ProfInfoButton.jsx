@@ -605,7 +605,7 @@ export default function ProfInfoButton(props) {
                       {rateMyProfessor ? (
                         <div className="rmp-card">
                           <div className="rmp-card-header">
-                            <h4>Rate My Professors</h4>
+                            <h4>Rate My Professor</h4>
                             {profileUrl && (
                               <a
                                 href={profileUrl}
